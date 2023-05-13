@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TestViewController.swift
 //  BeaMin-iOS
 //
 //  Created by uiskim on 2023/05/13.
@@ -12,7 +12,7 @@ import Then
 
 import DesignSystem
 
-class ViewController: UIViewController {
+class TestViewController: UIViewController {
     
     let test: UILabel = {
         let label = UILabel()

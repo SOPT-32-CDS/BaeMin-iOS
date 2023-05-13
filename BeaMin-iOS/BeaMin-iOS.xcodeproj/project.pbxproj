@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */; };
-		C01BB0E82A0FB27B0008C814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E72A0FB27B0008C814 /* ViewController.swift */; };
+		C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E72A0FB27B0008C814 /* TestViewController.swift */; };
 		C01BB0ED2A0FB27C0008C814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01BB0EC2A0FB27C0008C814 /* Assets.xcassets */; };
 		C01BB0F92A0FB6CA0008C814 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C01BB0F82A0FB6CA0008C814 /* SnapKit */; };
 		C01BB0FC2A0FB6D10008C814 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C01BB0FB2A0FB6D10008C814 /* Then */; };
@@ -30,6 +30,15 @@
 		C01BB1442A0FBAA70008C814 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1432A0FBAA70008C814 /* Palette.swift */; };
 		C01BB1462A0FBAEB0008C814 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1452A0FBAEB0008C814 /* UIColor+.swift */; };
 		C01BB1482A0FBB5E0008C814 /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1472A0FBB5E0008C814 /* CGColor+.swift */; };
+		C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1572A0FBC6A0008C814 /* OrderMainManager.swift */; };
+		C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */; };
+		C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */; };
+		C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15D2A0FBC830008C814 /* HomeManager.swift */; };
+		C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */; };
+		C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1612A0FBC930008C814 /* HomeView.swift */; };
+		C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */; };
+		C01BB1662A0FBCAB0008C814 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1652A0FBCAB0008C814 /* OrderDetailViewController.swift */; };
+		C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1672A0FBCB30008C814 /* OrederMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +83,7 @@
 		C01BB0E02A0FB27B0008C814 /* BeaMin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaMin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C01BB0E72A0FB27B0008C814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C01BB0E72A0FB27B0008C814 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C01BB0EC2A0FB27C0008C814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01BB0F12A0FB27C0008C814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C01BB1022A0FB70C0008C814 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +102,15 @@
 		C01BB1432A0FBAA70008C814 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		C01BB1452A0FBAEB0008C814 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		C01BB1472A0FBB5E0008C814 /* CGColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+.swift"; sourceTree = "<group>"; };
+		C01BB1572A0FBC6A0008C814 /* OrderMainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainManager.swift; sourceTree = "<group>"; };
+		C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
+		C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainView.swift; sourceTree = "<group>"; };
+		C01BB15D2A0FBC830008C814 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomViewController.swift; sourceTree = "<group>"; };
+		C01BB1612A0FBC930008C814 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailManager.swift; sourceTree = "<group>"; };
+		C01BB1652A0FBCAB0008C814 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		C01BB1672A0FBCB30008C814 /* OrederMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrederMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,10 +164,9 @@
 		C01BB0E22A0FB27B0008C814 /* BeaMin-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */,
-				C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */,
-				C01BB0E72A0FB27B0008C814 /* ViewController.swift */,
-				C01BB0EC2A0FB27C0008C814 /* Assets.xcassets */,
+				C01BB14A2A0FBBCD0008C814 /* Presenter */,
+				C01BB1492A0FBBA30008C814 /* App */,
+				C01BB0E72A0FB27B0008C814 /* TestViewController.swift */,
 				C01BB0F12A0FB27C0008C814 /* Info.plist */,
 			);
 			path = "BeaMin-iOS";
@@ -198,6 +215,128 @@
 				C01BB1472A0FBB5E0008C814 /* CGColor+.swift */,
 			);
 			path = Palette;
+			sourceTree = "<group>";
+		};
+		C01BB1492A0FBBA30008C814 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */,
+				C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */,
+				C01BB0EC2A0FB27C0008C814 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C01BB14A2A0FBBCD0008C814 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB14D2A0FBBFC0008C814 /* OrderDetail */,
+				C01BB14C2A0FBBEF0008C814 /* OrderMain */,
+				C01BB14B2A0FBBE50008C814 /* Home */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C01BB14B2A0FBBE50008C814 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1562A0FBC480008C814 /* Manager */,
+				C01BB1552A0FBC420008C814 /* ViewController */,
+				C01BB1542A0FBC3E0008C814 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C01BB14C2A0FBBEF0008C814 /* OrderMain */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1532A0FBC330008C814 /* Manager */,
+				C01BB1522A0FBC2F0008C814 /* ViewController */,
+				C01BB1512A0FBC2A0008C814 /* View */,
+			);
+			path = OrderMain;
+			sourceTree = "<group>";
+		};
+		C01BB14D2A0FBBFC0008C814 /* OrderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1502A0FBC240008C814 /* Manager */,
+				C01BB14F2A0FBC1D0008C814 /* ViewController */,
+				C01BB14E2A0FBC120008C814 /* View */,
+			);
+			path = OrderDetail;
+			sourceTree = "<group>";
+		};
+		C01BB14E2A0FBC120008C814 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1672A0FBCB30008C814 /* OrederMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C01BB14F2A0FBC1D0008C814 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1652A0FBCAB0008C814 /* OrderDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C01BB1502A0FBC240008C814 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C01BB1512A0FBC2A0008C814 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C01BB1522A0FBC2F0008C814 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C01BB1532A0FBC330008C814 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1572A0FBC6A0008C814 /* OrderMainManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C01BB1542A0FBC3E0008C814 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1612A0FBC930008C814 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C01BB1552A0FBC420008C814 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C01BB1562A0FBC480008C814 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB15D2A0FBC830008C814 /* HomeManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,8 +496,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01BB0E82A0FB27B0008C814 /* ViewController.swift in Sources */,
+				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
+				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
+				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
+				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
+				C01BB1662A0FBCAB0008C814 /* OrderDetailViewController.swift in Sources */,
+				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
+				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
+				C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */,
+				C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */,
+				C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */,
 				C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
