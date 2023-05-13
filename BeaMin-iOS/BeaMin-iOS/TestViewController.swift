@@ -11,6 +11,7 @@ import SnapKit
 import Then
 
 import DesignSystem
+import CustomExtension
 
 class TestViewController: UIViewController {
     
@@ -33,5 +34,9 @@ class TestViewController: UIViewController {
     }
 
 
+}
+
+class TestCell: UICollectionViewCell, CollectionViewCellReuseProtocol {
+    
 }
 
