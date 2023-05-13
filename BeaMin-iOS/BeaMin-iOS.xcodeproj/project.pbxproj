@@ -27,6 +27,9 @@
 		C01BB13F2A0FB8640008C814 /* Pretendard-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C01BB1382A0FB8640008C814 /* Pretendard-Thin.ttf */; };
 		C01BB1402A0FB8640008C814 /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C01BB1392A0FB8640008C814 /* Pretendard-Regular.ttf */; };
 		C01BB1412A0FB8640008C814 /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C01BB13A2A0FB8640008C814 /* Pretendard-SemiBold.ttf */; };
+		C01BB1442A0FBAA70008C814 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1432A0FBAA70008C814 /* Palette.swift */; };
+		C01BB1462A0FBAEB0008C814 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1452A0FBAEB0008C814 /* UIColor+.swift */; };
+		C01BB1482A0FBB5E0008C814 /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1472A0FBB5E0008C814 /* CGColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		C01BB1382A0FB8640008C814 /* Pretendard-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.ttf"; sourceTree = "<group>"; };
 		C01BB1392A0FB8640008C814 /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.ttf"; sourceTree = "<group>"; };
 		C01BB13A2A0FB8640008C814 /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
+		C01BB1432A0FBAA70008C814 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		C01BB1452A0FBAEB0008C814 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		C01BB1472A0FBB5E0008C814 /* CGColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 		C01BB1032A0FB70C0008C814 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				C01BB1422A0FBA960008C814 /* Palette */,
 				C01BB1252A0FB74A0008C814 /* Fonts */,
 				C01BB1202A0FB7160008C814 /* Font */,
 				C01BB1042A0FB70C0008C814 /* DesignSystem.h */,
@@ -181,6 +188,16 @@
 				C01BB1382A0FB8640008C814 /* Pretendard-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C01BB1422A0FBA960008C814 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				C01BB1432A0FBAA70008C814 /* Palette.swift */,
+				C01BB1452A0FBAEB0008C814 /* UIColor+.swift */,
+				C01BB1472A0FBB5E0008C814 /* CGColor+.swift */,
+			);
+			path = Palette;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +370,9 @@
 				C01BB1222A0FB7200008C814 /* Font.swift in Sources */,
 				C01BB1242A0FB73F0008C814 /* UIFont+.swift in Sources */,
 				C01BB1062A0FB70C0008C814 /* DesignSystem.docc in Sources */,
+				C01BB1482A0FBB5E0008C814 /* CGColor+.swift in Sources */,
+				C01BB1442A0FBAA70008C814 /* Palette.swift in Sources */,
+				C01BB1462A0FBAEB0008C814 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

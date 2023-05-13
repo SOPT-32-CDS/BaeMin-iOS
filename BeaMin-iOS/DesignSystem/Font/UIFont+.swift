@@ -9,7 +9,7 @@ import UIKit
 
 extension UIFont {
     
-    public class func pretendard(type: Font.PretendardType) -> UIFont {
+    public class func pretendard(_ type: Font.PretendardType) -> UIFont {
         let font = Font.CustomFont(name: .pretendard, weight: type.Wight)
         return ._font(name: font.name, size: type.Size)
     }
