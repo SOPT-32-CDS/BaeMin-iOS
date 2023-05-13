@@ -50,6 +50,23 @@
 		C01BB1952A0FBE310008C814 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1942A0FBE310008C814 /* UIView+.swift */; };
 		C01BB1972A0FBEAA0008C814 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1962A0FBEAA0008C814 /* String+.swift */; };
 		C01BB1992A0FBEFC0008C814 /* UIControl+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1982A0FBEFC0008C814 /* UIControl+.swift */; };
+		C07A518E2A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A517A2A0FD6CD00AA6CEF /* TemplateIcon-1016.png */; };
+		C07A518F2A0FD6CE00AA6CEF /* ___FILEBASENAME___CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A517B2A0FD6CD00AA6CEF /* ___FILEBASENAME___CollectionViewCell.swift */; };
+		C07A51902A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A517C2A0FD6CD00AA6CEF /* TemplateIcon-1016@2x.png */; };
+		C07A51912A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C07A517D2A0FD6CD00AA6CEF /* TemplateInfo.plist */; };
+		C07A51922A0FD6CE00AA6CEF /* set_template.sh in Resources */ = {isa = PBXBuildFile; fileRef = C07A517E2A0FD6CD00AA6CEF /* set_template.sh */; };
+		C07A51932A0FD6CE00AA6CEF /* ___FILEBASENAME___ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A51802A0FD6CD00AA6CEF /* ___FILEBASENAME___ViewController.swift */; };
+		C07A51942A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A51812A0FD6CD00AA6CEF /* TemplateIcon-1016.png */; };
+		C07A51952A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A51822A0FD6CD00AA6CEF /* TemplateIcon-1016@2x.png */; };
+		C07A51962A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C07A51832A0FD6CE00AA6CEF /* TemplateInfo.plist */; };
+		C07A51972A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A51852A0FD6CE00AA6CEF /* TemplateIcon-1016.png */; };
+		C07A51982A0FD6CE00AA6CEF /* ___FILEBASENAME___View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A51862A0FD6CE00AA6CEF /* ___FILEBASENAME___View.swift */; };
+		C07A51992A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A51872A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png */; };
+		C07A519A2A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C07A51882A0FD6CE00AA6CEF /* TemplateInfo.plist */; };
+		C07A519B2A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A518A2A0FD6CE00AA6CEF /* TemplateIcon-1016.png */; };
+		C07A519C2A0FD6CE00AA6CEF /* ___FILEBASENAME___TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A518B2A0FD6CE00AA6CEF /* ___FILEBASENAME___TableViewCell.swift */; };
+		C07A519D2A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C07A518C2A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png */; };
+		C07A519E2A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C07A518D2A0FD6CE00AA6CEF /* TemplateInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +171,23 @@
 		C01BB1942A0FBE310008C814 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		C01BB1962A0FBEAA0008C814 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		C01BB1982A0FBEFC0008C814 /* UIControl+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+.swift"; sourceTree = "<group>"; };
+		C07A517A2A0FD6CD00AA6CEF /* TemplateIcon-1016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016.png"; sourceTree = "<group>"; };
+		C07A517B2A0FD6CD00AA6CEF /* ___FILEBASENAME___CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___CollectionViewCell.swift"; sourceTree = "<group>"; };
+		C07A517C2A0FD6CD00AA6CEF /* TemplateIcon-1016@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016@2x.png"; sourceTree = "<group>"; };
+		C07A517D2A0FD6CD00AA6CEF /* TemplateInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
+		C07A517E2A0FD6CD00AA6CEF /* set_template.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = set_template.sh; sourceTree = "<group>"; };
+		C07A51802A0FD6CD00AA6CEF /* ___FILEBASENAME___ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___ViewController.swift"; sourceTree = "<group>"; };
+		C07A51812A0FD6CD00AA6CEF /* TemplateIcon-1016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016.png"; sourceTree = "<group>"; };
+		C07A51822A0FD6CD00AA6CEF /* TemplateIcon-1016@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016@2x.png"; sourceTree = "<group>"; };
+		C07A51832A0FD6CE00AA6CEF /* TemplateInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
+		C07A51852A0FD6CE00AA6CEF /* TemplateIcon-1016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016.png"; sourceTree = "<group>"; };
+		C07A51862A0FD6CE00AA6CEF /* ___FILEBASENAME___View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___View.swift"; sourceTree = "<group>"; };
+		C07A51872A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016@2x.png"; sourceTree = "<group>"; };
+		C07A51882A0FD6CE00AA6CEF /* TemplateInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
+		C07A518A2A0FD6CE00AA6CEF /* TemplateIcon-1016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016.png"; sourceTree = "<group>"; };
+		C07A518B2A0FD6CE00AA6CEF /* ___FILEBASENAME___TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___TableViewCell.swift"; sourceTree = "<group>"; };
+		C07A518C2A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon-1016@2x.png"; sourceTree = "<group>"; };
+		C07A518D2A0FD6CE00AA6CEF /* TemplateInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TemplateInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +260,7 @@
 		C01BB0E22A0FB27B0008C814 /* BeaMin-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C07A51512A0FD32800AA6CEF /* Scripts */,
 				C01BB14A2A0FBBCD0008C814 /* Presenter */,
 				C01BB1492A0FBBA30008C814 /* App */,
 				C01BB0E72A0FB27B0008C814 /* TestViewController.swift */,
@@ -440,6 +475,70 @@
 			path = Extenstions;
 			sourceTree = "<group>";
 		};
+		C07A51512A0FD32800AA6CEF /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				C07A51522A0FD33000AA6CEF /* Templates */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		C07A51522A0FD33000AA6CEF /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				C07A51792A0FD6CD00AA6CEF /* CollectionViewCell.xctemplate */,
+				C07A517E2A0FD6CD00AA6CEF /* set_template.sh */,
+				C07A51892A0FD6CE00AA6CEF /* TableViewCell.xctemplate */,
+				C07A51842A0FD6CE00AA6CEF /* View.xctemplate */,
+				C07A517F2A0FD6CD00AA6CEF /* ViewController.xctemplate */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		C07A51792A0FD6CD00AA6CEF /* CollectionViewCell.xctemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C07A517A2A0FD6CD00AA6CEF /* TemplateIcon-1016.png */,
+				C07A517B2A0FD6CD00AA6CEF /* ___FILEBASENAME___CollectionViewCell.swift */,
+				C07A517C2A0FD6CD00AA6CEF /* TemplateIcon-1016@2x.png */,
+				C07A517D2A0FD6CD00AA6CEF /* TemplateInfo.plist */,
+			);
+			path = CollectionViewCell.xctemplate;
+			sourceTree = "<group>";
+		};
+		C07A517F2A0FD6CD00AA6CEF /* ViewController.xctemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C07A51802A0FD6CD00AA6CEF /* ___FILEBASENAME___ViewController.swift */,
+				C07A51812A0FD6CD00AA6CEF /* TemplateIcon-1016.png */,
+				C07A51822A0FD6CD00AA6CEF /* TemplateIcon-1016@2x.png */,
+				C07A51832A0FD6CE00AA6CEF /* TemplateInfo.plist */,
+			);
+			path = ViewController.xctemplate;
+			sourceTree = "<group>";
+		};
+		C07A51842A0FD6CE00AA6CEF /* View.xctemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C07A51852A0FD6CE00AA6CEF /* TemplateIcon-1016.png */,
+				C07A51862A0FD6CE00AA6CEF /* ___FILEBASENAME___View.swift */,
+				C07A51872A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png */,
+				C07A51882A0FD6CE00AA6CEF /* TemplateInfo.plist */,
+			);
+			path = View.xctemplate;
+			sourceTree = "<group>";
+		};
+		C07A51892A0FD6CE00AA6CEF /* TableViewCell.xctemplate */ = {
+			isa = PBXGroup;
+			children = (
+				C07A518A2A0FD6CE00AA6CEF /* TemplateIcon-1016.png */,
+				C07A518B2A0FD6CE00AA6CEF /* ___FILEBASENAME___TableViewCell.swift */,
+				C07A518C2A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png */,
+				C07A518D2A0FD6CE00AA6CEF /* TemplateInfo.plist */,
+			);
+			path = TableViewCell.xctemplate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -620,14 +719,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07A518E2A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */,
 				C01BB1412A0FB8640008C814 /* Pretendard-SemiBold.ttf in Resources */,
+				C07A51972A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */,
+				C07A519D2A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */,
 				C01BB13F2A0FB8640008C814 /* Pretendard-Thin.ttf in Resources */,
+				C07A51922A0FD6CE00AA6CEF /* set_template.sh in Resources */,
+				C07A51942A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */,
+				C07A51902A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */,
+				C07A51992A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */,
 				C01BB1402A0FB8640008C814 /* Pretendard-Regular.ttf in Resources */,
 				C01BB13B2A0FB8640008C814 /* Pretendard-Medium.ttf in Resources */,
+				C07A519B2A0FD6CE00AA6CEF /* TemplateIcon-1016.png in Resources */,
+				C07A519E2A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */,
 				C01BB13C2A0FB8640008C814 /* Pretendard-Bold.ttf in Resources */,
+				C07A51962A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */,
+				C07A519A2A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */,
+				C07A51952A0FD6CE00AA6CEF /* TemplateIcon-1016@2x.png in Resources */,
 				C01BB13E2A0FB8640008C814 /* Pretendard-ExtraLight.ttf in Resources */,
 				C01BB13D2A0FB8640008C814 /* Pretendard-Light.ttf in Resources */,
 				C01BB0ED2A0FB27C0008C814 /* Assets.xcassets in Resources */,
+				C07A51912A0FD6CE00AA6CEF /* TemplateInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,14 +780,18 @@
 			files = (
 				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
+				C07A51932A0FD6CE00AA6CEF /* ___FILEBASENAME___ViewController.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
 				C01BB1662A0FBCAB0008C814 /* OrderDetailViewController.swift in Sources */,
 				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
+				C07A519C2A0FD6CE00AA6CEF /* ___FILEBASENAME___TableViewCell.swift in Sources */,
 				C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */,
+				C07A518F2A0FD6CE00AA6CEF /* ___FILEBASENAME___CollectionViewCell.swift in Sources */,
 				C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */,
+				C07A51982A0FD6CE00AA6CEF /* ___FILEBASENAME___View.swift in Sources */,
 				C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */,
 				C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */,
 			);
