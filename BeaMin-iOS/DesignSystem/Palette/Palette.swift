@@ -15,4 +15,9 @@ public enum Palette: String {
     case gray4
     case black
     case white
+    
+    case lightGreen
+    case darkGreen
+    case orange
+    case lightOrange
 }

@@ -32,6 +32,4 @@ class TestViewController: UIViewController {
             make.size.equalTo(200)
         }
     }
-
-
 }
