@@ -32,9 +32,26 @@ public enum Font {
         }
     }
     
+    public enum HannaProType {
+        case brandTypeBig
+        case brandTypeSmall
+        
+        var Weight: Font.Weight {
+            return ._400
+        }
+        
+        var Size: CGFloat {
+            switch self {
+            case .brandTypeBig: return Font.Size._20.rawValue
+            case .brandTypeSmall: return Font.Size._12.rawValue
+            }
+        }
+    }
+    
     public enum Name: String {
         case system
         case pretendard = "Pretendard"
+        case bmHannaPro = "BMHANNAPro"
     }
     
     public enum Size: CGFloat {
@@ -61,7 +78,7 @@ public enum Font {
         }
     }
 
-    public struct CustomFont {
+    public struct PretendardFont {
         private let _name: Name
         private let _weight: Weight
 
@@ -78,19 +95,48 @@ public enum Font {
             "ttf"
         }
     }
+    
+    public struct HannaProFont {
+        private let _name: Name
+        private let _weight: Weight
+        
+        init(_name: Name, _weight: Weight) {
+            self._name = _name
+            self._weight = _weight
+        }
+        
+        var name: String {
+            "\(_name.rawValue)"
+        }
+        
+        var `extension`: String {
+            "ttf"
+        }
+        
+    }
+    
 
     public static func registerFonts() {
-        fonts.forEach { font in
+        pretendardFonts.forEach { font in
+            Font.registerFont(fontName: font.name, fontExtension: font.extension)
+        }
+        hannaProFonts.forEach { font in
             Font.registerFont(fontName: font.name, fontExtension: font.extension)
         }
     }
 }
 
 extension Font {
-    static var fonts: [CustomFont] {
+    static var pretendardFonts: [PretendardFont] {
         [
-            CustomFont(name: .pretendard, weight: ._400),
-            CustomFont(name: .pretendard, weight: ._600),
+            PretendardFont(name: .pretendard, weight: ._400),
+            PretendardFont(name: .pretendard, weight: ._600),
+        ]
+    }
+    
+    static var hannaProFonts: [HannaProFont] {
+        [
+            HannaProFont(_name: .bmHannaPro, _weight: ._400)
         ]
     }
 

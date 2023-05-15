@@ -18,7 +18,7 @@ class TestViewController: UIViewController {
     let test: UILabel = {
         let label = UILabel()
         label.text = "테스트 텍스트입니다"
-        label.font = .pretendard(.title)
+        label.font = .hannaPro(.brandTypeBig)
         label.textColor = .designSystem(.white)
         return label
     }()
@@ -32,11 +32,4 @@ class TestViewController: UIViewController {
             make.size.equalTo(200)
         }
     }
-
-
 }
-
-class TestCell: UICollectionViewCell, CollectionViewCellReuseProtocol {
-    
-}
-

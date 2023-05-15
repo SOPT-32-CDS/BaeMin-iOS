@@ -10,7 +10,12 @@ import UIKit
 extension UIFont {
     
     public class func pretendard(_ type: Font.PretendardType) -> UIFont {
-        let font = Font.CustomFont(name: .pretendard, weight: type.Wight)
+        let font = Font.PretendardFont(name: .pretendard, weight: type.Wight)
+        return ._font(name: font.name, size: type.Size)
+    }
+    
+    public class func hannaPro(_ type: Font.HannaProType) -> UIFont {
+        let font = Font.HannaProFont(_name: .bmHannaPro, _weight: type.Weight)
         return ._font(name: font.name, size: type.Size)
     }
     
