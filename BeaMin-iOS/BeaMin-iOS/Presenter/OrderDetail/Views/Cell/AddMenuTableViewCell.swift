@@ -36,7 +36,7 @@ final class AddMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
     private let checkBox: UIButton = {
         let button = UIButton()
         button.setImage(.assetImage(.emptyCheckBox), for: .normal)
-        button.setImage(.assetImage(.fillCheckBox), for: .selected)
+//        button.setImage(.assetImage(.fillCheckBox), for: .selected)
         return button
     }()
     
@@ -56,7 +56,7 @@ final class AddMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
         return label
     }()
     
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // MARK: - 컴포넌트 설정
@@ -78,6 +78,10 @@ final class AddMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
     }
 }
 
@@ -112,6 +116,7 @@ private extension AddMenuTableViewCell {
     func setAddTarget() {
         checkBox.addButtonAction { sender in
             sender.isSelected = !sender.isSelected
+            sender.isSelected ? self.checkBox.setImage(.assetImage(.fillCheckBox), for: .normal) : self.checkBox.setImage(.assetImage(.emptyCheckBox), for: .normal)
             self.delegate?.priceChangeBySubMenu(isSelect: sender.isSelected, price: self.price)
         }
     }

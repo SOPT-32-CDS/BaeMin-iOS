@@ -76,6 +76,9 @@ public struct Constant {
         case fillCheckBox = "checkBoxTrue"
         case emptyCheckBox = "checkBoxFalse"
         
+        case minus
+        case plus
+        
         var real: String {
             return self.rawValue
         }

@@ -16,7 +16,14 @@ import DesignSystem
 
 final class OrderDetailViewController: UIViewController {
     
-    private var totalPrice = 0 {
+    private var singleMenuPrice = 0 {
+        didSet {
+            priceInfoView.price = singleMenuPrice
+            totalPrice = singleMenuPrice
+        }
+    }
+    
+    private lazy var totalPrice = mockData.menuPrice {
         didSet {
             priceInfoView.price = totalPrice
         }
@@ -90,11 +97,14 @@ private extension OrderDetailViewController {
         headerView.config(menuImageName: mockData.menuImage, menuName: mockData.menuName, menuDetail: mockData.menuDetail, menuPrice: mockData.menuPrice)
         OrderDetailTableView.tableHeaderView = headerView
         OrderDetailTableView.contentInsetAdjustmentBehavior = .never
+        let footerView = OrderDetailFooterViewView(frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 80))
+        footerView.stepperView.delegate = self
+        OrderDetailTableView.tableFooterView = footerView
     }
     
     func setData() {
-        self.totalPrice += mockData.menuPrice
-        print("현재금액은 \(self.totalPrice)")
+        self.singleMenuPrice += mockData.menuPrice
+        print("현재금액은 \(self.singleMenuPrice)")
     }
 }
 
@@ -131,13 +141,18 @@ extension OrderDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 68
+        return 60
     }
 }
 
 extension OrderDetailViewController: priceDelegate {
     func priceChangeBySubMenu(isSelect: Bool, price: Int) {
-        isSelect ? (totalPrice += price) : (totalPrice -= price)
-        print(totalPrice)
+        isSelect ? (singleMenuPrice += price) : (singleMenuPrice -= price)
+    }
+}
+
+extension OrderDetailViewController: menuCountDelegate {
+    func priceChangeByMenuCount(menuCont: Int) {
+        totalPrice += singleMenuPrice*menuCont
     }
 }

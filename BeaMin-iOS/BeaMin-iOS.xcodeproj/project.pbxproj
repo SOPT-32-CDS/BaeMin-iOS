@@ -21,6 +21,8 @@
 		C00E1C9D2A13F28B00F87D5B /* BMBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C9C2A13F28B00F87D5B /* BMBasicButton.swift */; };
 		C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C9E2A13F4B900F87D5B /* PriceInfoView.swift */; };
 		C00E1CA12A13F88300F87D5B /* SeperateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CA02A13F88300F87D5B /* SeperateView.swift */; };
+		C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CA22A13F9E900F87D5B /* OrderDetailFooterViewView.swift */; };
+		C00E1CA52A13FA5700F87D5B /* MenuStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CA42A13FA5700F87D5B /* MenuStepperView.swift */; };
 		C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */; };
 		C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E72A0FB27B0008C814 /* TestViewController.swift */; };
@@ -139,6 +141,8 @@
 		C00E1C9C2A13F28B00F87D5B /* BMBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMBasicButton.swift; sourceTree = "<group>"; };
 		C00E1C9E2A13F4B900F87D5B /* PriceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInfoView.swift; sourceTree = "<group>"; };
 		C00E1CA02A13F88300F87D5B /* SeperateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperateView.swift; sourceTree = "<group>"; };
+		C00E1CA22A13F9E900F87D5B /* OrderDetailFooterViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailFooterViewView.swift; sourceTree = "<group>"; };
+		C00E1CA42A13FA5700F87D5B /* MenuStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStepperView.swift; sourceTree = "<group>"; };
 		C01BB0E02A0FB27B0008C814 /* BeaMin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaMin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 				C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */,
 				C00E1C962A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift */,
 				C00E1C9E2A13F4B900F87D5B /* PriceInfoView.swift */,
+				C00E1CA22A13F9E900F87D5B /* OrderDetailFooterViewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				C00E1C982A13DB3700F87D5B /* ChoiceChipView.swift */,
 				C00E1C9C2A13F28B00F87D5B /* BMBasicButton.swift */,
 				C00E1CA02A13F88300F87D5B /* SeperateView.swift */,
+				C00E1CA42A13FA5700F87D5B /* MenuStepperView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -762,6 +768,7 @@
 				C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */,
 				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
 				C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */,
+				C00E1CA52A13FA5700F87D5B /* MenuStepperView.swift in Sources */,
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
 				C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */,
@@ -777,6 +784,7 @@
 				C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */,
 				C00E1C9D2A13F28B00F87D5B /* BMBasicButton.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
+				C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */,
 				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
 				C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */,
 				C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */,
