@@ -16,10 +16,11 @@ import DesignSystem
 
 final class OrderDetailViewController: UIViewController {
     
-    private let mockData = OrderDetail.orderDetailDummy.addOrder
+    private var totalPrice = 0
     
-    let testView = OrderDetailHeaderView()
-    let testTableView = UITableView()
+    private let mockData = OrderDetail.orderDetailDummy
+    
+    let OrderDetailTableView = UITableView(frame: .zero, style: .grouped)
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,28 +40,24 @@ final class OrderDetailViewController: UIViewController {
         setDelegate()
 
         setTableView()
+        setData()
     }
 }
 
 private extension OrderDetailViewController {
     func setUI() {
         view.backgroundColor = .designSystem(.white)
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func setHierarchy() {
-        view.addSubview(testView)
-        view.addSubview(testTableView)
+        view.addSubview(OrderDetailTableView)
     }
     
     func setLayout() {
-        testView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(500)
-        }
         
-        testTableView.snp.makeConstraints { make in
-            make.top.equalTo(testView.snp.bottom)
+        OrderDetailTableView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
             make.leading.trailing.bottom.equalToSuperview()
         }
     }
@@ -69,33 +66,68 @@ private extension OrderDetailViewController {
     }
     
     func setDelegate() {
-        testTableView.dataSource = self
+        OrderDetailTableView.dataSource = self
+        OrderDetailTableView.delegate = self
     }
     
     func setTableView() {
-        AddMenuTableViewCell.register(tableView: testTableView)
+        OrderDetailTableView.separatorStyle = .none
+        OrderDetailTableView.sectionFooterHeight = 0
+        AddMenuTableViewCell.register(tableView: OrderDetailTableView)
+        let headerView = OrderDetailHeaderView(frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 518))
+        headerView.config(menuImageName: mockData.menuImage, menuName: mockData.menuName, menuDetail: mockData.menuDetail, menuPrice: mockData.menuPrice)
+        OrderDetailTableView.tableHeaderView = headerView
+        OrderDetailTableView.contentInsetAdjustmentBehavior = .never
+    }
+    
+    func setData() {
+        self.totalPrice += mockData.menuPrice
+        print("현재금액은 \(self.totalPrice)")
     }
 }
 
 extension OrderDetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return mockData.count
+        return mockData.addOrder.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockData[section].addMenu.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return mockData[section].addMenuName
+        return mockData.addOrder[section].addMenu.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = AddMenuTableViewCell.dequeueReusableCell(tableView: tableView)
-        cell.data = mockData[indexPath.section].addMenu[indexPath.row]
+        cell.delegate = self
+        cell.selectionStyle = .none
+        cell.data = mockData.addOrder[indexPath.section].addMenu[indexPath.row]
         return cell
     }
     
     
+}
+
+extension OrderDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionHeaderView = OrderDetailSectionHeaderView()
+        sectionHeaderView.config(title: mockData.addOrder[section].addMenuName, maxCount: mockData.addOrder[section].addMenu.count)
+        return sectionHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 76
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 68
+    }
+}
+
+extension OrderDetailViewController: priceDelegate {
+    func priceChangeBySubMenu(isSelect: Bool, price: Int) {
+        isSelect ? (totalPrice += price) : (totalPrice -= price)
+        print(totalPrice)
+    }
+    
+
 }

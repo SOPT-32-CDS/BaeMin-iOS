@@ -14,7 +14,13 @@ import Then
 import CustomExtension
 import DesignSystem
 
+protocol priceDelegate: AnyObject {
+    func priceChangeBySubMenu(isSelect: Bool, price: Int)
+}
+
 final class AddMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
+    
+    weak var delegate: priceDelegate?
     
     var data: Menu? {
         didSet {
@@ -27,7 +33,12 @@ final class AddMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
     
     private var price: Int = 0
     
-    private let checkBox = CheckBox()
+    private let checkBox: UIButton = {
+        let button = UIButton()
+        button.setImage(.assetImage(.emptyCheckBox), for: .normal)
+        button.setImage(.assetImage(.fillCheckBox), for: .selected)
+        return button
+    }()
     
     private let addMenuLabel: UILabel = {
         let label = UILabel()
@@ -99,8 +110,9 @@ private extension AddMenuTableViewCell {
     }
     
     func setAddTarget() {
-        checkBox.dataSender = { isSelect in
-            isSelect ? print(self.price) : print("마이너스\(self.price)")
+        checkBox.addButtonAction { sender in
+            sender.isSelected = !sender.isSelected
+            self.delegate?.priceChangeBySubMenu(isSelect: sender.isSelected, price: self.price)
         }
     }
     

@@ -38,13 +38,7 @@ final class OrderDetailHeaderView: UIView {
         label.textColor = .designSystem(.black)
         label.textAlignment = .left
         label.numberOfLines = 0
-        
-        // MARK: - 알게된것
         label.lineBreakMode = .byCharWrapping
-        
-        // MARK: - 삭제
-        label.text = "[커플주문률1위]2인세트A+미니우동2"
-        
         return label
     }()
     
@@ -55,10 +49,6 @@ final class OrderDetailHeaderView: UIView {
         label.textAlignment = .left
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        
-        // MARK: - 삭제
-        label.text = "초밥24p+날치알대마끼2p+고로케2p\n(흰살생선2p, 연어2p, 토핑연어2p,초새우2p,생새우2p,\n간장새우2p,한치2p,계란2p,소고기 스테이크"
-        
         return label
     }()
     
@@ -76,8 +66,13 @@ final class OrderDetailHeaderView: UIView {
         label.font = .pretendard(.h3Headline)
         label.textColor = .designSystem(.black)
         label.textAlignment = .left
-        label.text = "34,000원"
         return label
+    }()
+    
+    private let seperateView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .designSystem(.seperateGray)
+        return view
     }()
     
     override init(frame: CGRect) {
@@ -87,9 +82,6 @@ final class OrderDetailHeaderView: UIView {
         
         // MARK: - addsubView
         setHierarchy()
-        
-        // MARK: - autolayout설정
-        setLayout()
     }
     
     @available(*, unavailable)
@@ -103,19 +95,9 @@ final class OrderDetailHeaderView: UIView {
         self.menuDetailLabel.text = menuDetail
         self.priceLabel.text = menuPrice.makePriceLabelFromNumber()
     }
-
-}
-
-private extension OrderDetailHeaderView {
-    func setUI() {
-        backgroundColor = .designSystem(.white)
-    }
     
-    func setHierarchy() {
-        addSubviews(menuImageView, popularityMark, menuNameLabel, menuDetailLabel, priceTitle, priceLabel)
-    }
-    
-    func setLayout() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
         menuImageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
@@ -151,5 +133,22 @@ private extension OrderDetailHeaderView {
             make.trailing.equalToSuperview().inset(18)
             make.height.equalTo(20)
         }
+        
+        seperateView.snp.makeConstraints { make in
+            make.top.equalTo(priceLabel.snp.bottom).offset(18)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(12)
+        }
+    }
+
+}
+
+private extension OrderDetailHeaderView {
+    func setUI() {
+        backgroundColor = .designSystem(.white)
+    }
+    
+    func setHierarchy() {
+        addSubviews(menuImageView, popularityMark, menuNameLabel, menuDetailLabel, priceTitle, priceLabel, seperateView)
     }
 }

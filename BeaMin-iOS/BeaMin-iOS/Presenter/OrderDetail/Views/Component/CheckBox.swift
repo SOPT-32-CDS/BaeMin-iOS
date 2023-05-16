@@ -23,13 +23,9 @@ final class CheckBox: UIControl {
         return imageView
     }()
     
-    private var image: UIImage {
-        return checked ? .assetImage(.fillCheckBox)! : .assetImage(.emptyCheckBox)!
-    }
-    
     private var checked: Bool = false {
         didSet {
-            checkImageView.image = image
+            checkImageView.image = checked ? .assetImage(.fillCheckBox)!: .assetImage(.emptyCheckBox)!
             guard let dataSender else { return }
             dataSender(checked)
         }
@@ -72,7 +68,7 @@ private extension CheckBox {
     
     func setAddTarget() {
         addButtonAction { _ in
-            self.checked = !self.checked
+            self.checked.toggle()
         }
     }
     

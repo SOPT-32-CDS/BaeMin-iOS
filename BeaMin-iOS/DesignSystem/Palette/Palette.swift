@@ -20,4 +20,6 @@ public enum Palette: String {
     case darkGreen
     case orange
     case lightOrange
+    
+    case seperateGray
 }

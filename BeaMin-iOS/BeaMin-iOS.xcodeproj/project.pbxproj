@@ -16,6 +16,8 @@
 		C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8D2A13B83F00F87D5B /* Int+.swift */; };
 		C00E1C922A13BDA400F87D5B /* AddMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C912A13BDA400F87D5B /* AddMenuTableViewCell.swift */; };
 		C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C942A13BE4400F87D5B /* CheckBox.swift */; };
+		C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C962A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift */; };
+		C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C982A13DB3700F87D5B /* ChoiceChipView.swift */; };
 		C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */; };
 		C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E72A0FB27B0008C814 /* TestViewController.swift */; };
@@ -129,6 +131,8 @@
 		C00E1C8D2A13B83F00F87D5B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		C00E1C912A13BDA400F87D5B /* AddMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuTableViewCell.swift; sourceTree = "<group>"; };
 		C00E1C942A13BE4400F87D5B /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		C00E1C962A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailSectionHeaderView.swift; sourceTree = "<group>"; };
+		C00E1C982A13DB3700F87D5B /* ChoiceChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceChipView.swift; sourceTree = "<group>"; };
 		C01BB0E02A0FB27B0008C814 /* BeaMin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaMin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */,
+				C00E1C962A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				C00E1C942A13BE4400F87D5B /* CheckBox.swift */,
+				C00E1C982A13DB3700F87D5B /* ChoiceChipView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -755,7 +761,9 @@
 				C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */,
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
+				C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */,
 				C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */,
+				C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
 				C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */,
