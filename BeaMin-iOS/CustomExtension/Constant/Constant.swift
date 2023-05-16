@@ -42,6 +42,7 @@ public struct Constant {
         case share_3 = "ic_share_3"
         case together_3 = "ic_together_3"
         case oneshipping = "ic_shipping_1p"
+        case popularityMark = "popularityMark"
         
         /// 홈 메뉴 이미지
         case menu = "Mask group"
@@ -69,6 +70,9 @@ public struct Constant {
         case menu22 = "Mask group-22"
         case menu23 = "Mask group-23"
         case menu24 = "Mask group-24"
+        
+        /// OrderDetail Image
+        case menuImage = "MenuImage"
         
         var real: String {
             return self.rawValue
