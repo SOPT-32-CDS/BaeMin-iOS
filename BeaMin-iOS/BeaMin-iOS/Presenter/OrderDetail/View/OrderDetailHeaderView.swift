@@ -96,6 +96,13 @@ final class OrderDetailHeaderView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func config(menuImageName: Constant.ImageName, menuName: String, menuDetail: String, menuPrice: Int) {
+        self.menuImageView.image = .assetImage(menuImageName)
+        self.menuNameLabel.text = menuName
+        self.menuDetailLabel.text = menuDetail
+        self.priceLabel.text = menuPrice.makePriceLabelFromNumber()
+    }
 
 }
 
