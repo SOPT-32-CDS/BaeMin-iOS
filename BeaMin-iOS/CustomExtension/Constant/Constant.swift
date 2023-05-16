@@ -73,6 +73,8 @@ public struct Constant {
         
         /// OrderDetail Image
         case menuImage = "MenuImage"
+        case fillCheckBox = "checkBoxTrue"
+        case emptyCheckBox = "checkBoxFalse"
         
         var real: String {
             return self.rawValue
