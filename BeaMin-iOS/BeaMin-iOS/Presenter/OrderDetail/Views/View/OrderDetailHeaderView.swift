@@ -69,11 +69,7 @@ final class OrderDetailHeaderView: UIView {
         return label
     }()
     
-    private let seperateView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .designSystem(.seperateGray)
-        return view
-    }()
+    private let seperateView = SeperateView(height: 12)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -137,7 +133,6 @@ final class OrderDetailHeaderView: UIView {
         seperateView.snp.makeConstraints { make in
             make.top.equalTo(priceLabel.snp.bottom).offset(18)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(12)
         }
     }
 

@@ -16,11 +16,17 @@ import DesignSystem
 
 final class OrderDetailViewController: UIViewController {
     
-    private var totalPrice = 0
+    private var totalPrice = 0 {
+        didSet {
+            priceInfoView.price = totalPrice
+        }
+    }
     
     private let mockData = OrderDetail.orderDetailDummy
+    private let OrderDetailTableView = UITableView(frame: .zero, style: .grouped)
     
-    let OrderDetailTableView = UITableView(frame: .zero, style: .grouped)
+    private lazy var priceInfoView = PriceInfoView(minimunPriceForDelivery: mockData.minPriceForDelivery)
+
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,14 +57,20 @@ private extension OrderDetailViewController {
     }
     
     func setHierarchy() {
-        view.addSubview(OrderDetailTableView)
+        view.addSubviews(OrderDetailTableView, priceInfoView)
     }
     
     func setLayout() {
         
         OrderDetailTableView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.trailing.bottom.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(priceInfoView.snp.top)
+        }
+        
+        priceInfoView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(90)
         }
     }
     
@@ -128,6 +140,4 @@ extension OrderDetailViewController: priceDelegate {
         isSelect ? (totalPrice += price) : (totalPrice -= price)
         print(totalPrice)
     }
-    
-
 }
