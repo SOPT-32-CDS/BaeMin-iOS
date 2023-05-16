@@ -18,14 +18,17 @@ final class OrderDetailViewController: UIViewController {
     
     private var singleMenuPrice = 0 {
         didSet {
-            priceInfoView.price = singleMenuPrice
-            totalPrice = singleMenuPrice
+            if totalMenuCount > 1 {
+                priceInfoView.price = singleMenuPrice * totalMenuCount
+            } else {
+                priceInfoView.price = singleMenuPrice
+            }
         }
     }
     
-    private lazy var totalPrice = mockData.menuPrice {
+    private lazy var totalMenuCount = 1 {
         didSet {
-            priceInfoView.price = totalPrice
+            priceInfoView.price = singleMenuPrice * totalMenuCount
         }
     }
     
@@ -153,6 +156,6 @@ extension OrderDetailViewController: priceDelegate {
 
 extension OrderDetailViewController: menuCountDelegate {
     func priceChangeByMenuCount(menuCont: Int) {
-        totalPrice += singleMenuPrice*menuCont
+        self.totalMenuCount = menuCont
     }
 }

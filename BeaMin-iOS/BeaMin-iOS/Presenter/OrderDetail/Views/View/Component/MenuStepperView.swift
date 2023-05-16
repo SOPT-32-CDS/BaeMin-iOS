@@ -25,6 +25,7 @@ final class MenuStepperView: UIView {
     private var menuCount: Int = 1 {
         didSet {
             menuCountLabel.text = menuCount.description + "개"
+            self.delegate?.priceChangeByMenuCount(menuCont: menuCount)
         }
     }
     
@@ -106,12 +107,10 @@ private extension MenuStepperView {
     func setAddTarget() {
         appendButton.addButtonAction { sender in
             self.menuCount += 1
-            self.delegate?.priceChangeByMenuCount(menuCont: 1)
         }
         reduceButton.addButtonAction { sender in
             if self.menuCount >= 2 {
                 self.menuCount -= 1
-                self.delegate?.priceChangeByMenuCount(menuCont: -1)
             }
         }
     }
