@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A45B650E2A1216BB00797BCE /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45B650D2A1216BB00797BCE /* TabBarItem.swift */; };
+		A4A4E0C62A1328D800B5EA8C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0C52A1328D800B5EA8C /* CustomTabBar.swift */; };
+		A4A4E0C92A15300600B5EA8C /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0C82A15300600B5EA8C /* UIButton+.swift */; };
 		C0066C122A11F56A00EC40FB /* BMHANNAPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */; };
 		C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */; };
@@ -114,6 +117,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A45B650D2A1216BB00797BCE /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		A4A4E0C52A1328D800B5EA8C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		A4A4E0C82A15300600B5EA8C /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAPro.ttf; sourceTree = "<group>"; };
 		C01BB0E02A0FB27B0008C814 /* BeaMin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaMin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +209,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4A4E0C72A151CFF00B5EA8C /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A45B650D2A1216BB00797BCE /* TabBarItem.swift */,
+				A4A4E0C52A1328D800B5EA8C /* CustomTabBar.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 		C01BB0D72A0FB27B0008C814 = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +398,7 @@
 		C01BB1542A0FBC3E0008C814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4A4E0C72A151CFF00B5EA8C /* CustomTabBar */,
 				C01BB1612A0FBC930008C814 /* HomeView.swift */,
 			);
 			path = View;
@@ -439,6 +455,7 @@
 				C01BB1942A0FBE310008C814 /* UIView+.swift */,
 				C01BB1962A0FBEAA0008C814 /* String+.swift */,
 				C01BB1982A0FBEFC0008C814 /* UIControl+.swift */,
+				A4A4E0C82A15300600B5EA8C /* UIButton+.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -672,6 +689,7 @@
 			files = (
 				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
+				A4A4E0C62A1328D800B5EA8C /* CustomTabBar.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
 				C01BB1662A0FBCAB0008C814 /* OrderDetailViewController.swift in Sources */,
@@ -679,6 +697,7 @@
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
 				C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */,
+				A45B650E2A1216BB00797BCE /* TabBarItem.swift in Sources */,
 				C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */,
 				C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */,
 				C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */,
@@ -716,6 +735,7 @@
 				C01BB1992A0FBEFC0008C814 /* UIControl+.swift in Sources */,
 				C01BB1972A0FBEAA0008C814 /* String+.swift in Sources */,
 				C01BB1952A0FBE310008C814 /* UIView+.swift in Sources */,
+				A4A4E0C92A15300600B5EA8C /* UIButton+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +911,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -919,6 +940,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -946,6 +968,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -979,6 +1002,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1048,6 +1072,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1081,6 +1106,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
