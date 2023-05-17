@@ -18,10 +18,6 @@ final class OrderDetailHeaderView: UIView {
     
     private let menuImageView: UIImageView = {
         let imageView = UIImageView()
-        
-        // MARK: - 삭제
-        imageView.image = .assetImage(.menuImage)
-        
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -135,7 +131,6 @@ final class OrderDetailHeaderView: UIView {
             make.leading.trailing.equalToSuperview()
         }
     }
-
 }
 
 private extension OrderDetailHeaderView {

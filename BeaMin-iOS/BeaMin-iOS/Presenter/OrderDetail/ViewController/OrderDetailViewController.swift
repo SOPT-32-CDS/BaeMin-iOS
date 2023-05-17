@@ -163,6 +163,7 @@ extension OrderDetailViewController: UITableViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
         if scrollView.contentOffset.y <= 260 {
             self.navigationBar.layer.opacity = Float((-1.0/80.0)*(scrollView.contentOffset.y)+(13.0/4.0))
             self.navigationBar.menuName.isHidden = true
@@ -176,7 +177,6 @@ extension OrderDetailViewController: UITableViewDelegate {
             self.navigationBarBackGroundView.layer.opacity = Float((1/40)*(scrollView.contentOffset.y)-6)
             self.navigationController?.navigationBar.barStyle = .default
         }
-
     }
 }
 
