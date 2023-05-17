@@ -31,7 +31,8 @@ final class OrderDetailViewController: UIViewController {
             priceInfoView.price = singleMenuPrice * totalMenuCount
         }
     }
-    
+    private let navigationBar = BMNavigationBar()
+    private let navigationBarBackGroundView = UIView()
     private let mockData = OrderDetail.orderDetailDummy
     private let OrderDetailTableView = UITableView(frame: .zero, style: .grouped)
     
@@ -64,17 +65,30 @@ private extension OrderDetailViewController {
     func setUI() {
         view.backgroundColor = .designSystem(.white)
         self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationBarBackGroundView.backgroundColor = .designSystem(.white)
+        self.navigationBarBackGroundView.layer.opacity = 0
     }
     
     func setHierarchy() {
-        view.addSubviews(OrderDetailTableView, priceInfoView)
+        view.addSubviews(OrderDetailTableView, priceInfoView, navigationBarBackGroundView, navigationBar)
     }
     
     func setLayout() {
         
+        navigationBar.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+        }
+        
         OrderDetailTableView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.bottom.equalTo(priceInfoView.snp.top)
+        }
+        
+        navigationBarBackGroundView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(navigationBar.snp.bottom)
         }
         
         priceInfoView.snp.makeConstraints { make in
@@ -108,6 +122,7 @@ private extension OrderDetailViewController {
     func setData() {
         self.singleMenuPrice += mockData.menuPrice
         print("현재금액은 \(self.singleMenuPrice)")
+        self.navigationBar.config(menuName: mockData.menuName)
     }
 }
 
@@ -145,6 +160,23 @@ extension OrderDetailViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y <= 260 {
+            self.navigationBar.layer.opacity = Float((-1.0/80.0)*(scrollView.contentOffset.y)+(13.0/4.0))
+            self.navigationBar.menuName.isHidden = true
+            self.navigationBar.buttonTintColor = .designSystem(.white)
+            self.navigationBarBackGroundView.layer.opacity = 0
+            self.navigationController?.navigationBar.barStyle = .black
+        } else {
+            self.navigationBar.menuName.isHidden = false
+            self.navigationBar.buttonTintColor = .designSystem(.black)
+            self.navigationBar.layer.opacity = Float((1/20)*(scrollView.contentOffset.y)-13)
+            self.navigationBarBackGroundView.layer.opacity = Float((1/40)*(scrollView.contentOffset.y)-6)
+            self.navigationController?.navigationBar.barStyle = .default
+        }
+
     }
 }
 
