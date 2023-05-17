@@ -11,6 +11,9 @@
 		A4A4E0C62A1328D800B5EA8C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0C52A1328D800B5EA8C /* CustomTabBar.swift */; };
 		A4A4E0C92A15300600B5EA8C /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A4E0C82A15300600B5EA8C /* UIButton+.swift */; };
 		C0066C122A11F56A00EC40FB /* BMHANNAPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */; };
+		C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C172A127AF800EC40FB /* OrderDetail.swift */; };
+		C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C192A127F2F00EC40FB /* Home.swift */; };
+		C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */; };
 		C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */; };
 		C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E72A0FB27B0008C814 /* TestViewController.swift */; };
@@ -121,6 +124,9 @@
 		A4A4E0C52A1328D800B5EA8C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		A4A4E0C82A15300600B5EA8C /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAPro.ttf; sourceTree = "<group>"; };
+		C0066C172A127AF800EC40FB /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
+		C0066C192A127F2F00EC40FB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetail.swift; sourceTree = "<group>"; };
 		C01BB0E02A0FB27B0008C814 /* BeaMin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaMin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +222,38 @@
 				A4A4E0C52A1328D800B5EA8C /* CustomTabBar.swift */,
 			);
 			path = CustomTabBar;
+		C0066C132A127A5600EC40FB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C0066C162A127A7100EC40FB /* Home */,
+				C0066C152A127A6900EC40FB /* OrderDetail */,
+				C0066C142A127A5E00EC40FB /* OrderMain */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C0066C142A127A5E00EC40FB /* OrderMain */ = {
+			isa = PBXGroup;
+			children = (
+				C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */,
+			);
+			path = OrderMain;
+			sourceTree = "<group>";
+		};
+		C0066C152A127A6900EC40FB /* OrderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C0066C172A127AF800EC40FB /* OrderDetail.swift */,
+			);
+			path = OrderDetail;
+			sourceTree = "<group>";
+		};
+		C0066C162A127A7100EC40FB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C0066C192A127F2F00EC40FB /* Home.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C01BB0D72A0FB27B0008C814 = {
@@ -243,6 +281,7 @@
 		C01BB0E22A0FB27B0008C814 /* BeaMin-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C0066C132A127A5600EC40FB /* Data */,
 				C01BB14A2A0FBBCD0008C814 /* Presenter */,
 				C01BB1492A0FBBA30008C814 /* App */,
 				C01BB0E72A0FB27B0008C814 /* TestViewController.swift */,
@@ -688,12 +727,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
+				C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */,
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
 				A4A4E0C62A1328D800B5EA8C /* CustomTabBar.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
 				C01BB1662A0FBCAB0008C814 /* OrderDetailViewController.swift in Sources */,
 				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
+				C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */,
+				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
 				C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */,
