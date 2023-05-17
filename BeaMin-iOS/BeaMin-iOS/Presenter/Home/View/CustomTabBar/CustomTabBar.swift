@@ -11,7 +11,9 @@ import Then
 import SnapKit
 
 final class CustomTabBar: UIView {
+    
     private let stackView = UIStackView()
+    private let eachStackView = UIStackView()
     private let tabBarItems: [TabBarItem]
     
     init(tabBarItems: [TabBarItem]) {
@@ -33,10 +35,14 @@ final class CustomTabBar: UIView {
             .enumerated()
             .forEach { i, item in
                 let button = UIButton()
-                let buttonText = UILabel()
                 button.setImage(item.tabBarImage, for: .normal)
-                buttonText.text = item.tabBarText
-                stackView.addArrangedSubview(buttonText)
+                button.setTitle(item.tabBarText, for: .normal)
+                button.setTitleColor(.designSystem(.gray1), for: .normal)
+                button.titleLabel?.font = .pretendard(.body4Bold)
+                button.adjustsImageWhenHighlighted = false
+                button.alignTextBelow(spacing: 1)
+                stackView.spacing = 33
+                stackView.addArrangedSubview(button)
             }
     }
     
@@ -45,16 +51,10 @@ final class CustomTabBar: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         stackView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(20)
-            $0.leading.equalToSuperview()
+            $0.top.equalToSuperview().inset(-5)
+            $0.leading.equalToSuperview().inset(35)
+            $0.trailing.equalToSuperview().inset(25)
         }
-        
-//        NSLayoutConstraint.activate([
-//            stackView.leftAnchor.constraint(equalTo: leftAnchor),
-//            stackView.rightAnchor.constraint(equalTo: rightAnchor),
-//            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-//            stackView.topAnchor.constraint(equalTo: topAnchor),
-//        ])
         
     }
 }
