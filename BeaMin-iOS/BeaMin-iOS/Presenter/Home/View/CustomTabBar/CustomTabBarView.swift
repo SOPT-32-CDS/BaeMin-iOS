@@ -31,11 +31,6 @@ final class CustomTabBarView: UIView {
         // MARK: - autolayout설정
         setLayout()
         
-        // MARK: - button의 addtarget설정
-        setAddTarget()
-        
-        // MARK: - delegate설정
-        setDelegate()
     }
     
     @available(*, unavailable)
@@ -68,21 +63,11 @@ private extension CustomTabBarView {
         addSubview(stackView)
     }
     
-    func setLayout() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
+    func setLayout() {    
         stackView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(-5)
             $0.leading.equalToSuperview().inset(35)
             $0.trailing.equalToSuperview().inset(25)
         }
-    }
-    
-    func setAddTarget() {
-        
-    }
-    
-    func setDelegate() {
-        
     }
 }

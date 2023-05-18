@@ -16,7 +16,7 @@ import DesignSystem
 
 final class HomeViewController: UIViewController {
     
-    let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
+    private let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +28,6 @@ final class HomeViewController: UIViewController {
         
         // MARK: - autolayout설정
         setLayout()
-        
-        // MARK: - button의 addtarget설정
-        setAddTarget()
-        
-        // MARK: - delegate설정
-        setDelegate()
         
     }
 }
@@ -57,13 +51,5 @@ private extension HomeViewController {
             tabBarView.heightAnchor.constraint(equalToConstant: 83),
             tabBarView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
         ])
-    }
-    
-    func setAddTarget() {
-        
-    }
-    
-    func setDelegate() {
-        
     }
 }
