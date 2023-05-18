@@ -22,7 +22,15 @@ final class CartInfoView: UIView {
         }
     }
     
-    private var totalPriceForPay: Int
+    var updateCart: Int? {
+        didSet {
+            guard let updateCart else { return }
+            priceInfoView.updateCart = updateCart
+        }
+    }
+
+    
+    var totalPriceForPay: Int
     private let delivertTip: Int
     
     private let topSeperatedView = SeperateView(height: 10)

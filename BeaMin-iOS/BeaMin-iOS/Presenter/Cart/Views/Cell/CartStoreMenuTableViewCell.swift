@@ -16,10 +16,11 @@ import DesignSystem
 
 protocol CartMenuCountDelegate: AnyObject {
     func priceChangeByMenuCount(singlePricePerMenu: Int)
+    func deleteRow(sender: UIButton)
 }
 
+
 final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
-    
     weak var delegate: CartMenuCountDelegate?
     
     var menuData: CartMenu? {
@@ -207,7 +208,7 @@ private extension CartStoreMenuTableViewCell {
     
     func setAddTarget() {
         deleteButton.addButtonAction { sender in
-            print("삭제버튼이 눌렸습니다")
+            self.delegate?.deleteRow(sender: sender)
         }
         
         optionChangeButton.addButtonAction { sender in

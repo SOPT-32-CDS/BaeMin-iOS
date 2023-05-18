@@ -11,13 +11,13 @@ import DesignSystem
 import CustomExtension
 
 struct CartModel {
-    let menusByStore: [MenuByStore]
+    var menusByStore: [MenuByStore]
 }
 
 struct MenuByStore {
     let storeImage: Constant.ImageName
     let storeName: String
-    let cartMenus: [CartMenu]
+    var cartMenus: [CartMenu]
     let minimumPriceForDelivery: Int
 }
 

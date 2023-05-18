@@ -29,6 +29,14 @@ final class DeliveryPriceInfoView: UIView {
         }
     }
     
+    var updateCart: Int? {
+        didSet {
+            guard let updateCart else { return }
+            totalPriceForPay = updateCart
+//            estimatedPaymentAmount.text = (updateCart + totalTip).makePriceLabelFromNumber()
+        }
+    }
+    
     private let totalTip: Int
     
     private let totalPriceTitle: UILabel = {
@@ -57,7 +65,7 @@ final class DeliveryPriceInfoView: UIView {
         return label
     }()
     
-    private let totalPrice: UILabel = {
+    private var totalPrice: UILabel = {
         let label = UILabel()
         label.font = .pretendard(.h3Headline)
         label.textColor = .designSystem(.black)

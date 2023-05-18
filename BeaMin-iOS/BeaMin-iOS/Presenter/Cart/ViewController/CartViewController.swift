@@ -16,10 +16,11 @@ import DesignSystem
 
 final class CartViewController: UIViewController {
     
-    private let cartData = CartModel.cartDummy
+    private var cartData = CartModel.cartDummy
     
     private let cartTableView = UITableView(frame: .zero, style: .grouped)
-    private lazy var tableViewFooterView = CartInfoView(delivertTip: cartData.menusByStore.map{$0.minimumPriceForDelivery}.reduce(0, +), totalPriceForPay: cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +), frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
+    private lazy var tableViewFooterView = CartInfoView(delivertTip: cartData.menusByStore.map{$0.minimumPriceForDelivery}.reduce(0, +),
+                                                        totalPriceForPay: cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +), frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,6 +121,16 @@ extension CartViewController: UITableViewDelegate {
 }
 
 extension CartViewController: CartMenuCountDelegate {
+    func deleteRow(sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: cartTableView)
+        guard let indexPath = cartTableView.indexPathForRow(at: point) else { return }
+        cartData.menusByStore[indexPath.section].cartMenus.remove(at: indexPath.row)
+        cartTableView.beginUpdates()
+        cartTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .left)
+        cartTableView.endUpdates()
+        tableViewFooterView.updateCart = cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +)
+    }
+    
     func priceChangeByMenuCount(singlePricePerMenu: Int) {
         tableViewFooterView.priceChangeAmount = singlePricePerMenu
     }
