@@ -11,6 +11,19 @@
 		C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C172A127AF800EC40FB /* OrderDetail.swift */; };
 		C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C192A127F2F00EC40FB /* Home.swift */; };
 		C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */; };
+		C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */; };
+		C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */; };
+		C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8D2A13B83F00F87D5B /* Int+.swift */; };
+		C00E1C922A13BDA400F87D5B /* AddMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C912A13BDA400F87D5B /* AddMenuTableViewCell.swift */; };
+		C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C942A13BE4400F87D5B /* CheckBox.swift */; };
+		C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C962A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift */; };
+		C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C982A13DB3700F87D5B /* ChoiceChipView.swift */; };
+		C00E1C9D2A13F28B00F87D5B /* BMBasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C9C2A13F28B00F87D5B /* BMBasicButton.swift */; };
+		C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C9E2A13F4B900F87D5B /* PriceInfoView.swift */; };
+		C00E1CA12A13F88300F87D5B /* SeperateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CA02A13F88300F87D5B /* SeperateView.swift */; };
+		C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CA22A13F9E900F87D5B /* OrderDetailFooterViewView.swift */; };
+		C00E1CA52A13FA5700F87D5B /* MenuStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CA42A13FA5700F87D5B /* MenuStepperView.swift */; };
+		C00E1CA72A147C1100F87D5B /* BMNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CA62A147C1100F87D5B /* BMNavigationBar.swift */; };
 		C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */; };
 		C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E72A0FB27B0008C814 /* TestViewController.swift */; };
@@ -41,8 +54,6 @@
 		C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */; };
 		C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1612A0FBC930008C814 /* HomeView.swift */; };
 		C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */; };
-		C01BB1662A0FBCAB0008C814 /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1652A0FBCAB0008C814 /* OrderDetailViewController.swift */; };
-		C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1672A0FBCB30008C814 /* OrederMainView.swift */; };
 		C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1712A0FBD2F0008C814 /* CustomExtension.docc */; };
 		C01BB1782A0FBD2F0008C814 /* CustomExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */; };
 		C01BB1802A0FBD2F0008C814 /* CustomExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C01BB1702A0FBD2F0008C814 /* CustomExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +132,19 @@
 		C0066C172A127AF800EC40FB /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		C0066C192A127F2F00EC40FB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetail.swift; sourceTree = "<group>"; };
+		C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailHeaderView.swift; sourceTree = "<group>"; };
+		C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		C00E1C8D2A13B83F00F87D5B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		C00E1C912A13BDA400F87D5B /* AddMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuTableViewCell.swift; sourceTree = "<group>"; };
+		C00E1C942A13BE4400F87D5B /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		C00E1C962A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailSectionHeaderView.swift; sourceTree = "<group>"; };
+		C00E1C982A13DB3700F87D5B /* ChoiceChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceChipView.swift; sourceTree = "<group>"; };
+		C00E1C9C2A13F28B00F87D5B /* BMBasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMBasicButton.swift; sourceTree = "<group>"; };
+		C00E1C9E2A13F4B900F87D5B /* PriceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInfoView.swift; sourceTree = "<group>"; };
+		C00E1CA02A13F88300F87D5B /* SeperateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeperateView.swift; sourceTree = "<group>"; };
+		C00E1CA22A13F9E900F87D5B /* OrderDetailFooterViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailFooterViewView.swift; sourceTree = "<group>"; };
+		C00E1CA42A13FA5700F87D5B /* MenuStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStepperView.swift; sourceTree = "<group>"; };
+		C00E1CA62A147C1100F87D5B /* BMNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMNavigationBar.swift; sourceTree = "<group>"; };
 		C01BB0E02A0FB27B0008C814 /* BeaMin-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeaMin-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,8 +174,6 @@
 		C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomViewController.swift; sourceTree = "<group>"; };
 		C01BB1612A0FBC930008C814 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailManager.swift; sourceTree = "<group>"; };
-		C01BB1652A0FBCAB0008C814 /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
-		C01BB1672A0FBCB30008C814 /* OrederMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrederMainView.swift; sourceTree = "<group>"; };
 		C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB1702A0FBD2F0008C814 /* CustomExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomExtension.h; sourceTree = "<group>"; };
 		C01BB1712A0FBD2F0008C814 /* CustomExtension.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CustomExtension.docc; sourceTree = "<group>"; };
@@ -241,6 +263,39 @@
 				C0066C192A127F2F00EC40FB /* Home.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C00E1C8F2A13BD4100F87D5B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C00E1C912A13BDA400F87D5B /* AddMenuTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C00E1C902A13BD5400F87D5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C00E1C932A13BE2F00F87D5B /* Component */,
+				C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */,
+				C00E1C962A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift */,
+				C00E1C9E2A13F4B900F87D5B /* PriceInfoView.swift */,
+				C00E1CA22A13F9E900F87D5B /* OrderDetailFooterViewView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C00E1C932A13BE2F00F87D5B /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				C00E1C942A13BE4400F87D5B /* CheckBox.swift */,
+				C00E1C982A13DB3700F87D5B /* ChoiceChipView.swift */,
+				C00E1C9C2A13F28B00F87D5B /* BMBasicButton.swift */,
+				C00E1CA02A13F88300F87D5B /* SeperateView.swift */,
+				C00E1CA42A13FA5700F87D5B /* MenuStepperView.swift */,
+				C00E1CA62A147C1100F87D5B /* BMNavigationBar.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		C01BB0D72A0FB27B0008C814 = {
@@ -368,23 +423,24 @@
 			children = (
 				C01BB1502A0FBC240008C814 /* Manager */,
 				C01BB14F2A0FBC1D0008C814 /* ViewController */,
-				C01BB14E2A0FBC120008C814 /* View */,
+				C01BB14E2A0FBC120008C814 /* Views */,
 			);
 			path = OrderDetail;
 			sourceTree = "<group>";
 		};
-		C01BB14E2A0FBC120008C814 /* View */ = {
+		C01BB14E2A0FBC120008C814 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C01BB1672A0FBCB30008C814 /* OrederMainView.swift */,
+				C00E1C902A13BD5400F87D5B /* View */,
+				C00E1C8F2A13BD4100F87D5B /* Cell */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C01BB14F2A0FBC1D0008C814 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C01BB1652A0FBCAB0008C814 /* OrderDetailViewController.swift */,
+				C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -480,6 +536,7 @@
 				C01BB1942A0FBE310008C814 /* UIView+.swift */,
 				C01BB1962A0FBEAA0008C814 /* String+.swift */,
 				C01BB1982A0FBEFC0008C814 /* UIControl+.swift */,
+				C00E1C8D2A13B83F00F87D5B /* Int+.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -711,18 +768,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */,
 				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
 				C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */,
+				C00E1CA52A13FA5700F87D5B /* MenuStepperView.swift in Sources */,
+				C00E1CA72A147C1100F87D5B /* BMNavigationBar.swift in Sources */,
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
+				C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */,
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
-				C01BB1662A0FBCAB0008C814 /* OrderDetailViewController.swift in Sources */,
 				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
+				C00E1C922A13BDA400F87D5B /* AddMenuTableViewCell.swift in Sources */,
+				C00E1CA12A13F88300F87D5B /* SeperateView.swift in Sources */,
 				C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */,
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
+				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
+				C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */,
+				C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */,
+				C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */,
+				C00E1C9D2A13F28B00F87D5B /* BMBasicButton.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
+				C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */,
 				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
-				C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */,
 				C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */,
 				C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */,
 				C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */,
@@ -756,6 +823,7 @@
 				C01BB18F2A0FBDBE0008C814 /* TableViewCellReuseProtocol.swift in Sources */,
 				C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */,
 				C01BB18D2A0FBD560008C814 /* CollectionViewCellReuseProtocol.swift in Sources */,
+				C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */,
 				C01BB1922A0FBDF10008C814 /* Constant.swift in Sources */,
 				C01BB1992A0FBEFC0008C814 /* UIControl+.swift in Sources */,
 				C01BB1972A0FBEAA0008C814 /* String+.swift in Sources */,
