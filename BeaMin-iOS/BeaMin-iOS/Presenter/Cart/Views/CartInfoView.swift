@@ -22,19 +22,18 @@ final class CartInfoView: UIView {
         }
     }
     
-    var updateCart: Int? {
+    var updatePriceByDeleteMenu: Int? {
         didSet {
-            guard let updateCart else { return }
-            priceInfoView.updateCart = updateCart
+            guard let updatePriceByDeleteMenu else { return }
+            priceInfoView.updatePriceByDeleteMenu = updatePriceByDeleteMenu
         }
     }
 
     
-    var totalPriceForPay: Int
-    private let delivertTip: Int
-    
+    private var totalPrice: Int
+    private var delivertTip: Int
     private let topSeperatedView = SeperateView(height: 10)
-
+    
     private let deliveryLabel: UILabel = {
         let label = UILabel()
         label.font = .pretendard(.body1)
@@ -43,31 +42,20 @@ final class CartInfoView: UIView {
         return label
     }()
     
-    private let deliveryInfoView = DeliveryInfoView()
-    
+    private lazy var deliveryInfoView = DeliveryInfoView(tip: self.delivertTip)
     private let bottomSeperatedView = SeperateView(height: 10)
+    private lazy var priceInfoView = DeliveryPriceInfoView(totalTip: delivertTip, totalPrice: totalPrice)
     
-    private lazy var priceInfoView = DeliveryPriceInfoView(totalTip: delivertTip, totalPriceForPay: totalPriceForPay)
     
-    
-    init(delivertTip: Int, totalPriceForPay: Int, frame: CGRect) {
+    init(delivertTip: Int, totalPrice: Int, frame: CGRect) {
         self.delivertTip = delivertTip
-        self.totalPriceForPay = totalPriceForPay
+        self.totalPrice = totalPrice
         super.init(frame: frame)
         // MARK: - 컴포넌트 설정
         setUI()
         
         // MARK: - addsubView
         setHierarchy()
-        
-        // MARK: - autolayout설정
-        setLayout()
-        
-        // MARK: - button의 addtarget설정
-        setAddTarget()
-        
-        // MARK: - delegate설정
-        setDelegate()
     }
     
     @available(*, unavailable)
@@ -112,17 +100,5 @@ private extension CartInfoView {
     
     func setHierarchy() {
         addSubviews(topSeperatedView, deliveryLabel, deliveryInfoView, bottomSeperatedView, priceInfoView)
-    }
-    
-    func setLayout() {
-
-    }
-    
-    func setAddTarget() {
-        
-    }
-    
-    func setDelegate() {
-        
     }
 }

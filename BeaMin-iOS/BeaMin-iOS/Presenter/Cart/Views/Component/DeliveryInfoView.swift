@@ -16,6 +16,8 @@ import DesignSystem
 
 final class DeliveryInfoView: UIView {
     
+    private let deliveryTip: Int
+    
     private let deliveryIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.image = .assetImage(.oneshipping)
@@ -35,12 +37,12 @@ final class DeliveryInfoView: UIView {
         let label = UILabel()
         label.font = .pretendard(.body2Bold)
         label.textColor = .designSystem(.black)
-        label.text = "배달팁 2,000원"
         return label
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(tip: Int) {
+        self.deliveryTip = tip
+        super.init(frame: .zero)
         // MARK: - 컴포넌트 설정
         setUI()
         
@@ -64,6 +66,8 @@ private extension DeliveryInfoView {
         self.clipsToBounds = true
         self.layer.borderColor = .designSystem(.black)
         self.layer.borderWidth = 1
+        
+        deliveryTipLabel.text = "배달팁 " + deliveryTip.makePriceLabelFromNumber()
     }
     
     func setHierarchy() {

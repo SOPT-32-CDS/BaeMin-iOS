@@ -19,8 +19,9 @@ final class CartViewController: UIViewController {
     private var cartData = CartModel.cartDummy
     
     private let cartTableView = UITableView(frame: .zero, style: .grouped)
-    private lazy var tableViewFooterView = CartInfoView(delivertTip: cartData.menusByStore.map{$0.minimumPriceForDelivery}.reduce(0, +),
-                                                        totalPriceForPay: cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +), frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
+    private lazy var tableViewFooterView = CartInfoView(delivertTip: cartData.totalDeliveryTip,
+                                                        totalPrice: cartData.totalPrice,
+                                                        frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +33,6 @@ final class CartViewController: UIViewController {
         
         // MARK: - autolayout설정
         setLayout()
-        
-        // MARK: - button의 addtarget설정
-        setAddTarget()
         
         // MARK: - delegate설정
         setDelegate()
@@ -62,10 +60,6 @@ private extension CartViewController {
         }
     }
     
-    func setAddTarget() {
-        
-    }
-    
     func setDelegate() {
         cartTableView.dataSource = self
         cartTableView.delegate = self
@@ -76,7 +70,6 @@ private extension CartViewController {
         cartTableView.rowHeight = 196
         cartTableView.separatorStyle = .none
         cartTableView.sectionFooterHeight = 52
-
         cartTableView.tableFooterView = tableViewFooterView
     }
     
@@ -128,7 +121,7 @@ extension CartViewController: CartMenuCountDelegate {
         cartTableView.beginUpdates()
         cartTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .left)
         cartTableView.endUpdates()
-        tableViewFooterView.updateCart = cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +)
+        tableViewFooterView.updatePriceByDeleteMenu = cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +)
     }
     
     func priceChangeByMenuCount(singlePricePerMenu: Int) {

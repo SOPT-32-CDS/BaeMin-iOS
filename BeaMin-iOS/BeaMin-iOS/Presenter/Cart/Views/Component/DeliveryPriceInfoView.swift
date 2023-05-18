@@ -16,24 +16,23 @@ import DesignSystem
 
 final class DeliveryPriceInfoView: UIView {
     
-    var totalPriceForPay: Int {
+    private var totalPrice: Int {
         didSet {
-            self.totalPrice.text = totalPriceForPay.makePriceLabelFromNumber()
-            self.estimatedPaymentAmount.text = (totalPriceForPay + totalTip).makePriceLabelFromNumber()
+            self.totalPriceLabel.text = totalPrice.makePriceLabelFromNumber()
+            self.estimatedPaymentAmount.text = (totalPrice + totalTip).makePriceLabelFromNumber()
         }
     }
     
     var changeAmountPrice: Int = 0 {
         didSet {
-            totalPriceForPay += changeAmountPrice
+            totalPrice += changeAmountPrice
         }
     }
     
-    var updateCart: Int? {
+    var updatePriceByDeleteMenu: Int? {
         didSet {
-            guard let updateCart else { return }
-            totalPriceForPay = updateCart
-//            estimatedPaymentAmount.text = (updateCart + totalTip).makePriceLabelFromNumber()
+            guard let updatePriceByDeleteMenu else { return }
+            totalPrice = updatePriceByDeleteMenu
         }
     }
     
@@ -65,7 +64,7 @@ final class DeliveryPriceInfoView: UIView {
         return label
     }()
     
-    private var totalPrice: UILabel = {
+    private var totalPriceLabel: UILabel = {
         let label = UILabel()
         label.font = .pretendard(.h3Headline)
         label.textColor = .designSystem(.black)
@@ -89,8 +88,8 @@ final class DeliveryPriceInfoView: UIView {
     
     private let warningView = WarningView()
     
-    init(totalTip: Int, totalPriceForPay: Int) {
-        self.totalPriceForPay = totalPriceForPay
+    init(totalTip: Int, totalPrice: Int) {
+        self.totalPrice = totalPrice
         self.totalTip = totalTip
         super.init(frame: .zero)
         // MARK: - 컴포넌트 설정
@@ -120,7 +119,7 @@ final class DeliveryPriceInfoView: UIView {
             make.leading.equalToSuperview().inset(15)
         }
         
-        totalPrice.snp.makeConstraints { make in
+        totalPriceLabel.snp.makeConstraints { make in
             make.centerY.equalTo(totalPriceTitle.snp.centerY)
             make.trailing.equalToSuperview().inset(15)
         }
@@ -157,12 +156,12 @@ final class DeliveryPriceInfoView: UIView {
 private extension DeliveryPriceInfoView {
     func setUI() {
         backgroundColor = .designSystem(.white)
-        self.totalPrice.text = totalPriceForPay.makePriceLabelFromNumber()
-        self.estimatedPaymentAmount.text = (totalPriceForPay + totalTip).makePriceLabelFromNumber()
+        self.totalPriceLabel.text = totalPrice.makePriceLabelFromNumber()
+        self.estimatedPaymentAmount.text = (totalPrice + totalTip).makePriceLabelFromNumber()
     }
     
     func setHierarchy() {
-        addSubviews(totalPriceTitle, tipTitle, estimatedPaymentAmountTitle, totalPrice, tip, estimatedPaymentAmount, seperatedView, warningView)
+        addSubviews(totalPriceTitle, tipTitle, estimatedPaymentAmountTitle, totalPriceLabel, tip, estimatedPaymentAmount, seperatedView, warningView)
     }
     
     func setLayout() {

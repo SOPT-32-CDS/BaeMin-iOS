@@ -19,29 +19,13 @@ protocol CartMenuCountDelegate: AnyObject {
     func deleteRow(sender: UIButton)
 }
 
-
 final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
+    
     weak var delegate: CartMenuCountDelegate?
     
-    var menuData: CartMenu? {
+    var menuData: CartModel.CartMenu? {
         didSet {
-            guard let menuData else { return }
-            menuNameLabel.text = menuData.menuName
-            menuImageView.image = .assetImage(menuData.menuImage)
-            singlePricePerMenuLabel.text = "가격:" + menuData.singleMenuPrice.makePriceLabelFromNumber()
-            if menuData.sideInfo == nil {
-                sideInfoLabel.text = ""
-                totalPricePerMenuLabel.snp.remakeConstraints { make in
-                    make.top.equalTo(singlePricePerMenuLabel.snp.bottom).offset(12)
-                    make.leading.equalTo(menuImageView.snp.trailing).offset(12)
-                    make.trailing.equalToSuperview().inset(64)
-                }
-            } else {
-                sideInfoLabel.text = "사이드 추가선택:" + (menuData.sideInfo ?? "")
-            }
-            totalPrice = menuData.totalPricePerMenu
-            totalPricePerMenuLabel.text = (menuData.totalPricePerMenu).makePriceLabelFromNumber()
-            menuStepper.menuCount = menuData.menuCount
+            dataBind(menuData)
         }
     }
     
@@ -222,5 +206,25 @@ private extension CartStoreMenuTableViewCell {
             self.totalPrice += ((data.totalPricePerMenu / data.menuCount) * (count))
             self.delegate?.priceChangeByMenuCount(singlePricePerMenu: (data.totalPricePerMenu / data.menuCount) * (count))
         }
+    }
+    
+    func dataBind(_ menuData: CartModel.CartMenu?) {
+        guard let menuData else { return }
+        menuNameLabel.text = menuData.menuName
+        menuImageView.image = .assetImage(menuData.menuImage)
+        singlePricePerMenuLabel.text = "가격:" + menuData.singleMenuPrice.makePriceLabelFromNumber()
+        if menuData.sideInfo == nil {
+            sideInfoLabel.text = ""
+            totalPricePerMenuLabel.snp.remakeConstraints { make in
+                make.top.equalTo(singlePricePerMenuLabel.snp.bottom).offset(12)
+                make.leading.equalTo(menuImageView.snp.trailing).offset(12)
+                make.trailing.equalToSuperview().inset(64)
+            }
+        } else {
+            sideInfoLabel.text = "사이드 추가선택:" + (menuData.sideInfo ?? "")
+        }
+        totalPrice = menuData.totalPricePerMenu
+        totalPricePerMenuLabel.text = (menuData.totalPricePerMenu).makePriceLabelFromNumber()
+        menuStepper.menuCount = menuData.menuCount
     }
 }

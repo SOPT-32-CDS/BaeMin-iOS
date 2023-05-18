@@ -33,9 +33,6 @@ final class WarningView: UIView {
         
         // MARK: - addsubView
         setHierarchy()
-        
-        // MARK: - autolayout설정
-        setLayout()
     }
     
     @available(*, unavailable)
@@ -59,9 +56,5 @@ private extension WarningView {
     
     func setHierarchy() {
         addSubview(warningLabel)
-    }
-    
-    func setLayout() {
-
     }
 }

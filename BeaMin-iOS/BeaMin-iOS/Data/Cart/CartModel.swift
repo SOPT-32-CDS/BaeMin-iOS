@@ -11,24 +11,35 @@ import DesignSystem
 import CustomExtension
 
 struct CartModel {
+    
+    struct MenuByStore {
+        let storeImage: Constant.ImageName
+        let storeName: String
+        var cartMenus: [CartMenu]
+        let minimumPriceForDelivery: Int
+    }
+
+    struct CartMenu {
+        let menuImage: Constant.ImageName
+        let menuName: String
+        let sideInfo: String?
+        let singleMenuPrice: Int
+        let totalPricePerMenu: Int
+        let menuCount: Int
+    }
+    
     var menusByStore: [MenuByStore]
+    
+    var totalDeliveryTip: Int {
+        return menusByStore.map{ $0.minimumPriceForDelivery }.reduce(0, +)
+    }
+    
+    var totalPrice: Int {
+        return menusByStore.map{ $0.cartMenus }.flatMap{ $0 }.map{ $0.totalPricePerMenu }.reduce(0, +)
+    }
 }
 
-struct MenuByStore {
-    let storeImage: Constant.ImageName
-    let storeName: String
-    var cartMenus: [CartMenu]
-    let minimumPriceForDelivery: Int
-}
 
-struct CartMenu {
-    let menuImage: Constant.ImageName
-    let menuName: String
-    let sideInfo: String?
-    let singleMenuPrice: Int
-    let totalPricePerMenu: Int
-    let menuCount: Int
-}
 
 
 
