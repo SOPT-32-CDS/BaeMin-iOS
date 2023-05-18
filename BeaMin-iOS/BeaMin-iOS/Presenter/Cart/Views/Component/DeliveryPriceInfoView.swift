@@ -87,19 +87,9 @@ final class DeliveryPriceInfoView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-}
-
-private extension DeliveryPriceInfoView {
-    func setUI() {
-        backgroundColor = .designSystem(.white)
-    }
     
-    func setHierarchy() {
-        addSubviews(totalPriceTitle, tipTitle, estimatedPaymentAmountTitle, totalPrice, tip, estimatedPaymentAmount, seperatedView, warningView)
-    }
-    
-    func setLayout() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
         totalPriceTitle.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(22)
             make.leading.equalToSuperview().inset(15)
@@ -140,5 +130,20 @@ private extension DeliveryPriceInfoView {
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+    }
+
+}
+
+private extension DeliveryPriceInfoView {
+    func setUI() {
+        backgroundColor = .designSystem(.white)
+    }
+    
+    func setHierarchy() {
+        addSubviews(totalPriceTitle, tipTitle, estimatedPaymentAmountTitle, totalPrice, tip, estimatedPaymentAmount, seperatedView, warningView)
+    }
+    
+    func setLayout() {
+
     }
 }

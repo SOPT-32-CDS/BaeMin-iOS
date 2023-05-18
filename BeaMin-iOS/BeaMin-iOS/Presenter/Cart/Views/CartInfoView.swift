@@ -58,19 +58,9 @@ final class CartInfoView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-}
-
-private extension CartInfoView {
-    func setUI() {
-        backgroundColor = .designSystem(.white)
-    }
     
-    func setHierarchy() {
-        addSubviews(topSeperatedView, deliveryLabel, deliveryInfoView, bottomSeperatedView, priceInfoView)
-    }
-    
-    func setLayout() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
         topSeperatedView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
         }
@@ -95,6 +85,21 @@ private extension CartInfoView {
             make.top.equalTo(bottomSeperatedView.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
         }
+    }
+
+}
+
+private extension CartInfoView {
+    func setUI() {
+        backgroundColor = .designSystem(.white)
+    }
+    
+    func setHierarchy() {
+        addSubviews(topSeperatedView, deliveryLabel, deliveryInfoView, bottomSeperatedView, priceInfoView)
+    }
+    
+    func setLayout() {
+
     }
     
     func setAddTarget() {

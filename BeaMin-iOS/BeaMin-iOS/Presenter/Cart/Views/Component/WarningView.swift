@@ -43,6 +43,13 @@ final class WarningView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        warningLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(15)
+        }
+    }
 }
 
 private extension WarningView {
@@ -55,9 +62,6 @@ private extension WarningView {
     }
     
     func setLayout() {
-        warningLabel.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(15)
-        }
+
     }
 }
