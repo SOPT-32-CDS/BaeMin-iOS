@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */; };
+		A4D727082A15DC8700A00E16 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727072A15DC8700A00E16 /* UIButton+.swift */; };
+		A4D7270A2A15DCEF00A00E16 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */; };
+		A4D7270C2A15DD8700A00E16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7270B2A15DD8700A00E16 /* HomeViewController.swift */; };
 		C0066C122A11F56A00EC40FB /* BMHANNAPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */; };
 		C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C172A127AF800EC40FB /* OrderDetail.swift */; };
 		C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C192A127F2F00EC40FB /* Home.swift */; };
@@ -51,7 +55,6 @@
 		C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */; };
 		C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */; };
 		C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15D2A0FBC830008C814 /* HomeManager.swift */; };
-		C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */; };
 		C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1612A0FBC930008C814 /* HomeView.swift */; };
 		C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */; };
 		C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1712A0FBD2F0008C814 /* CustomExtension.docc */; };
@@ -128,6 +131,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
+		A4D727072A15DC8700A00E16 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		A4D7270B2A15DD8700A00E16 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAPro.ttf; sourceTree = "<group>"; };
 		C0066C172A127AF800EC40FB /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		C0066C192A127F2F00EC40FB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -171,7 +178,6 @@
 		C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
 		C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainView.swift; sourceTree = "<group>"; };
 		C01BB15D2A0FBC830008C814 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
-		C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomViewController.swift; sourceTree = "<group>"; };
 		C01BB1612A0FBC930008C814 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailManager.swift; sourceTree = "<group>"; };
 		C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +237,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4D727042A15DBE100A00E16 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */,
+				A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 		C0066C132A127A5600EC40FB /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +495,7 @@
 		C01BB1542A0FBC3E0008C814 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4D727042A15DBE100A00E16 /* CustomTabBar */,
 				C01BB1612A0FBC930008C814 /* HomeView.swift */,
 			);
 			path = View;
@@ -488,7 +504,7 @@
 		C01BB1552A0FBC420008C814 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C01BB15F2A0FBC8B0008C814 /* HomViewController.swift */,
+				A4D7270B2A15DD8700A00E16 /* HomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -537,6 +553,7 @@
 				C01BB1962A0FBEAA0008C814 /* String+.swift */,
 				C01BB1982A0FBEFC0008C814 /* UIControl+.swift */,
 				C00E1C8D2A13B83F00F87D5B /* Int+.swift */,
+				A4D727072A15DC8700A00E16 /* UIButton+.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -777,20 +794,22 @@
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
 				C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */,
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
+				A4D7270A2A15DCEF00A00E16 /* CustomTabBarView.swift in Sources */,
 				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
 				C00E1C922A13BDA400F87D5B /* AddMenuTableViewCell.swift in Sources */,
 				C00E1CA12A13F88300F87D5B /* SeperateView.swift in Sources */,
 				C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */,
+				A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */,
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
 				C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */,
 				C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */,
+				A4D7270C2A15DD8700A00E16 /* HomeViewController.swift in Sources */,
 				C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */,
 				C00E1C9D2A13F28B00F87D5B /* BMBasicButton.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */,
 				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
-				C01BB1602A0FBC8B0008C814 /* HomViewController.swift in Sources */,
 				C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */,
 				C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */,
 			);
@@ -824,6 +843,7 @@
 				C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */,
 				C01BB18D2A0FBD560008C814 /* CollectionViewCellReuseProtocol.swift in Sources */,
 				C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */,
+				A4D727082A15DC8700A00E16 /* UIButton+.swift in Sources */,
 				C01BB1922A0FBDF10008C814 /* Constant.swift in Sources */,
 				C01BB1992A0FBEFC0008C814 /* UIControl+.swift in Sources */,
 				C01BB1972A0FBEAA0008C814 /* String+.swift in Sources */,
