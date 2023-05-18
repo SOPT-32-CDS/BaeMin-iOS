@@ -91,6 +91,7 @@ extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CartStoreMenuTableViewCell.dequeueReusableCell(tableView: tableView)
         cell.menuData = cartData.menusByStore[indexPath.section].cartMenus[indexPath.row]
+        cell.selectionStyle = .none
         cell.delegate = self
         return cell
     }
