@@ -1,9 +1,9 @@
 //
-//  CartInfoView.swift
+//  CartStoreMenuTableViewFooterView.swift
 //  BeaMin-iOS
 //
 //  Created by uiskim on 2023/05/18.
-//  Copyright (c) 2023 CartInfo. All rights reserved.
+//  Copyright (c) 2023 CartStoreMenuTableViewFooter. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,17 @@ import Then
 import CustomExtension
 import DesignSystem
 
-final class CartInfoView: UIView {
+final class CartStoreMenuTableViewFooterView: UIView {
+    
+    private let deliveryLabel: UILabel = {
+        let label = UILabel()
+        label.font = .pretendard(.body1)
+        label.textColor = .designSystem(.black)
+        label.text = "배달로 받을게요"
+        return label
+    }()
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,7 +51,7 @@ final class CartInfoView: UIView {
 
 }
 
-private extension CartInfoView {
+private extension CartStoreMenuTableViewFooterView {
     func setUI() {
         
     }

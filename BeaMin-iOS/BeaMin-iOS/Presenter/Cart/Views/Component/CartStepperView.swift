@@ -18,7 +18,7 @@ final class CartStepperView: UIView {
     
     weak var delegate: menuCountDelegate?
     
-    private var menuCount: Int = 1 {
+    var menuCount: Int = 1 {
         didSet {
             menuCountLabel.text = menuCount.description
             self.delegate?.priceChangeByMenuCount(menuCont: menuCount)

@@ -73,7 +73,8 @@ private extension CartViewController {
         CartStoreMenuTableViewCell.register(tableView: cartTableView)
         cartTableView.rowHeight = 196
         cartTableView.separatorStyle = .none
-        cartTableView.sectionFooterHeight = 0
+        cartTableView.sectionFooterHeight = 52
+        cartTableView.tableFooterView = CartInfoView(delivertTip: 2000, frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
     }
     
     func setNavigation() {
@@ -107,5 +108,10 @@ extension CartViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 74
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let sectionFooterView = CartStoreMenuSectionFooterView()
+        return sectionFooterView
     }
 }

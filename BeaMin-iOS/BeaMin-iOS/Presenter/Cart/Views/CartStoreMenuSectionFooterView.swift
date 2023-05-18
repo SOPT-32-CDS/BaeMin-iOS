@@ -16,6 +16,15 @@ import DesignSystem
 
 final class CartStoreMenuSectionFooterView: UIView {
     
+    private let moreOrderButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("더 담으러 가기", for: .normal)
+        button.setImage(.assetImage(.mini_plus), for: .normal)
+        button.titleLabel?.font = .pretendard(.body2Bold)
+        button.tintColor = .designSystem(.black)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         // MARK: - 컴포넌트 설정
@@ -26,12 +35,6 @@ final class CartStoreMenuSectionFooterView: UIView {
         
         // MARK: - autolayout설정
         setLayout()
-        
-        // MARK: - button의 addtarget설정
-        setAddTarget()
-        
-        // MARK: - delegate설정
-        setDelegate()
     }
     
     @available(*, unavailable)
@@ -43,22 +46,18 @@ final class CartStoreMenuSectionFooterView: UIView {
 
 private extension CartStoreMenuSectionFooterView {
     func setUI() {
-        
+        backgroundColor = .designSystem(.white)
     }
     
     func setHierarchy() {
-        
+        addSubview(moreOrderButton)
     }
     
     func setLayout() {
-        
-    }
-    
-    func setAddTarget() {
-        
-    }
-    
-    func setDelegate() {
-        
+        moreOrderButton.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.height.equalTo(22)
+            make.width.equalTo(114)
+        }
     }
 }

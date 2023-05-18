@@ -32,8 +32,8 @@ final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProto
             } else {
                 sideInfoLabel.text = "사이드 추가선택:" + (menuData.sideInfo ?? "")
             }
-
             totalPricePerMenuLabel.text = menuData.totalPricePerMenu.makePriceLabelFromNumber()
+            menuStepper.menuCount = menuData.menuCount
         }
     }
     
