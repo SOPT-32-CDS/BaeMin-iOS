@@ -79,6 +79,9 @@ public struct Constant {
         case minus
         case plus
         
+        case mini_minus
+        case mini_plus
+        
         var real: String {
             return self.rawValue
         }

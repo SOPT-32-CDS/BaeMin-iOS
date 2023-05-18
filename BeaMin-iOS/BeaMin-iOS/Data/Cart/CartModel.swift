@@ -1,5 +1,5 @@
 //
-//  Card.swift
+//  CartModel.swift
 //  BeaMin-iOS
 //
 //  Created by uiskim on 2023/05/18.
@@ -10,9 +10,9 @@ import Foundation
 import DesignSystem
 import CustomExtension
 
-struct Cart {
+struct CartModel {
     
-    let menusByStroe: [MenuByStore]
+    let menusByStore: [MenuByStore]
     
     struct MenuByStore {
         let storeImage: Constant.ImageName
@@ -31,10 +31,10 @@ struct Cart {
     }
 }
 
-extension Cart {
-    static var cartDummy: [Cart] {
-        return [
-            .init(menusByStroe: [
+extension CartModel {
+    static var cartDummy: CartModel {
+        return
+            .init(menusByStore: [
                 .init(storeImage: .logoImage,
                       storeName: "청담초밥 송파점",
                       cartMenus: sushiMenus,
@@ -44,7 +44,7 @@ extension Cart {
                       cartMenus: tanghuruMenus,
                       minimumPriceForDelivery: 3000)
             ])
-        ]
+        
     }
     
     static var sushiMenus: [Menu] {
