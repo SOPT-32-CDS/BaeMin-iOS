@@ -16,24 +16,39 @@ import DesignSystem
 
 final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
     
-//    var menuData: Cart.Menu? {
-//        didSet {
-//            guard let menuData else { return }
-//        }
-//    }
+    var menuData: CartMenu? {
+        didSet {
+            guard let menuData else { return }
+            menuNameLabel.text = menuData.menuName
+            menuImageView.image = .assetImage(menuData.menuImage)
+            singlePricePerMenuLabel.text = "가격:" + menuData.singleMenuPrice.makePriceLabelFromNumber()
+            if menuData.sideInfo == nil {
+                sideInfoLabel.text = ""
+                totalPricePerMenuLabel.snp.remakeConstraints { make in
+                    make.top.equalTo(singlePricePerMenuLabel.snp.bottom).offset(12)
+                    make.leading.equalTo(menuImageView.snp.trailing).offset(12)
+                    make.trailing.equalToSuperview().inset(64)
+                }
+            } else {
+                sideInfoLabel.text = "사이드 추가선택:" + (menuData.sideInfo ?? "")
+            }
+
+            totalPricePerMenuLabel.text = menuData.totalPricePerMenu.makePriceLabelFromNumber()
+        }
+    }
+    
+    private let sectionLine = SeperateView(height: 1)
     
     private let menuNameLabel: UILabel = {
         let label = UILabel()
         label.font = .pretendard(.h3Headline)
         label.textColor = .designSystem(.black)
-        label.text = "[갓성비]모둠초밥"
         return label
     }()
     
     private let menuImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.image = .assetImage(.menu13)
         imageView.layer.cornerRadius = 8
         imageView.clipsToBounds = true
         return imageView
@@ -43,7 +58,6 @@ final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProto
         let label = UILabel()
         label.font = .pretendard(.body2Bold)
         label.textColor = .designSystem(.gray1)
-        label.text = "가격 : 11,000원"
         return label
     }()
     
@@ -51,7 +65,6 @@ final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProto
         let label = UILabel()
         label.font = .pretendard(.body2Bold)
         label.textColor = .designSystem(.gray1)
-        label.text = "사이드 추가선택 : 7,000원"
         return label
     }()
     
@@ -59,13 +72,12 @@ final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProto
         let label = UILabel()
         label.font = .pretendard(.h3Headline)
         label.textColor = .designSystem(.black)
-        label.text = 36000.makePriceLabelFromNumber()
         return label
     }()
     
     private let deleteButton: UIButton = {
         let button = UIButton()
-        button.setImage(.assetImage(.homeButton), for: .normal)
+        button.setImage(.assetImage(.delete), for: .normal)
         return button
     }()
     
@@ -114,10 +126,15 @@ private extension CartStoreMenuTableViewCell {
     }
     
     func setHierarchy() {
-        contentView.addSubviews(menuNameLabel, singlePricePerMenuLabel, menuImageView, sideInfoLabel, totalPricePerMenuLabel, deleteButton, optionChangeButton, menuStepper)
+        contentView.addSubviews(sectionLine, menuNameLabel, singlePricePerMenuLabel, menuImageView, sideInfoLabel, totalPricePerMenuLabel, deleteButton, optionChangeButton, menuStepper)
     }
     
     func setLayout() {
+        
+        sectionLine.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+        }
+        
         menuNameLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(18)
             make.leading.equalToSuperview().inset(15)

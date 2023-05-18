@@ -18,7 +18,7 @@ final class CartViewController: UIViewController {
     
     private let cartData = CartModel.cartDummy
     
-    private let cartTableView = UITableView()
+    private let cartTableView = UITableView(frame: .zero, style: .grouped)
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,8 @@ final class CartViewController: UIViewController {
         
         // MARK: - tableView설정
         setTableView()
+        
+        setNavigation()
 
     }
 }
@@ -70,6 +72,12 @@ private extension CartViewController {
     func setTableView() {
         CartStoreMenuTableViewCell.register(tableView: cartTableView)
         cartTableView.rowHeight = 196
+        cartTableView.separatorStyle = .none
+        cartTableView.sectionFooterHeight = 0
+    }
+    
+    func setNavigation() {
+        self.navigationController?.navigationBar.isHidden = true
     }
 }
 
@@ -85,12 +93,19 @@ extension CartViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CartStoreMenuTableViewCell.dequeueReusableCell(tableView: tableView)
+        cell.menuData = cartData.menusByStore[indexPath.section].cartMenus[indexPath.row]
         return cell
     }
 }
 
 extension CartViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "section입니다"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionHeaderView = CartStoreMenuSectionHeaderView()
+        sectionHeaderView.configure(storeName: cartData.menusByStore[section].storeName, storeImage: cartData.menusByStore[section].storeImage)
+        return sectionHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 74
     }
 }
