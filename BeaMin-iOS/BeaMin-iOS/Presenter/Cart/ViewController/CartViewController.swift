@@ -19,6 +19,7 @@ final class CartViewController: UIViewController {
     private let cartData = CartModel.cartDummy
     
     private let cartTableView = UITableView(frame: .zero, style: .grouped)
+    private lazy var tableViewFooterView = CartInfoView(delivertTip: cartData.menusByStore.map{$0.minimumPriceForDelivery}.reduce(0, +), totalPriceForPay: cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +), frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +75,8 @@ private extension CartViewController {
         cartTableView.rowHeight = 196
         cartTableView.separatorStyle = .none
         cartTableView.sectionFooterHeight = 52
-        cartTableView.tableFooterView = CartInfoView(delivertTip: 2000, frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
+
+        cartTableView.tableFooterView = tableViewFooterView
     }
     
     func setNavigation() {
@@ -95,6 +97,7 @@ extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CartStoreMenuTableViewCell.dequeueReusableCell(tableView: tableView)
         cell.menuData = cartData.menusByStore[indexPath.section].cartMenus[indexPath.row]
+        cell.delegate = self
         return cell
     }
 }
@@ -113,5 +116,11 @@ extension CartViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let sectionFooterView = CartStoreMenuSectionFooterView()
         return sectionFooterView
+    }
+}
+
+extension CartViewController: CartMenuCountDelegate {
+    func priceChangeByMenuCount(singlePricePerMenu: Int) {
+        tableViewFooterView.priceChangeAmount = singlePricePerMenu
     }
 }

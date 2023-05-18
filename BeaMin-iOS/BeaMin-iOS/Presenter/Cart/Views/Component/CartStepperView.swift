@@ -16,12 +16,11 @@ import DesignSystem
 
 final class CartStepperView: UIView {
     
-    weak var delegate: menuCountDelegate?
+    var cartDataBind: ((Int)->Void)?
     
     var menuCount: Int = 1 {
         didSet {
             menuCountLabel.text = menuCount.description
-            self.delegate?.priceChangeByMenuCount(menuCont: menuCount)
         }
     }
     
@@ -100,10 +99,12 @@ private extension CartStepperView {
     func setAddTarget() {
         appendButton.addButtonAction { sender in
             self.menuCount += 1
+            self.cartDataBind?(1)
         }
         reduceButton.addButtonAction { sender in
             if self.menuCount >= 2 {
                 self.menuCount -= 1
+                self.cartDataBind?(-1)
             }
         }
     }

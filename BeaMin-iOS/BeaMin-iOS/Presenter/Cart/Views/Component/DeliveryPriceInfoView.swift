@@ -16,6 +16,19 @@ import DesignSystem
 
 final class DeliveryPriceInfoView: UIView {
     
+    var totalPriceForPay: Int {
+        didSet {
+            self.totalPrice.text = totalPriceForPay.makePriceLabelFromNumber()
+            self.estimatedPaymentAmount.text = (totalPriceForPay + totalTip).makePriceLabelFromNumber()
+        }
+    }
+    
+    var changeAmountPrice: Int = 0 {
+        didSet {
+            totalPriceForPay += changeAmountPrice
+        }
+    }
+    
     private let totalTip: Int
     
     private let totalPriceTitle: UILabel = {
@@ -48,7 +61,6 @@ final class DeliveryPriceInfoView: UIView {
         let label = UILabel()
         label.font = .pretendard(.h3Headline)
         label.textColor = .designSystem(.black)
-        label.text = 78600.makePriceLabelFromNumber()
         return label
     }()
     
@@ -64,13 +76,13 @@ final class DeliveryPriceInfoView: UIView {
         let label = UILabel()
         label.font = .pretendard(.h3Headline)
         label.textColor = .designSystem(.black)
-        label.text = 80600.makePriceLabelFromNumber()
         return label
     }()
     
     private let warningView = WarningView()
     
-    init(totalTip: Int) {
+    init(totalTip: Int, totalPriceForPay: Int) {
+        self.totalPriceForPay = totalPriceForPay
         self.totalTip = totalTip
         super.init(frame: .zero)
         // MARK: - 컴포넌트 설정
@@ -137,6 +149,8 @@ final class DeliveryPriceInfoView: UIView {
 private extension DeliveryPriceInfoView {
     func setUI() {
         backgroundColor = .designSystem(.white)
+        self.totalPrice.text = totalPriceForPay.makePriceLabelFromNumber()
+        self.estimatedPaymentAmount.text = (totalPriceForPay + totalTip).makePriceLabelFromNumber()
     }
     
     func setHierarchy() {

@@ -14,7 +14,13 @@ import Then
 import CustomExtension
 import DesignSystem
 
+protocol CartMenuCountDelegate: AnyObject {
+    func priceChangeByMenuCount(singlePricePerMenu: Int)
+}
+
 final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
+    
+    weak var delegate: CartMenuCountDelegate?
     
     var menuData: CartMenu? {
         didSet {
@@ -32,8 +38,15 @@ final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProto
             } else {
                 sideInfoLabel.text = "사이드 추가선택:" + (menuData.sideInfo ?? "")
             }
-            totalPricePerMenuLabel.text = menuData.totalPricePerMenu.makePriceLabelFromNumber()
+            totalPrice = menuData.totalPricePerMenu
+            totalPricePerMenuLabel.text = (menuData.totalPricePerMenu).makePriceLabelFromNumber()
             menuStepper.menuCount = menuData.menuCount
+        }
+    }
+    
+    private var totalPrice: Int = 0 {
+        didSet {
+            totalPricePerMenuLabel.text = totalPrice.makePriceLabelFromNumber()
         }
     }
     
@@ -203,6 +216,10 @@ private extension CartStoreMenuTableViewCell {
     }
     
     func setDelegate() {
-        
+        menuStepper.cartDataBind = { count in
+            guard let data = self.menuData else { return }
+            self.totalPrice += ((data.totalPricePerMenu / data.menuCount) * (count))
+            self.delegate?.priceChangeByMenuCount(singlePricePerMenu: (data.totalPricePerMenu / data.menuCount) * (count))
+        }
     }
 }

@@ -16,6 +16,13 @@ import DesignSystem
 
 final class CartInfoView: UIView {
     
+    var priceChangeAmount: Int = 0 {
+        didSet {
+            priceInfoView.changeAmountPrice = priceChangeAmount
+        }
+    }
+    
+    private var totalPriceForPay: Int
     private let delivertTip: Int
     
     private let topSeperatedView = SeperateView(height: 10)
@@ -32,11 +39,12 @@ final class CartInfoView: UIView {
     
     private let bottomSeperatedView = SeperateView(height: 10)
     
-    private lazy var priceInfoView = DeliveryPriceInfoView(totalTip: delivertTip)
+    private lazy var priceInfoView = DeliveryPriceInfoView(totalTip: delivertTip, totalPriceForPay: totalPriceForPay)
     
     
-    init(delivertTip: Int, frame: CGRect) {
+    init(delivertTip: Int, totalPriceForPay: Int, frame: CGRect) {
         self.delivertTip = delivertTip
+        self.totalPriceForPay = totalPriceForPay
         super.init(frame: frame)
         // MARK: - 컴포넌트 설정
         setUI()
