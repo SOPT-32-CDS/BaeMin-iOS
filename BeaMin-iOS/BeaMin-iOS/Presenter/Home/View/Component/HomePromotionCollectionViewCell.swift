@@ -16,7 +16,8 @@ import DesignSystem
 
 final class HomePromotionCollectionViewCell: UICollectionViewCell, CollectionViewCellReuseProtocol {
     
-    static let identifier = "HomePromotionCollectionViewCell"
+    // MARK: - CollectionViewCellReuseProtocol을 채택하면 identifier안만들어도 됩니다
+//    static let identifier = "HomePromotionCollectionViewCell"
     
     private let promotionButton = UIButton()
     private let promotionLabel = UILabel()
@@ -41,7 +42,7 @@ final class HomePromotionCollectionViewCell: UICollectionViewCell, CollectionVie
 
 private extension HomePromotionCollectionViewCell {
     func setUI() {
-        
+        backgroundColor = .blue
         promotionButton.do {
             $0.backgroundColor = .designSystem(.darkGreen)
             $0.setTitle("으아아", for: .normal)
