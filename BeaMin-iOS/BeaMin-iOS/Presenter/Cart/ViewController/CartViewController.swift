@@ -24,7 +24,7 @@ final class CartViewController: UIViewController {
                                                         totalPrice: cartData.totalPrice,
                                                         frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
     
-    private lazy var cartButton = CartInfoButton(totalPrice: cartData.totalPrice, totalCount: cartData.totalMenuCount)
+    private lazy var cartButton = CartInfoButton(totalPrice: cartData.totalPrice + cartData.totalDeliveryTip, totalCount: cartData.totalMenuCount)
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +84,7 @@ private extension CartViewController {
         CartStoreMenuTableViewCell.register(tableView: cartTableView)
         cartTableView.rowHeight = 196
         cartTableView.separatorStyle = .none
-        cartTableView.sectionFooterHeight = 52
+        cartTableView.sectionFooterHeight = 45
         cartTableView.tableFooterView = tableViewFooterView
     }
     
@@ -132,6 +132,12 @@ extension CartViewController: UITableViewDelegate {
 }
 
 extension CartViewController: CartMenuCountDelegate {
+    func deleteCartMenu(deleteCount: Int, price: Int) {
+        cartButton.totalCount -= deleteCount
+        tableViewFooterView.updatePriceByDeleteMenu = price
+        cartButton.totalPrice -= price
+    }
+    
     func changeCarMenuCount(count: Int) {
         cartButton.totalCount += count
     }
@@ -143,9 +149,6 @@ extension CartViewController: CartMenuCountDelegate {
         cartTableView.beginUpdates()
         cartTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .left)
         cartTableView.endUpdates()
-        tableViewFooterView.updatePriceByDeleteMenu = cartData.totalPrice
-        cartButton.totalCount = cartData.totalMenuCount
-        cartButton.totalPrice = cartData.totalPrice
     }
     
     func priceChangeByMenuCount(singlePricePerMenu: Int) {

@@ -18,6 +18,7 @@ protocol CartMenuCountDelegate: AnyObject {
     func priceChangeByMenuCount(singlePricePerMenu: Int)
     func deleteRow(sender: UIButton)
     func changeCarMenuCount(count: Int)
+    func deleteCartMenu(deleteCount: Int, price: Int)
 }
 
 final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
@@ -194,6 +195,7 @@ private extension CartStoreMenuTableViewCell {
     func setAddTarget() {
         deleteButton.addButtonAction { sender in
             self.delegate?.deleteRow(sender: sender)
+            self.delegate?.deleteCartMenu(deleteCount: self.menuStepper.menuCount, price: self.totalPrice)
         }
         
         optionChangeButton.addButtonAction { sender in

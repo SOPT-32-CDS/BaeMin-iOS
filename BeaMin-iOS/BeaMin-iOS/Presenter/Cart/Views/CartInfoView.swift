@@ -22,15 +22,15 @@ final class CartInfoView: UIView {
         }
     }
     
-    var updatePriceByDeleteMenu: Int? {
+    var updatePriceByDeleteMenu: Int = 0 {
         didSet {
-            guard let updatePriceByDeleteMenu else { return }
             priceInfoView.updatePriceByDeleteMenu = updatePriceByDeleteMenu
         }
     }
 
     
     private var totalPrice: Int
+    
     private var delivertTip: Int
     private let topSeperatedView = SeperateView(height: 10)
     

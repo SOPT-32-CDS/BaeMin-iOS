@@ -29,10 +29,10 @@ final class DeliveryPriceInfoView: UIView {
         }
     }
     
-    var updatePriceByDeleteMenu: Int? {
+    var updatePriceByDeleteMenu: Int = 0 {
         didSet {
-            guard let updatePriceByDeleteMenu else { return }
-            totalPrice = updatePriceByDeleteMenu
+            print(updatePriceByDeleteMenu)
+            totalPrice -= updatePriceByDeleteMenu
         }
     }
     
