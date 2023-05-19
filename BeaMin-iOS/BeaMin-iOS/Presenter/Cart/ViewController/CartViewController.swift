@@ -18,10 +18,13 @@ final class CartViewController: UIViewController {
     
     private var cartData = CartModel.cartDummy
     
+    private let BMnavigationBar = BMNavigationBar()
     private let cartTableView = UITableView(frame: .zero, style: .grouped)
     private lazy var tableViewFooterView = CartInfoView(delivertTip: cartData.totalDeliveryTip,
                                                         totalPrice: cartData.totalPrice,
                                                         frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
+    
+    private lazy var cartButton = CartInfoButton(totalPrice: cartData.totalPrice, totalCount: cartData.totalMenuCount)
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +51,28 @@ final class CartViewController: UIViewController {
 private extension CartViewController {
     func setUI() {
         view.backgroundColor = .designSystem(.white)
+        print(cartData.totalMenuCount)
     }
     
     func setHierarchy() {
-        view.addSubviews(cartTableView)
+        view.addSubviews(cartTableView, BMnavigationBar, cartButton)
     }
     
     func setLayout() {
         cartTableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(BMnavigationBar.snp.bottom)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(cartButton.snp.top).offset(-12)
         }
+        BMnavigationBar.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+        }
+        
+        cartButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(50)
+            make.leading.trailing.equalToSuperview().inset(11.5)
+        }
+
     }
     
     func setDelegate() {
@@ -75,6 +90,8 @@ private extension CartViewController {
     
     func setNavigation() {
         self.navigationController?.navigationBar.isHidden = true
+        BMnavigationBar.backgroundColor = .designSystem(.white)
+        BMnavigationBar.buttonTintColor = .designSystem(.black)
     }
 }
 
@@ -115,6 +132,10 @@ extension CartViewController: UITableViewDelegate {
 }
 
 extension CartViewController: CartMenuCountDelegate {
+    func changeCarMenuCount(count: Int) {
+        cartButton.totalCount += count
+    }
+    
     func deleteRow(sender: UIButton) {
         let point = sender.convert(CGPoint.zero, to: cartTableView)
         guard let indexPath = cartTableView.indexPathForRow(at: point) else { return }
@@ -122,10 +143,14 @@ extension CartViewController: CartMenuCountDelegate {
         cartTableView.beginUpdates()
         cartTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .left)
         cartTableView.endUpdates()
-        tableViewFooterView.updatePriceByDeleteMenu = cartData.menusByStore.map{$0.cartMenus}.flatMap{$0}.map{$0.totalPricePerMenu}.reduce(0, +)
+        tableViewFooterView.updatePriceByDeleteMenu = cartData.totalPrice
+        cartButton.totalCount = cartData.totalMenuCount
+        cartButton.totalPrice = cartData.totalPrice
     }
     
     func priceChangeByMenuCount(singlePricePerMenu: Int) {
+        print(singlePricePerMenu)
         tableViewFooterView.priceChangeAmount = singlePricePerMenu
+        cartButton.changePrice = singlePricePerMenu
     }
 }

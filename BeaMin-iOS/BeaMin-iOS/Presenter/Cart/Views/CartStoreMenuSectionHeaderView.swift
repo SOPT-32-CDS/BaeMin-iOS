@@ -14,7 +14,6 @@ import Then
 import CustomExtension
 import DesignSystem
 
-///
 final class CartStoreMenuSectionHeaderView: UIView {
     
     private let sectionLine = SeperateView(height: 10)

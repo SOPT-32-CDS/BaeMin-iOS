@@ -78,6 +78,7 @@
 		C069698F2A16539A008663C9 /* DeliveryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C069698E2A16539A008663C9 /* DeliveryInfoView.swift */; };
 		C06969912A16566E008663C9 /* DeliveryPriceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06969902A16566E008663C9 /* DeliveryPriceInfoView.swift */; };
 		C06969952A165846008663C9 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06969942A165846008663C9 /* WarningView.swift */; };
+		C07E6A3E2A17BCDC0006A61E /* CartInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E6A3D2A17BCDC0006A61E /* CartInfoButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		C069698E2A16539A008663C9 /* DeliveryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryInfoView.swift; sourceTree = "<group>"; };
 		C06969902A16566E008663C9 /* DeliveryPriceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPriceInfoView.swift; sourceTree = "<group>"; };
 		C06969942A165846008663C9 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
+		C07E6A3D2A17BCDC0006A61E /* CartInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInfoButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 				C069698E2A16539A008663C9 /* DeliveryInfoView.swift */,
 				C06969902A16566E008663C9 /* DeliveryPriceInfoView.swift */,
 				C06969942A165846008663C9 /* WarningView.swift */,
+				C07E6A3D2A17BCDC0006A61E /* CartInfoButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -869,6 +872,7 @@
 				C00E1CB92A16355D00F87D5B /* CartInfoView.swift in Sources */,
 				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
 				C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */,
+				C07E6A3E2A17BCDC0006A61E /* CartInfoButton.swift in Sources */,
 				C00E1CA52A13FA5700F87D5B /* MenuStepperView.swift in Sources */,
 				C00E1CA72A147C1100F87D5B /* BMNavigationBar.swift in Sources */,
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,

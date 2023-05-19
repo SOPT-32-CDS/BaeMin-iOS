@@ -37,6 +37,10 @@ struct CartModel {
     var totalPrice: Int {
         return menusByStore.map{ $0.cartMenus }.flatMap{ $0 }.map{ $0.totalPricePerMenu }.reduce(0, +)
     }
+    
+    var totalMenuCount: Int {
+        return menusByStore.map{ $0.cartMenus }.flatMap{ $0 }.map{ $0.menuCount }.reduce(0, +)
+    }
 }
 
 
