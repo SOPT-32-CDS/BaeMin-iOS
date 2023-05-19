@@ -15,9 +15,9 @@ import CustomExtension
 import DesignSystem
 
 final class HomeViewController: UIViewController {
-
-    private let promotionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
     
+    private lazy var promotionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+    private let flowLayout = UICollectionViewFlowLayout()
     private let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
     
     public override func viewDidLoad() {
@@ -39,6 +39,11 @@ private extension HomeViewController {
         view.backgroundColor = .designSystem(.white)
         HomePromotionCollectionViewCell.register(collectionView: promotionView)
         
+        flowLayout.do {
+            $0.scrollDirection = .vertical
+            $0.minimumLineSpacing = 8
+        }
+        
         promotionView.do {
             $0.delegate = self
             $0.dataSource = self
@@ -57,7 +62,7 @@ private extension HomeViewController {
     }
     
     func setLayout() {
-
+        
         promotionView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaInsets)
             $0.leading.trailing.bottom.equalToSuperview()

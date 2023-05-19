@@ -44,7 +44,7 @@ private extension HomePromotionCollectionViewCell {
         
         promotionButton.do {
             $0.backgroundColor = .designSystem(.darkGreen)
-            $0.titleLabel?.text = promotionLabel.text
+            $0.setTitle("으아아", for: .normal)
         }
         
         promotionLabel.do {
