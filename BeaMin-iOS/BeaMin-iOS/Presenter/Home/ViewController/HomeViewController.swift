@@ -15,6 +15,8 @@ import CustomExtension
 import DesignSystem
 
 final class HomeViewController: UIViewController {
+
+    private let promotionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
     
     private let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
     
@@ -34,16 +36,33 @@ final class HomeViewController: UIViewController {
 
 private extension HomeViewController {
     func setUI() {
-        tabBarView.translatesAutoresizingMaskIntoConstraints = false
-        tabBarView.layer.cornerRadius = 16
-        tabBarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        view.backgroundColor = .designSystem(.white)
+        HomePromotionCollectionViewCell.register(collectionView: promotionView)
+        
+        promotionView.do {
+            $0.delegate = self
+            $0.dataSource = self
+        }
+        
+        tabBarView.do {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.layer.cornerRadius = 16
+            $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
+        
     }
     
     func setHierarchy() {
-        view.addSubview(tabBarView)
+        view.addSubviews(promotionView, tabBarView)
     }
     
     func setLayout() {
+
+        promotionView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaInsets)
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+        
         NSLayoutConstraint.activate([
             tabBarView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tabBarView.rightAnchor.constraint(equalTo: view.rightAnchor),
@@ -52,4 +71,20 @@ private extension HomeViewController {
             tabBarView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
         ])
     }
+}
+
+extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("🐰🐰🐰🐰🐰🐰")
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("🍔🍔🍔🍔🍔")
+        guard let cell = promotionView.dequeueReusableCell(withReuseIdentifier: HomePromotionCollectionViewCell.identifier, for: indexPath) as? HomePromotionCollectionViewCell else { return UICollectionViewCell() }
+        print("🍔🍔🍔🍔🍔")
+        return cell
+        
+    }
+    
 }
