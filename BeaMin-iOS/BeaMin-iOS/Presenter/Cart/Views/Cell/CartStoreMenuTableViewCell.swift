@@ -14,6 +14,7 @@ import Then
 import CustomExtension
 import DesignSystem
 
+// MARK: - 삭제
 protocol CartMenuCountDelegate: AnyObject {
     func priceChangeByMenuCount(singlePricePerMenu: Int)
     func deleteRow(sender: UIButton)
