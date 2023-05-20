@@ -117,6 +117,7 @@ final class OrderMainView: UIView {
     
     private let heartImage = UIImageView().then {
         $0.image = .assetImage(.heart_3)
+        $0.contentMode = .scaleAspectFill
     }
     
     private let heartLabel = UILabel().then {
@@ -127,6 +128,7 @@ final class OrderMainView: UIView {
     
     private let shareImage = UIImageView().then {
         $0.image = .assetImage(.share_3)
+        $0.contentMode = .scaleAspectFill
     }
     
     private let shareLabel = UILabel().then {
@@ -137,6 +139,7 @@ final class OrderMainView: UIView {
     
     private let togetherImage = UIImageView().then {
         $0.image = .assetImage(.together_3)
+        $0.contentMode = .scaleAspectFill
     }
     
     private let togetherLabel = UILabel().then {
@@ -267,19 +270,17 @@ private extension OrderMainView {
         personalStack.snp.makeConstraints {
             $0.top.equalTo(storeinformView.snp.bottom).offset(16)
             $0.centerX.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().inset(30)
+            $0.leading.trailing.equalToSuperview().inset(60)
         }
         
         section1View.snp.makeConstraints {
             $0.height.equalTo(14)
             $0.width.equalTo(1)
-            $0.leading.equalToSuperview().offset(118)
         }
         
         section2View.snp.makeConstraints {
             $0.height.equalTo(14)
             $0.width.equalTo(1)
-            $0.trailing.equalToSuperview().offset(-118)
         }
         
         heartImage.snp.makeConstraints {
@@ -296,19 +297,21 @@ private extension OrderMainView {
         
         shareStack.snp.makeConstraints {
 //            $0.leading.equalTo(section1View.snp.trailing).offset(38)
-            $0.width.equalTo(53)
+            $0.centerY.equalToSuperview()
+            $0.width.equalTo(60)
             $0.height.equalTo(24)
         }
         
         heartStack.snp.makeConstraints {
 //            $0.leading.equalToSuperview().offset(28)
-            $0.width.equalTo(51)
+            $0.centerY.equalToSuperview()
+            $0.width.equalTo(60)
             $0.height.equalTo(24)
         }
         
         togetherStack.snp.makeConstraints {
-            $0.trailing.equalToSuperview().offset(-15)
-            $0.width.equalTo(77)
+//            $0.trailing.equalToSuperview().offset(-15)
+            $0.width.equalTo(80)
             $0.height.equalTo(24)
         }
     }
