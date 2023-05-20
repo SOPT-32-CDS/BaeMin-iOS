@@ -17,7 +17,7 @@ import DesignSystem
 final class HomeStoreBigCollectionViewCell: UICollectionViewCell, CollectionViewCellReuseProtocol {
     
     private let homeStoreBigImage = UIImageView()
-    private let homeStoreBigTItle = UILabel()
+    private let homeStoreBigTitle = UILabel()
     
     private let homeStoreBigStarIcon = UIImageView()
     private let homeStoreBigStar = UILabel()
@@ -59,13 +59,14 @@ extension HomeStoreBigCollectionViewCell {
             $0.image = UIImage.assetImage(.nav_heart)
         }
         
-        homeStoreBigTItle.do {
+        homeStoreBigTitle.do {
             $0.font = .pretendard(.h2Headline)
             $0.textColor = .designSystem(.black)
         }
         
         homeStoreBigStarIcon.do {
-            $0.image = UIImage.assetImage(.starImage)
+            $0.image = UIImage.assetImage(.ic_star
+            )
         }
         
         homeStoreBigStar.do {
@@ -108,7 +109,7 @@ extension HomeStoreBigCollectionViewCell {
     func setHierarchy() {
         addSubviews(homeStoreBigImage,homeStoreBigTitleStackView,homeStoreBigInfoStackView, homeStoreBigMinDeliveryStackView)
         
-        homeStoreBigTitleStackView.addSubviews(homeStoreBigTItle, homeStoreBigStarStackView)
+        homeStoreBigTitleStackView.addSubviews(homeStoreBigTitle, homeStoreBigStarStackView)
         homeStoreBigStarStackView.addSubviews(homeStoreBigStarIcon, homeStoreBigStar)
         homeStoreBigInfoStackView.addSubviews(homeStoreBigIcon, homeStoreBigDeliveryTime, homeStoreBigDeliveryTipTitle, homeStoreBigDeliveryTip)
         homeStoreBigMinDeliveryStackView.addSubviews(homeStoreBigMinDeliveryTitle, homeStoreBigMinDelivery)
@@ -116,28 +117,27 @@ extension HomeStoreBigCollectionViewCell {
     
     func setLayout() {
         homeStoreBigImage.snp.makeConstraints {
-//            $0.centerX.equalToSuperview()
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(186)
         }
         
-        homeStoreBigTItle.snp.makeConstraints {
+        homeStoreBigTitle.snp.makeConstraints {
             $0.top.leading.equalToSuperview()
         }
         
         homeStoreBigStarIcon.snp.makeConstraints {
-            $0.top.leading.equalToSuperview()
+            $0.top.leading.equalToSuperview().inset(4)
         }
         
         homeStoreBigStar.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.equalToSuperview().inset(2.5)
             $0.leading.equalTo(homeStoreBigStarIcon.snp.trailing)
         }
         
         homeStoreBigStarStackView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(2)
-            $0.leading.equalTo(homeStoreBigTItle.snp.trailing).offset(4)
+            $0.leading.equalTo(homeStoreBigTitle.snp.trailing).offset(4)
         }
         
         homeStoreBigTitleStackView.snp.makeConstraints {
@@ -165,7 +165,7 @@ extension HomeStoreBigCollectionViewCell {
         }
 
         homeStoreBigInfoStackView.snp.makeConstraints {
-            $0.top.equalTo(homeStoreBigTItle.snp.bottom).offset(4)
+            $0.top.equalTo(homeStoreBigTitle.snp.bottom).offset(4)
             $0.leading.equalToSuperview().inset(14)
         }
 
@@ -185,7 +185,7 @@ extension HomeStoreBigCollectionViewCell {
     }
     
     func setDataBind(model : HomeStore) {
-        homeStoreBigTItle.text = model.name
+        homeStoreBigTitle.text = model.name
         homeStoreBigStar.text = String(model.rate)
         homeStoreBigDeliveryTime.text = String(model.minDeliveryTime)
         homeStoreBigDeliveryTip.text = String(model.deliveryFee)

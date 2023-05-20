@@ -47,9 +47,8 @@ private extension HomeStoreBigViewController {
         HomeStoreBigCollectionViewCell.register(collectionView: homeStoreBigView)
         
         flowLayout.do {
-            $0.scrollDirection = .horizontal
-//            $0.minimumInteritemSpacing = 30
-            $0.itemSize = CGSize(width: 398, height: 480)
+            $0.scrollDirection = .vertical
+            $0.itemSize = CGSize(width: 398, height: 280)
         }
     }
     
