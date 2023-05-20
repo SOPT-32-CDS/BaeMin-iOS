@@ -42,7 +42,7 @@ final class BMNavigationBar: UIView {
     
     let menuName: UILabel = {
         let label = UILabel()
-        label.font = .pretendard(.bady2)
+        label.font = .pretendard(.body2)
         label.textColor = .designSystem(.black)
         label.isHidden = true
         return label
