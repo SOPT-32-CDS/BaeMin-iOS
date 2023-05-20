@@ -38,10 +38,12 @@ public struct Constant {
         case scrdownImage = "ic_chips_scrdown"
         
         /// 주문하기상세메인 이미지
+        case sushi = "sushi"
         case heart_3 = "ic_heart_3"
         case share_3 = "ic_share_3"
         case together_3 = "ic_together_3"
         case oneshipping = "ic_shipping_1p"
+        case popularTag = "ic_popular"
         
         /// 홈 메뉴 이미지
         case menu = "Mask group"

@@ -10,12 +10,12 @@ import UIKit
 public enum Font {
     
     public enum PretendardType {
-        case title, h1Headline, h2Headline, h3Headline, body1, bady2, body2Bold, body3, body3Bold, body4, body4Bold
+        case title, h1Headline, h2Headline, h3Headline, body1, body2, body2Bold, body3, body3Bold, body4, body4Bold
         
         var Wight: Font.Weight {
             switch self {
             case .title, .h1Headline, .h2Headline, .h3Headline, .body2Bold, .body3Bold, .body4Bold: return ._600
-            case .body1, .bady2, .body3, .body4: return ._400
+            case .body1, .body2, .body3, .body4: return ._400
             }
         }
         
@@ -25,7 +25,7 @@ public enum Font {
             case .h1Headline: return Font.Size._20.rawValue
             case .h2Headline: return Font.Size._18.rawValue
             case .h3Headline, .body1: return Font.Size._16.rawValue
-            case .bady2, .body2Bold: return Font.Size._14.rawValue
+            case .body2, .body2Bold: return Font.Size._14.rawValue
             case .body3, .body3Bold: return Font.Size._12.rawValue
             case .body4, .body4Bold: return Font.Size._10.rawValue
             }
