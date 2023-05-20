@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//
 struct Home {
     let storeName : String
     let storeStar : Int
