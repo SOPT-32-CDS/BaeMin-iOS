@@ -70,6 +70,7 @@ public struct Constant {
         case menu22 = "Mask group-22"
         case menu23 = "Mask group-23"
         case menu24 = "Mask group-24"
+        case ic_star = "ic_star"
         
         /// OrderDetail Image
         case menuImage = "MenuImage"
