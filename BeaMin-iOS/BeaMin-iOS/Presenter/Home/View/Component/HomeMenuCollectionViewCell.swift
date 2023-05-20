@@ -16,8 +16,10 @@ import DesignSystem
 
 final class HomeMenuCollectionViewCell: UICollectionViewCell, CollectionViewCellReuseProtocol {
     
-
-    override init(frame: CGRect) {
+    private let homeMenuImage = UIImageView()
+    private let homeMenuTitle = UILabel()
+    
+    override init(frame : CGRect) {
         super.init(frame: frame)
         // MARK: - 컴포넌트 설정
         setUI()
@@ -28,36 +30,49 @@ final class HomeMenuCollectionViewCell: UICollectionViewCell, CollectionViewCell
         // MARK: - autolayout설정
         setLayout()
         
-        // MARK: - button의 addtarget설정
-        setAddTarget()
-        
-        // MARK: - delegate설정
-        setDelegate()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
-private extension HomeMenuCollectionViewCell {
+extension HomeMenuCollectionViewCell {
     func setUI() {
         
+        homeMenuImage.do {
+            $0.image = UIImage.assetImage(.menu11)
+        }
+        
+        homeMenuTitle.do {
+            $0.text = "텍스트"
+            $0.textAlignment = .center
+            $0.font = .hannaPro(.brandTypeMiddle)
+            $0.textColor = .designSystem(.black)
+        }
     }
     
     func setHierarchy() {
-        
+        addSubviews(homeMenuImage, homeMenuTitle)
     }
     
     func setLayout() {
         
+        homeMenuImage.snp.makeConstraints {
+            $0.width.height.equalTo(40)
+            $0.top.equalToSuperview().inset(4)
+            $0.leading.trailing.equalToSuperview().inset(4)
+        }
+        
+        homeMenuTitle.snp.makeConstraints {
+            $0.top.equalTo(homeMenuImage.snp.bottom).offset(8)
+            $0.centerX.equalToSuperview()
+        }
     }
     
-    func setAddTarget() {
-        
-    }
-    
-    func setDelegate() {
-        
+    func setDataBind(model: HomeMenuItem) {
+        homeMenuImage.image = model.homeMenuImage
+        homeMenuTitle.text = model.homeMenuText
     }
 }
