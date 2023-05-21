@@ -17,7 +17,7 @@ import DesignSystem
 protocol CartMenuCountDelegate: AnyObject {
     func priceChangeByMenuCount(singlePricePerMenu: Int)
     func deleteRow(sender: UIButton)
-    func changeCarMenuCount(count: Int)
+    func changeCarMenuCount(sender: UIButton, count: Int, totalPrice: Int)
     func deleteCartMenu(deleteCount: Int, price: Int)
 }
 
@@ -208,7 +208,7 @@ private extension CartStoreMenuTableViewCell {
             guard let data = self.menuData else { return }
             self.totalPrice += ((data.totalPricePerMenu / data.menuCount) * (count))
             self.delegate?.priceChangeByMenuCount(singlePricePerMenu: (data.totalPricePerMenu / data.menuCount) * (count))
-            self.delegate?.changeCarMenuCount(count: count)
+            self.delegate?.changeCarMenuCount(sender: self.deleteButton, count: count, totalPrice: self.totalPrice)
         }
     }
     

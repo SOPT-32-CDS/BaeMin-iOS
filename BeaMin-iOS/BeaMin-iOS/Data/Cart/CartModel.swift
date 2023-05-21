@@ -23,9 +23,9 @@ struct CartModel {
         let menuImage: Constant.ImageName
         let menuName: String
         let sideInfo: String?
-        let singleMenuPrice: Int
-        let totalPricePerMenu: Int
-        let menuCount: Int
+        var singleMenuPrice: Int
+        var totalPricePerMenu: Int
+        var menuCount: Int
     }
     
     var menusByStore: [MenuByStore]
