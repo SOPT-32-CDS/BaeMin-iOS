@@ -16,20 +16,11 @@ import DesignSystem
 
 final class CartInfoView: UIView {
     
-    var priceChangeAmount: Int = 0 {
+    var totalPrice: Int {
         didSet {
-            priceInfoView.changeAmountPrice = priceChangeAmount
+            priceInfoView.totalPrice = totalPrice
         }
     }
-    
-    var updatePriceByDeleteMenu: Int = 0 {
-        didSet {
-            priceInfoView.updatePriceByDeleteMenu = updatePriceByDeleteMenu
-        }
-    }
-
-    
-    private var totalPrice: Int
     
     private var delivertTip: Int
     private let topSeperatedView = SeperateView(height: 10)

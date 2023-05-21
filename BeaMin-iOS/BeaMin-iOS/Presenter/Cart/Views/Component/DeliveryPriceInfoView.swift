@@ -16,23 +16,10 @@ import DesignSystem
 
 final class DeliveryPriceInfoView: UIView {
     
-    private var totalPrice: Int {
+    var totalPrice: Int {
         didSet {
             self.totalPriceLabel.text = totalPrice.makePriceLabelFromNumber()
             self.estimatedPaymentAmount.text = (totalPrice + totalTip).makePriceLabelFromNumber()
-        }
-    }
-    
-    var changeAmountPrice: Int = 0 {
-        didSet {
-            totalPrice += changeAmountPrice
-        }
-    }
-    
-    var updatePriceByDeleteMenu: Int = 0 {
-        didSet {
-            print(updatePriceByDeleteMenu)
-            totalPrice -= updatePriceByDeleteMenu
         }
     }
     
@@ -97,9 +84,6 @@ final class DeliveryPriceInfoView: UIView {
         
         // MARK: - addsubView
         setHierarchy()
-        
-        // MARK: - autolayout설정
-        setLayout()
     }
     
     @available(*, unavailable)
@@ -162,9 +146,5 @@ private extension DeliveryPriceInfoView {
     
     func setHierarchy() {
         addSubviews(totalPriceTitle, tipTitle, estimatedPaymentAmountTitle, totalPriceLabel, tip, estimatedPaymentAmount, seperatedView, warningView)
-    }
-    
-    func setLayout() {
-
     }
 }

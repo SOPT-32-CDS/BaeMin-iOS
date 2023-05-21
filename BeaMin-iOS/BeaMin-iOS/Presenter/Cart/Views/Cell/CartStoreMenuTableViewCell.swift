@@ -15,10 +15,8 @@ import CustomExtension
 import DesignSystem
 
 protocol CartMenuCountDelegate: AnyObject {
-    func priceChangeByMenuCount(singlePricePerMenu: Int)
     func deleteRow(sender: UIButton)
     func changeCarMenuCount(sender: UIButton, count: Int, totalPrice: Int)
-    func deleteCartMenu(deleteCount: Int, price: Int)
 }
 
 final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
@@ -195,7 +193,6 @@ private extension CartStoreMenuTableViewCell {
     func setAddTarget() {
         deleteButton.addButtonAction { sender in
             self.delegate?.deleteRow(sender: sender)
-            self.delegate?.deleteCartMenu(deleteCount: self.menuStepper.menuCount, price: self.totalPrice)
         }
         
         optionChangeButton.addButtonAction { sender in
@@ -207,7 +204,6 @@ private extension CartStoreMenuTableViewCell {
         menuStepper.cartDataBind = { count in
             guard let data = self.menuData else { return }
             self.totalPrice += ((data.totalPricePerMenu / data.menuCount) * (count))
-            self.delegate?.priceChangeByMenuCount(singlePricePerMenu: (data.totalPricePerMenu / data.menuCount) * (count))
             self.delegate?.changeCarMenuCount(sender: self.deleteButton, count: count, totalPrice: self.totalPrice)
         }
     }
