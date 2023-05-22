@@ -1,9 +1,8 @@
 //
-//  MenuStepperView.swift
+//  CartStepperView.swift
 //  BeaMin-iOS
 //
-//  Created by uiskim on 2023/05/17.
-//  Copyright (c) 2023 MenuStepper. All rights reserved.
+//  Created by uiskim on 2023/05/18.
 //
 
 import UIKit
@@ -14,37 +13,33 @@ import Then
 import CustomExtension
 import DesignSystem
 
-protocol menuCountDelegate: AnyObject {
-    func priceChangeByMenuCount(menuCont: Int)
-}
 
-final class MenuStepperView: UIView {
+final class CartStepperView: UIView {
     
-    weak var delegate: menuCountDelegate?
+    var cartDataBind: ((Int)->Void)?
     
-    private var menuCount: Int = 1 {
+    var menuCount: Int = 1 {
         didSet {
-            menuCountLabel.text = menuCount.description + "개"
-            self.delegate?.priceChangeByMenuCount(menuCont: menuCount)
+            menuCountLabel.text = menuCount.description
         }
     }
     
     private let appendButton: UIButton = {
         let button = UIButton()
-        button.setImage(.assetImage(.plus), for: .normal)
+        button.setImage(.assetImage(.mini_plus), for: .normal)
         return button
     }()
     
     private let reduceButton: UIButton = {
         let button = UIButton()
-        button.setImage(.assetImage(.minus), for: .normal)
+        button.setImage(.assetImage(.mini_minus), for: .normal)
         return button
     }()
     
     private lazy var menuCountLabel: UILabel = {
         let label = UILabel()
-        label.text = menuCount.description + "개"
-        label.font = .pretendard(.h3Headline)
+        label.text = menuCount.description
+        label.font = .pretendard(.body3)
         label.textColor = .designSystem(.black)
         return label
     }()
@@ -71,7 +66,7 @@ final class MenuStepperView: UIView {
 
 }
 
-private extension MenuStepperView {
+private extension CartStepperView {
     func setUI() {
         self.layer.cornerRadius = 4
         self.layer.borderWidth = 1
@@ -85,30 +80,33 @@ private extension MenuStepperView {
     func setLayout() {
         appendButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().inset(10)
-            make.size.equalTo(28)
+            make.leading.equalToSuperview().inset(7)
+            make.size.equalTo(22)
         }
         
         menuCountLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalTo(appendButton.snp.trailing).offset(28)
+            make.leading.equalTo(appendButton.snp.trailing).offset(15)
         }
         
         reduceButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().inset(10)
-            make.leading.equalTo(menuCountLabel.snp.trailing).offset(28)
+            make.trailing.equalToSuperview().inset(7)
+            make.leading.equalTo(menuCountLabel.snp.trailing).offset(16)
         }
     }
     
     func setAddTarget() {
         appendButton.addButtonAction { sender in
             self.menuCount += 1
+            self.cartDataBind?(1)
         }
         reduceButton.addButtonAction { sender in
             if self.menuCount >= 2 {
                 self.menuCount -= 1
+                self.cartDataBind?(-1)
             }
         }
     }
 }
+
