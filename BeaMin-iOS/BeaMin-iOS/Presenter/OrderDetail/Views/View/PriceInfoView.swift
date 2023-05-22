@@ -38,7 +38,7 @@ final class PriceInfoView: UIView {
     
     private let minimumPrice: UILabel = {
         let label = UILabel()
-        label.font = .pretendard(.bady2)
+        label.font = .pretendard(.body2)
         label.textColor = .designSystem(.black)
         return label
     }()

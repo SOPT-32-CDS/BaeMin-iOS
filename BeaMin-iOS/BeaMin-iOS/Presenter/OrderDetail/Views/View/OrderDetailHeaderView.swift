@@ -40,7 +40,7 @@ final class OrderDetailHeaderView: UIView {
     
     private let menuDetailLabel: UILabel = {
         let label = UILabel()
-        label.font = .pretendard(.bady2)
+        label.font = .pretendard(.body2)
         label.textColor = .designSystem(.gray1)
         label.textAlignment = .left
         label.numberOfLines = 0
