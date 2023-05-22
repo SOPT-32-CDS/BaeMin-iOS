@@ -20,9 +20,9 @@ struct HomeStore {
     let name: String
     //let image: String
     let rate: Double
-    let minOrderAmount, deliveryFee, minDeliveryTime, maxDeliveryT₩₩ime: Int
+    let minOrderAmount, deliveryFee, minDeliveryTime, maxDeliveryTime: Int
     //let hasCoupon: Bool
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, image, rate
         case minOrderAmount = "min_order_amount"
@@ -38,22 +38,22 @@ extension HomeStore {
         return [
             HomeStore(name : "이공족발",
                       rate : 4.0,
-                     minOrderAmount: 10000,
-                     deliveryFee: 4400,
-                     minDeliveryTime: 20,
-                     maxDeliveryTime: 50),
+                      minOrderAmount: 10000,
+                      deliveryFee: 4400,
+                      minDeliveryTime: 20,
+                      maxDeliveryTime: 50),
             HomeStore(name : "이공족발",
                       rate : 4.0,
-                     minOrderAmount: 10000,
-                     deliveryFee: 4400,
-                     minDeliveryTime: 20,
-                     maxDeliveryTime: 50),
+                      minOrderAmount: 10000,
+                      deliveryFee: 4400,
+                      minDeliveryTime: 20,
+                      maxDeliveryTime: 50),
             HomeStore(name : "이공족발",
                       rate : 4.0,
-                     minOrderAmount: 10000,
-                     deliveryFee: 4400,
-                     minDeliveryTime: 20,
-                     maxDeliveryTime: 50)
+                      minOrderAmount: 10000,
+                      deliveryFee: 4400,
+                      minDeliveryTime: 20,
+                      maxDeliveryTime: 50)
         ]
     }
 }
