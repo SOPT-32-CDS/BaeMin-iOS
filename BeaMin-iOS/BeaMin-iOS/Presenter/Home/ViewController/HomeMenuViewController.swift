@@ -86,7 +86,7 @@ extension HomeMenuViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 25
+        return homeMenuModel.count
     }
     
 }

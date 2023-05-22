@@ -86,7 +86,7 @@ extension HomePromotionViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return homePromotionModel.count
     }
 
 }

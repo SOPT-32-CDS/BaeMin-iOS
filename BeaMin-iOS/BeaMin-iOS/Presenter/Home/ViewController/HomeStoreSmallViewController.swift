@@ -88,7 +88,7 @@ extension HomeStoreSmallViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return homeStoreModel.count
     }
 
 }
