@@ -260,7 +260,6 @@
 		A4D727042A15DBE100A00E16 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */,
 				A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */,
 			);
 			path = CustomTabBar;
@@ -269,9 +268,7 @@
 		A4D7270D2A16043300A00E16 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				A4D727122A17611C00A00E16 /* HomePromotionItem.swift */,
 				A4D727102A1604A700A00E16 /* HomePromotionCollectionViewCell.swift */,
-				A4D7271B2A17A67800A00E16 /* HomeMenuItem.swift */,
 				A4D727182A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift */,
 				A4D7271F2A1875FD00A00E16 /* HomeStoreSmallCollectionViewCell.swift */,
 				A4D727232A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift */,
@@ -308,7 +305,10 @@
 		C0066C162A127A7100EC40FB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */,
 				C0066C192A127F2F00EC40FB /* Home.swift */,
+				A4D7271B2A17A67800A00E16 /* HomeMenuItem.swift */,
+				A4D727122A17611C00A00E16 /* HomePromotionItem.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
