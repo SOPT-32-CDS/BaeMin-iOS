@@ -21,7 +21,7 @@ struct HomeStore {
     //let image: String
     let rate: Double
     let minOrderAmount, deliveryFee, minDeliveryTime, maxDeliveryTime: Int
-    //let hasCoupon: Bool
+    //let hasCoupon: String
     
     enum CodingKeys: String, CodingKey {
         case id, name, image, rate
