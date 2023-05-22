@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4809C3C2A1B3DAB0009C1DD /* HomeChipItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */; };
+		A4809C3E2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */; };
+		A4809C402A1B68190009C1DD /* HomeChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */; };
 		A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */; };
 		A4D727082A15DC8700A00E16 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727072A15DC8700A00E16 /* UIButton+.swift */; };
 		A4D7270A2A15DCEF00A00E16 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */; };
@@ -141,6 +144,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipItem.swift; sourceTree = "<group>"; };
+		A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipViewController.swift; sourceTree = "<group>"; };
 		A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
 		A4D727072A15DC8700A00E16 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
@@ -272,6 +278,7 @@
 				A4D727182A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift */,
 				A4D7271F2A1875FD00A00E16 /* HomeStoreSmallCollectionViewCell.swift */,
 				A4D727232A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift */,
+				A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -309,6 +316,7 @@
 				C0066C192A127F2F00EC40FB /* Home.swift */,
 				A4D7271B2A17A67800A00E16 /* HomeMenuItem.swift */,
 				A4D727122A17611C00A00E16 /* HomePromotionItem.swift */,
+				A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -543,6 +551,7 @@
 				A4D7271D2A17AC8F00A00E16 /* HomeMenuViewController.swift */,
 				A4D727212A1882D100A00E16 /* HomeStoreSmallViewController.swift */,
 				A4D727252A1890D500A00E16 /* HomeStoreBigViewController.swift */,
+				A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -838,8 +847,11 @@
 				A4D7270A2A15DCEF00A00E16 /* CustomTabBarView.swift in Sources */,
 				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
 				C00E1C922A13BDA400F87D5B /* AddMenuTableViewCell.swift in Sources */,
+				A4809C3E2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift in Sources */,
 				C00E1CA12A13F88300F87D5B /* SeperateView.swift in Sources */,
 				C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */,
+				A4809C3C2A1B3DAB0009C1DD /* HomeChipItem.swift in Sources */,
+				A4809C402A1B68190009C1DD /* HomeChipViewController.swift in Sources */,
 				A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */,
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
