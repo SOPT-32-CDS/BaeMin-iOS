@@ -32,9 +32,6 @@ final class HomePromotionViewController: UIViewController {
         // MARK: - autolayout설정
         setLayout()
         
-        // MARK: - button의 addtarget설정
-        setAddTarget()
-        
         // MARK: - delegate설정
         setDelegate()
 
@@ -62,10 +59,6 @@ private extension HomePromotionViewController {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(200)
         }
-    }
-    
-    func setAddTarget() {
-        
     }
     
     func setDelegate() {
