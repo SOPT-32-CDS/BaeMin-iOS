@@ -34,16 +34,23 @@ final class HomeViewController: UIViewController {
 
 private extension HomeViewController {
     func setUI() {
-        tabBarView.translatesAutoresizingMaskIntoConstraints = false
-        tabBarView.layer.cornerRadius = 16
-        tabBarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        view.backgroundColor = .designSystem(.white)
+
+        tabBarView.do {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.layer.cornerRadius = 16
+            $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        }
+        
     }
     
     func setHierarchy() {
-        view.addSubview(tabBarView)
+        view.addSubviews(tabBarView)
     }
     
     func setLayout() {
+        
+        // MARK: - 이부분 snapkit으로 바꿔주세요
         NSLayoutConstraint.activate([
             tabBarView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tabBarView.rightAnchor.constraint(equalTo: view.rightAnchor),

@@ -25,7 +25,7 @@ final class OrderDetailSectionHeaderView: UIView {
     
     private let maximunLabel: UILabel = {
         let label = UILabel()
-        label.font = .pretendard(.bady2)
+        label.font = .pretendard(.body2)
         label.textColor = .designSystem(.gray1)
         return label
     }()
