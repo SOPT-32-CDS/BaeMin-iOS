@@ -40,7 +40,7 @@ final class BMNavigationBar: UIView {
         return button
     }()
     
-    let menuName: UILabel = {
+    var menuName: UILabel = {
         let label = UILabel()
         label.font = .pretendard(.body2)
         label.textColor = .designSystem(.black)

@@ -80,6 +80,15 @@ public struct Constant {
         case minus
         case plus
         
+        case mini_minus
+        case mini_plus
+        
+        case suish2
+        case suish
+        case tang
+        
+        case delete
+        
         var real: String {
             return self.rawValue
         }
