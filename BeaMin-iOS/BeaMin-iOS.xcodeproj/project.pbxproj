@@ -93,6 +93,7 @@
 		C06969952A165846008663C9 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06969942A165846008663C9 /* WarningView.swift */; };
 		C07E6A3E2A17BCDC0006A61E /* CartInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E6A3D2A17BCDC0006A61E /* CartInfoButton.swift */; };
 		C0FFD7672A1B98CD00C73270 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C0FFD7662A1B98CD00C73270 /* Alamofire */; };
+		C0FFD76A2A1D052200C73270 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FFD7692A1D052200C73270 /* CartManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 		C06969902A16566E008663C9 /* DeliveryPriceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPriceInfoView.swift; sourceTree = "<group>"; };
 		C06969942A165846008663C9 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		C07E6A3D2A17BCDC0006A61E /* CartInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInfoButton.swift; sourceTree = "<group>"; };
+		C0FFD7692A1D052200C73270 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +384,7 @@
 		C00E1CAB2A16343900F87D5B /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				C0FFD7682A1D050600C73270 /* Manager */,
 				C00E1CAD2A16345500F87D5B /* ViewController */,
 				C00E1CAC2A16345000F87D5B /* Views */,
 			);
@@ -688,6 +691,14 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		C0FFD7682A1D050600C73270 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C0FFD7692A1D052200C73270 /* CartManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -918,6 +929,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C065C80D2A16412A001DA63D /* CartStepperView.swift in Sources */,
+				C0FFD76A2A1D052200C73270 /* CartManager.swift in Sources */,
 				C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */,
 				C069698D2A164426008663C9 /* CartModel.swift in Sources */,
 				C00E1CB92A16355D00F87D5B /* CartInfoView.swift in Sources */,
@@ -946,17 +958,14 @@
 				A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */,
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
-
 				A4D727132A17611C00A00E16 /* HomePromotionItem.swift in Sources */,
 				A4D727192A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift in Sources */,
 				A4D727282A18A4BE00A00E16 /* HomePromotionViewController.swift in Sources */,
 				A4D727242A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift in Sources */,
 				A4D727222A1882D100A00E16 /* HomeStoreSmallViewController.swift in Sources */,
 				A4D7271E2A17AC8F00A00E16 /* HomeMenuViewController.swift in Sources */,
-
 				C00E1CB52A1634E900F87D5B /* CartStoreMenuSectionFooterView.swift in Sources */,
 				C06969912A16566E008663C9 /* DeliveryPriceInfoView.swift in Sources */,
-
 				C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */,
 				C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */,
 				A4D7270C2A15DD8700A00E16 /* HomeViewController.swift in Sources */,
