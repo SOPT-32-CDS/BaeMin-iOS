@@ -27,7 +27,7 @@ final class DeliveryInfoView: UIView {
     
     private let deliveryTimeLabel: UILabel = {
         let label = UILabel()
-        label.font = .pretendard(.bady2)
+        label.font = .pretendard(.body2)
         label.textColor = .designSystem(.black)
         label.text = "34~44분 후 도착"
         return label
