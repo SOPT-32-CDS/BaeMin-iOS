@@ -82,7 +82,7 @@ final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProto
     private let optionChangeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("옵션변경", for: .normal)
-        button.titleLabel?.font = .pretendard(.bady2)
+        button.titleLabel?.font = .pretendard(.body2)
         button.tintColor = .designSystem(.black)
         button.layer.cornerRadius = 4
         button.clipsToBounds = true
