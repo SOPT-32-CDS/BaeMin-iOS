@@ -73,7 +73,6 @@
 		C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */; };
 		C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */; };
 		C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15D2A0FBC830008C814 /* HomeManager.swift */; };
-		C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1612A0FBC930008C814 /* HomeView.swift */; };
 		C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */; };
 		C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1712A0FBD2F0008C814 /* CustomExtension.docc */; };
 		C01BB1782A0FBD2F0008C814 /* CustomExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */; };
@@ -221,7 +220,6 @@
 		C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
 		C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainView.swift; sourceTree = "<group>"; };
 		C01BB15D2A0FBC830008C814 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
-		C01BB1612A0FBC930008C814 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailManager.swift; sourceTree = "<group>"; };
 		C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB1702A0FBD2F0008C814 /* CustomExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomExtension.h; sourceTree = "<group>"; };
@@ -613,7 +611,6 @@
 			children = (
 				A4D727042A15DBE100A00E16 /* CustomTabBar */,
 				A4D7270D2A16043300A00E16 /* Component */,
-				C01BB1612A0FBC930008C814 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -921,7 +918,6 @@
 				C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */,
 				C069698D2A164426008663C9 /* CartModel.swift in Sources */,
 				C00E1CB92A16355D00F87D5B /* CartInfoView.swift in Sources */,
-				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
 				C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */,
 				A4D7271C2A17A67800A00E16 /* HomeMenuItem.swift in Sources */,
 				A4D727202A1875FD00A00E16 /* HomeStoreSmallCollectionViewCell.swift in Sources */,
@@ -946,17 +942,14 @@
 				A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */,
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
-
 				A4D727132A17611C00A00E16 /* HomePromotionItem.swift in Sources */,
 				A4D727192A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift in Sources */,
 				A4D727282A18A4BE00A00E16 /* HomePromotionViewController.swift in Sources */,
 				A4D727242A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift in Sources */,
 				A4D727222A1882D100A00E16 /* HomeStoreSmallViewController.swift in Sources */,
 				A4D7271E2A17AC8F00A00E16 /* HomeMenuViewController.swift in Sources */,
-
 				C00E1CB52A1634E900F87D5B /* CartStoreMenuSectionFooterView.swift in Sources */,
 				C06969912A16566E008663C9 /* DeliveryPriceInfoView.swift in Sources */,
-
 				C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */,
 				C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */,
 				A4D7270C2A15DD8700A00E16 /* HomeViewController.swift in Sources */,
