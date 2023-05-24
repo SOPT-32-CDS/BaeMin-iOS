@@ -21,7 +21,6 @@ final class OrderMainView: UIView {
     }
     
     private let menuNameLabel = UILabel().then {
-        $0.text = "정담초밥 송파점"
         $0.font = .pretendard(.title)
         $0.textColor = .designSystem(.black)
     }
@@ -31,13 +30,11 @@ final class OrderMainView: UIView {
 //    }
     
     private let starLabel = UILabel().then {
-        $0.text = "4.9"
         $0.font = .pretendard(.h3Headline)
         $0.textColor = .designSystem(.black)
     }
     
     private let reviewLabel = UILabel().then {
-        $0.text = "리뷰 176개 >"
         $0.font = .pretendard(.body1)
         $0.textColor = .designSystem(.black)
     }
@@ -73,7 +70,6 @@ final class OrderMainView: UIView {
     }
     
     private let minPriceLabel = UILabel().then {
-        $0.text = "15,000원"
         $0.font = .pretendard(.body2)
         $0.textColor = .designSystem(.black)
     }
@@ -87,21 +83,18 @@ final class OrderMainView: UIView {
     }
     
     private let deliverTimeLabel = UILabel().then {
-        $0.text = "38~48분 후 도착"
         $0.font = .pretendard(.body2)
         $0.textColor = .designSystem(.black)
     }
     
     private let deliverTipLabel = UILabel().then {
-        $0.text = "배달팁 4,440원"
         $0.font = .pretendard(.body2)
         $0.textColor = .designSystem(.black)
     }
     
     private let personalStack = UIStackView().then {
         $0.distribution = .equalSpacing
-//        $0.alignment = .leading
-//        $0.alignment = .center
+
     }
     
     private let heartStack = UIStackView()
@@ -172,6 +165,15 @@ final class OrderMainView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func config(storeName: String, storeStars: Float, storeReviews: Int, minPrice: Int, deliverTime: String, deliverTips: Int) {
+        menuNameLabel.text = storeName
+        starLabel.text = storeStars.description
+        reviewLabel.text = "리뷰 \(storeReviews) 개"
+        minPriceLabel.text = minPrice.makePriceLabelFromNumber()
+        deliverTimeLabel.text = deliverTime
+        deliverTipLabel.text = "배달팁 " + deliverTips.makePriceLabelFromNumber()
     }
 }
 
@@ -299,21 +301,18 @@ private extension OrderMainView {
         }
         
         shareStack.snp.makeConstraints {
-//            $0.leading.equalTo(section1View.snp.trailing).offset(38)
             $0.centerY.equalToSuperview()
             $0.width.equalTo(60)
             $0.height.equalTo(24)
         }
         
         heartStack.snp.makeConstraints {
-//            $0.leading.equalToSuperview().offset(28)
             $0.centerY.equalToSuperview()
             $0.width.equalTo(60)
             $0.height.equalTo(24)
         }
         
         togetherStack.snp.makeConstraints {
-//            $0.trailing.equalToSuperview().offset(-15)
             $0.width.equalTo(80)
             $0.height.equalTo(24)
         }
