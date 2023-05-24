@@ -9,8 +9,8 @@ import UIKit
 
 public struct Constant {
     public struct Screen {
-        static let width = UIScreen.main.bounds.width
-        static let height = UIScreen.main.bounds.height
+        public static let width = UIScreen.main.bounds.width
+        public static let height = UIScreen.main.bounds.height
     }
     
     public enum ImageName: String {
@@ -43,8 +43,12 @@ public struct Constant {
         case share_3 = "ic_share_3"
         case together_3 = "ic_together_3"
         case oneshipping = "ic_shipping_1p"
+
         case popularTag = "ic_popular"
         case uparrow = "btn_uparrow"
+
+        case popularityMark = "popularityMark"
+
         
         /// 홈 메뉴 이미지
         case menu = "Mask group"
@@ -72,6 +76,24 @@ public struct Constant {
         case menu22 = "Mask group-22"
         case menu23 = "Mask group-23"
         case menu24 = "Mask group-24"
+        case ic_star = "ic_star"
+        
+        /// OrderDetail Image
+        case menuImage = "MenuImage"
+        case fillCheckBox = "checkBoxTrue"
+        case emptyCheckBox = "checkBoxFalse"
+        
+        case minus
+        case plus
+        
+        case mini_minus
+        case mini_plus
+        
+        case suish2
+        case suish
+        case tang
+        
+        case delete
         
         var real: String {
             return self.rawValue

@@ -35,6 +35,7 @@ public enum Font {
     public enum HannaProType {
         case brandTypeBig
         case brandTypeSmall
+        case brandTypeMiddle
         
         var Weight: Font.Weight {
             return ._400
@@ -44,6 +45,7 @@ public enum Font {
             switch self {
             case .brandTypeBig: return Font.Size._20.rawValue
             case .brandTypeSmall: return Font.Size._12.rawValue
+            case .brandTypeMiddle: return Font.Size._14.rawValue
             }
         }
     }

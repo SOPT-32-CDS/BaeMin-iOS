@@ -15,6 +15,8 @@ import CustomExtension
 
 class TestViewController: UIViewController {
     
+    let testChip = ChoiceChipView()
+    
     let test: UILabel = {
         let label = UILabel()
         label.text = "테스트 텍스트입니다"
@@ -30,6 +32,11 @@ class TestViewController: UIViewController {
         test.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.size.equalTo(200)
+        }
+        
+        view.addSubview(testChip)
+        testChip.snp.makeConstraints { make in
+            make.center.equalToSuperview()
         }
     }
 }

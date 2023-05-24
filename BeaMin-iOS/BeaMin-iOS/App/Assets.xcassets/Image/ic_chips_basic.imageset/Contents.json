@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_chips_basic.png",
+      "filename" : "Rectangle 6667439.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ic_chips_basic@2x.png",
+      "filename" : "Rectangle 6667439@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ic_chips_basic@3x.png",
+      "filename" : "Rectangle 6667439@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
