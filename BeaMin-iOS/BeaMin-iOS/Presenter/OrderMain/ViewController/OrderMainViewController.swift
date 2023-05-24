@@ -78,8 +78,6 @@ private extension OrderMainViewController {
         let headerView = OrderMainView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 536))
         headerView.config(storeName: mockData.storeName, storeStars: mockData.storeStars, storeReviews: mockData.storeReviews, minPrice: mockData.minPrice, deliverTime: mockData.deliverTime, deliverTips: mockData.deliverTips)
         OrderMainTableView.tableHeaderView = headerView
-
-//        testTableView.rowHeight = 182
     }
 }
 
