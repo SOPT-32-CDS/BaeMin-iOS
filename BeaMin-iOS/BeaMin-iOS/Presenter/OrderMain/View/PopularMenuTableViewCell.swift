@@ -18,7 +18,7 @@ final class PopularMenuTableViewCell: UITableViewCell, TableViewCellReuseProtoco
     
     static let identifier = "PopularMenuCell"
     
-    var data: Menu? {
+    var data: OrderMenu? {
         didSet {
             guard let data else { return }
             menuName.text = data.menuName

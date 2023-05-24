@@ -23,10 +23,10 @@ struct StoreDetail {
 
 struct MenuOrderInfo {
     let menuName: String
-    let menuDetail: [Menu]
+    let menuDetail: [OrderMenu]
 }
 
-struct Menu {
+struct OrderMenu {
     let menuName: String
     let menuContent: String
     let menuPrice: Int
