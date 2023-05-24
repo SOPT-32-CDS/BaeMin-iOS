@@ -43,7 +43,7 @@ final class CartManager {
     }
     
     private func convertCartDTO(input: CartModel) -> CartModelDTO {
-        .init(cartID: input.data.cartID, menusByStore: input.data.cartStoreList.map{.init(storeImage: .menu6, storeName: $0.name, cartMenus: $0.cartItemList.map{.init(menuImage: .menu10, menuName: $0.name, sideInfo: $0.options, singleMenuPrice: $0.totalPrice/$0.count, totalPricePerMenu: $0.totalPrice, menuCount: $0.count)}, minimumPriceForDelivery: input.data.deliveryFee)})
+        .init(cartID: input.data.cartID, menusByStore: input.data.cartStoreList.map{.init(storeID: $0.cartStoreID, storeImage: .menu6, storeName: $0.name, cartMenus: $0.cartItemList.map{.init(menuID: $0.cartItemID, menuImage: .menu10, menuName: $0.name, sideInfo: $0.options, singleMenuPrice: $0.totalPrice/$0.count, totalPricePerMenu: $0.totalPrice, menuCount: $0.count)}, minimumPriceForDelivery: input.data.deliveryFee)})
     }
 
     private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, changeData: T.Type) -> NetworkResult<T> {
