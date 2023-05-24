@@ -16,7 +16,7 @@ import DesignSystem
 
 final class OrderMainHeaderViewController: UIViewController {
     
-    let testView = OrderMainView()
+    let testView = PopularMenuSectionHeaderView()
 
     public override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,6 +16,8 @@ import DesignSystem
 
 final class PopularMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
     
+    static let identifier = "PopularMenuCell"
+    
     var data: Menu? {
         didSet {
             guard let data else { return }
@@ -33,8 +35,16 @@ final class PopularMenuTableViewCell: UITableViewCell, TableViewCellReuseProtoco
     }
     
     private let menuContent = UILabel().then {
-        $0.text = "흰살생선3p, 연어 2p, 참치1p, 황새치 1p,초새우1p, 간장새우1p, 생새우1p, 소..."
+        $0.text = "흰살생선3p, 연어 2p, 참치1p, 황새치 1p,\n초새우1p, 간장새우1p, 생새우1p, 소..."
+        $0.numberOfLines = 2
         $0.font = .pretendard(.body2)
+        $0.textColor = .designSystem(.gray1)
+    }
+    
+    private let menuImage = UIImageView().then {
+        $0.image = .assetImage(.sushi)
+        $0.layer.cornerRadius = 12
+        $0.clipsToBounds = true
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -67,7 +77,7 @@ private extension PopularMenuTableViewCell {
     }
     
     func setHierarchy() {
-        contentView.addSubviews(popularTag, menuName, menuContent)
+        contentView.addSubviews(popularTag, menuName, menuContent, menuImage)
     }
     
     func setLayout() {
@@ -79,12 +89,19 @@ private extension PopularMenuTableViewCell {
         
         menuName.snp.makeConstraints {
             $0.leading.equalTo(popularTag.snp.trailing)
-            $0.top.bottom.equalTo(popularTag.snp.top).inset(6)
+            $0.top.equalTo(popularTag.snp.top).inset(6)
         }
         
         menuContent.snp.makeConstraints {
-            $0.leading.equalTo(popularTag.snp.leading)
-            $0.top.equalTo(popularTag.snp.bottom).inset(8)
+            $0.leading.equalToSuperview().offset(18)
+            $0.trailing.equalToSuperview().inset(183)
+            $0.top.equalTo(popularTag.snp.bottom).offset(8)
+        }
+        
+        menuImage.snp.makeConstraints {
+            $0.width.height.equalTo(120)
+            $0.top.equalToSuperview().offset(12)
+            $0.trailing.equalToSuperview().inset(18)
         }
     }
     

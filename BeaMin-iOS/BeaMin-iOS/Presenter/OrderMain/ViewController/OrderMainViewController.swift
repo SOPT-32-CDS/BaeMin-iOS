@@ -16,8 +16,7 @@ import DesignSystem
 
 final class OrderMainViewController: UIViewController {
     
-    let testView = OrderMainView()
-    let testTableView = UITableView()
+    private let OrderMainTableView = UITableView()
     
     private let mockData = StoreDetail.storeDetailDummy.menuOrder
     
@@ -35,6 +34,8 @@ final class OrderMainViewController: UIViewController {
         // MARK: - button의 addtarget설정
         setAddTarget()
         
+//        setRegister()
+        
         // MARK: - delegate설정
         setDelegate()
 
@@ -48,18 +49,18 @@ private extension OrderMainViewController {
     }
     
     func setHierarchy() {
-        view.addSubviews(testView, testTableView)
+        view.addSubviews(OrderMainTableView)
     }
     
     func setLayout() {
         
-        testView.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(300)
-        }
+//        testView.snp.makeConstraints {
+//            $0.top.equalToSuperview()
+//            $0.leading.trailing.equalToSuperview()
+//            $0.height.equalTo(600)
+//        }
         
-        testTableView.snp.makeConstraints {
+        OrderMainTableView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaInsets)
             $0.bottom.leading.trailing.equalToSuperview()
         }
@@ -69,14 +70,26 @@ private extension OrderMainViewController {
         
     }
     
+//    func setRegister() {
+//        OrderMainTableView.register(PopularMenuTableViewCell.self, forCellReuseIdentifier: PopularMenuTableViewCell.identifier)
+//    }
+    
     func setDelegate() {
-        testTableView.dataSource = self
-        testTableView.delegate = self
+        OrderMainTableView.dataSource = self
+        OrderMainTableView.delegate = self
     }
     
     func setTableView() {
-        PopularMenuTableViewCell.register(tableView: testTableView)
-        testTableView.rowHeight = 182
+        PopularMenuTableViewCell.register(tableView: OrderMainTableView)
+        OrderMainTableView.rowHeight = 182
+        OrderMainTableView.sectionFooterHeight = 0
+        
+        PopularMenuTableViewCell.register(tableView: OrderMainTableView)
+        let headerView = OrderMainView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 536))
+        OrderMainTableView.tableHeaderView = headerView
+        
+//        headerView.config(menuName: <#T##String#>, menuContent: <#T##String#>, menuPrice: <#T##Int#>)
+//        testTableView.rowHeight = 182
     }
 }
 
@@ -93,15 +106,13 @@ extension OrderMainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return mockData[section].menuName
     }
-    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = PopularMenuTableViewCell.dequeueReusableCell(tableView: tableView)
+        cell.selectionStyle = .none
         cell.data = mockData[indexPath.section].menuDetail[indexPath.row]
         return cell
     }
-
-
 }
 
 extension OrderMainViewController: UITableViewDelegate {

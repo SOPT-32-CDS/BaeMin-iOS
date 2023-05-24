@@ -18,7 +18,6 @@ final class OrderMainView: UIView {
     
     private let menuImage = UIImageView().then {
         $0.image = .assetImage(.sushi)
-        $0.contentMode = .scaleAspectFit
     }
     
     private let menuNameLabel = UILabel().then {
@@ -27,8 +26,12 @@ final class OrderMainView: UIView {
         $0.textColor = .designSystem(.black)
     }
     
+//    private let starImage = UIImageView().then {
+//
+//    }
+    
     private let starLabel = UILabel().then {
-        $0.text = "⭐️4.9"
+        $0.text = "4.9"
         $0.font = .pretendard(.h3Headline)
         $0.textColor = .designSystem(.black)
     }
@@ -203,7 +206,7 @@ private extension OrderMainView {
         menuImage.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(322)
+            $0.height.equalTo(225)
         }
         
         menuNameLabel.snp.makeConstraints {

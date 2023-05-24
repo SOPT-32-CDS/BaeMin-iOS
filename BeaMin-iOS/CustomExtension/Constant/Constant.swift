@@ -44,6 +44,7 @@ public struct Constant {
         case together_3 = "ic_together_3"
         case oneshipping = "ic_shipping_1p"
         case popularTag = "ic_popular"
+        case uparrow = "btn_uparrow"
         
         /// 홈 메뉴 이미지
         case menu = "Mask group"
