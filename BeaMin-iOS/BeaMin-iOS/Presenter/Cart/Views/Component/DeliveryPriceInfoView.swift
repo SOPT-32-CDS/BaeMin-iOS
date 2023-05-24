@@ -23,7 +23,12 @@ final class DeliveryPriceInfoView: UIView {
         }
     }
     
-    private let totalTip: Int
+    var totalTip: Int {
+        didSet {
+            print(totalTip)
+            self.tip.text = totalTip.makePriceLabelFromNumber()
+        }
+    }
     
     private let totalPriceTitle: UILabel = {
         let label = UILabel()

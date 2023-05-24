@@ -16,11 +16,12 @@ import DesignSystem
 
 final class CartViewController: UIViewController {
     
-    private var cartData: CartModel = .init(menusByStore: []) {
+    private var cartData: CartModelDTO = .init(cartID: 0, menusByStore: []) {
         didSet {
             cartButton.totalPrice = cartData.totalPrice + cartData.totalDeliveryTip
             cartButton.totalCount = cartData.totalMenuCount
             tableViewFooterView.totalPrice = cartData.totalPrice
+            tableViewFooterView.delivertTip = cartData.totalDeliveryTip
         }
     }
     private let BMnavigationBar = BMNavigationBar()
@@ -101,7 +102,11 @@ private extension CartViewController {
     }
     
     func setData() {
-        cartData = CartModel.cartDummy
+        CartManager.shared.fetchCartDTO { result in
+            self.cartData = result
+            dump(result)
+            self.cartTableView.reloadData()
+        }
     }
 }
 

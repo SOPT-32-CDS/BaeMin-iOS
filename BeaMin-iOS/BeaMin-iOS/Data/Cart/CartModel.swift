@@ -2,92 +2,59 @@
 //  CartModel.swift
 //  BeaMin-iOS
 //
-//  Created by uiskim on 2023/05/18.
+//  Created by uiskim on 2023/05/24.
 //
 
 import Foundation
 
-import DesignSystem
-import CustomExtension
+// MARK: - Welcome
+struct CartModel: Codable {
+    let status: Int
+    let message: String
+    let data: DataClass
+    
+    // MARK: - DataClass
+    struct DataClass: Codable {
+        let cartID, totalPrice, deliveryFee: Int
+        let cartStoreList: [CartStoreList]
 
-struct CartModel {
-    
-    struct MenuByStore {
-        let storeImage: Constant.ImageName
-        let storeName: String
-        var cartMenus: [CartMenu]
-        let minimumPriceForDelivery: Int
+        enum CodingKeys: String, CodingKey {
+            case cartID = "cart_id"
+            case totalPrice = "total_price"
+            case deliveryFee = "delivery_fee"
+            case cartStoreList = "cart_store_list"
+        }
     }
 
-    struct CartMenu {
-        let menuImage: Constant.ImageName
-        let menuName: String
-        let sideInfo: String?
-        var singleMenuPrice: Int
-        var totalPricePerMenu: Int
-        var menuCount: Int
+    // MARK: - CartStoreList
+    struct CartStoreList: Codable {
+        let cartStoreID: Int
+        let name: String
+        let image: String
+        let cartItemList: [CartItemList]
+
+        enum CodingKeys: String, CodingKey {
+            case cartStoreID = "cart_store_id"
+            case name, image
+            case cartItemList = "cart_item_list"
+        }
     }
-    
-    var menusByStore: [MenuByStore]
-    
-    var totalDeliveryTip: Int {
-        return menusByStore.map{ $0.minimumPriceForDelivery }.reduce(0, +)
+
+    // MARK: - CartItemList
+    struct CartItemList: Codable {
+        let cartItemID: Int
+        let name: String
+        let totalPrice: Int
+        let options: String
+        let count: Int
+
+        enum CodingKeys: String, CodingKey {
+            case cartItemID = "cart_item_id"
+            case name
+            case totalPrice = "total_price"
+            case options, count
+        }
     }
-    
-    var totalPrice: Int {
-        return menusByStore.map{ $0.cartMenus }.flatMap{ $0 }.map{ $0.totalPricePerMenu }.reduce(0, +)
-    }
-    
-    var totalMenuCount: Int {
-        return menusByStore.map{ $0.cartMenus }.flatMap{ $0 }.map{ $0.menuCount }.reduce(0, +)
-    }
+
 }
 
-
-
-
-
-extension CartModel {
-    static var cartDummy: CartModel {
-        return
-            .init(menusByStore: [
-                .init(storeImage: .logoImage,
-                      storeName: "청담초밥 송파점",
-                      cartMenus: sushiMenus,
-                      minimumPriceForDelivery: 2000),
-                .init(storeImage: .logoImage,
-                      storeName: "황후 탕후루",
-                      cartMenus: tanghuruMenus,
-                      minimumPriceForDelivery: 3000)
-            ])
-        
-    }
-    
-    static var sushiMenus: [CartMenu] {
-        return [
-            .init(menuImage: .suish,
-                  menuName: "[갓성비]모둠초밥(10P)+미니우동",
-                  sideInfo: "새우튀김(6p)추가(7,000원)",
-                  singleMenuPrice: 11000,
-                  totalPricePerMenu: 36000,
-                  menuCount: 2),
-            .init(menuImage: .suish2,
-                  menuName: "[재주문1위]특초밥+미니우동",
-                  sideInfo: nil,
-                  singleMenuPrice: 12000,
-                  totalPricePerMenu: 16000,
-                  menuCount: 1)
-        ]
-    }
-    
-    static var tanghuruMenus: [CartMenu] {
-        return [
-            .init(menuImage: .tang,
-                  menuName: "딸기탕후루 제철이 끝나가는중",
-                  sideInfo: nil,
-                  singleMenuPrice: 3800,
-                  totalPricePerMenu: 26600,
-                  menuCount: 7)
-        ]
-    }
-}
