@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		149291812A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149291802A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift */; };
 		14D01E2F2A1520D8001A3C70 /* PopularMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */; };
 		14D01E312A154245001A3C70 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E302A154245001A3C70 /* OrderMainViewController.swift */; };
 		14D01E332A174A17001A3C70 /* OrderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E322A174A17001A3C70 /* OrderMainView.swift */; };
-		14D01E352A175B15001A3C70 /* OrderMainHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E342A175B15001A3C70 /* OrderMainHeaderViewController.swift */; };
-
 		A4809C3C2A1B3DAB0009C1DD /* HomeChipItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */; };
 		A4809C3E2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */; };
 		A4809C402A1B68190009C1DD /* HomeChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */; };
@@ -31,7 +28,6 @@
 		A4D727242A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727232A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift */; };
 		A4D727262A1890D500A00E16 /* HomeStoreBigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727252A1890D500A00E16 /* HomeStoreBigViewController.swift */; };
 		A4D727282A18A4BE00A00E16 /* HomePromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727272A18A4BE00A00E16 /* HomePromotionViewController.swift */; };
-
 		C0066C122A11F56A00EC40FB /* BMHANNAPro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */; };
 		C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C172A127AF800EC40FB /* OrderDetail.swift */; };
 		C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C192A127F2F00EC40FB /* Home.swift */; };
@@ -162,13 +158,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-
 		149291802A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMenuSectionHeaderView.swift; sourceTree = "<group>"; };
 		14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMenuTableViewCell.swift; sourceTree = "<group>"; };
 		14D01E302A154245001A3C70 /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
 		14D01E322A174A17001A3C70 /* OrderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainView.swift; sourceTree = "<group>"; };
-		14D01E342A175B15001A3C70 /* OrderMainHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainHeaderViewController.swift; sourceTree = "<group>"; };
-
 		A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipItem.swift; sourceTree = "<group>"; };
 		A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipViewController.swift; sourceTree = "<group>"; };
@@ -186,7 +179,6 @@
 		A4D727232A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoreBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4D727252A1890D500A00E16 /* HomeStoreBigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoreBigViewController.swift; sourceTree = "<group>"; };
 		A4D727272A18A4BE00A00E16 /* HomePromotionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePromotionViewController.swift; sourceTree = "<group>"; };
-
 		C0066C112A11F56A00EC40FB /* BMHANNAPro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAPro.ttf; sourceTree = "<group>"; };
 		C0066C172A127AF800EC40FB /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		C0066C192A127F2F00EC40FB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -610,7 +602,6 @@
 			isa = PBXGroup;
 			children = (
 				14D01E302A154245001A3C70 /* OrderMainViewController.swift */,
-				14D01E342A175B15001A3C70 /* OrderMainHeaderViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -932,14 +923,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				14D01E352A175B15001A3C70 /* OrderMainHeaderViewController.swift in Sources */,
-
 				C065C80D2A16412A001DA63D /* CartStepperView.swift in Sources */,
 				C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */,
 				C069698D2A164426008663C9 /* CartModel.swift in Sources */,
 				C00E1CB92A16355D00F87D5B /* CartInfoView.swift in Sources */,
-
 				C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */,
 				C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */,
 				A4D7271C2A17A67800A00E16 /* HomeMenuItem.swift in Sources */,
@@ -950,23 +937,17 @@
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
 				A4D727262A1890D500A00E16 /* HomeStoreBigViewController.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
-
 				14D01E2F2A1520D8001A3C70 /* PopularMenuTableViewCell.swift in Sources */,
-
 				C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */,
-
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
 				C00E1CB12A1634AD00F87D5B /* CartStoreMenuTableViewCell.swift in Sources */,
 				A4D7270A2A15DCEF00A00E16 /* CustomTabBarView.swift in Sources */,
 				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
-
 				14D01E332A174A17001A3C70 /* OrderMainView.swift in Sources */,
-
 				C00E1C922A13BDA400F87D5B /* AddMenuTableViewCell.swift in Sources */,
 				A4809C3E2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift in Sources */,
 				C069698F2A16539A008663C9 /* DeliveryInfoView.swift in Sources */,
 				C00E1CA12A13F88300F87D5B /* SeperateView.swift in Sources */,
-
 				C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */,
 				A4809C3C2A1B3DAB0009C1DD /* HomeChipItem.swift in Sources */,
 				A4809C402A1B68190009C1DD /* HomeChipViewController.swift in Sources */,
@@ -975,19 +956,15 @@
 				14D01E312A154245001A3C70 /* OrderMainViewController.swift in Sources */,
 				149291812A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
-				C01BB1682A0FBCB30008C814 /* OrederMainView.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
-
 				A4D727132A17611C00A00E16 /* HomePromotionItem.swift in Sources */,
 				A4D727192A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift in Sources */,
 				A4D727282A18A4BE00A00E16 /* HomePromotionViewController.swift in Sources */,
 				A4D727242A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift in Sources */,
 				A4D727222A1882D100A00E16 /* HomeStoreSmallViewController.swift in Sources */,
 				A4D7271E2A17AC8F00A00E16 /* HomeMenuViewController.swift in Sources */,
-
 				C00E1CB52A1634E900F87D5B /* CartStoreMenuSectionFooterView.swift in Sources */,
 				C06969912A16566E008663C9 /* DeliveryPriceInfoView.swift in Sources */,
-
 				C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */,
 				C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */,
 				A4D7270C2A15DD8700A00E16 /* HomeViewController.swift in Sources */,
@@ -999,7 +976,6 @@
 				C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */,
 				C00E1CBB2A163CE900F87D5B /* CartViewController.swift in Sources */,
 				C00E1CB32A1634D800F87D5B /* CartStoreMenuSectionHeaderView.swift in Sources */,
-        
 				C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

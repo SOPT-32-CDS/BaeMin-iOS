@@ -18,7 +18,7 @@ final class OrderMainViewController: UIViewController {
     
     private let OrderMainTableView = UITableView()
     
-    private let mockData = StoreDetail.storeDetailDummy.menuOrder
+    private let mockData = StoreDetail.storeDetailDummy
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,12 +54,6 @@ private extension OrderMainViewController {
     
     func setLayout() {
         
-//        testView.snp.makeConstraints {
-//            $0.top.equalToSuperview()
-//            $0.leading.trailing.equalToSuperview()
-//            $0.height.equalTo(600)
-//        }
-        
         OrderMainTableView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaInsets)
             $0.bottom.leading.trailing.equalToSuperview()
@@ -69,10 +63,6 @@ private extension OrderMainViewController {
     func setAddTarget() {
         
     }
-    
-//    func setRegister() {
-//        OrderMainTableView.register(PopularMenuTableViewCell.self, forCellReuseIdentifier: PopularMenuTableViewCell.identifier)
-//    }
     
     func setDelegate() {
         OrderMainTableView.dataSource = self
@@ -86,31 +76,29 @@ private extension OrderMainViewController {
         
         PopularMenuTableViewCell.register(tableView: OrderMainTableView)
         let headerView = OrderMainView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 536))
+        headerView.config(storeName: mockData.storeName, storeStars: mockData.storeStars, storeReviews: mockData.storeReviews, minPrice: mockData.minPrice, deliverTime: mockData.deliverTime, deliverTips: mockData.deliverTips)
         OrderMainTableView.tableHeaderView = headerView
-        
-//        headerView.config(menuName: <#T##String#>, menuContent: <#T##String#>, menuPrice: <#T##Int#>)
-//        testTableView.rowHeight = 182
     }
 }
 
 extension OrderMainViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return mockData.count
+        return mockData.menuOrder.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockData[section].menuDetail.count
+        return mockData.menuOrder[section].menuDetail.count
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return mockData[section].menuName
+        return mockData.menuOrder[section].menuName
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = PopularMenuTableViewCell.dequeueReusableCell(tableView: tableView)
         cell.selectionStyle = .none
-        cell.data = mockData[indexPath.section].menuDetail[indexPath.row]
+        cell.data = mockData.menuOrder[indexPath.section].menuDetail[indexPath.row]
         return cell
     }
 }
