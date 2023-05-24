@@ -21,5 +21,6 @@ public enum Palette: String {
     case orange
     case lightOrange
     
+    case chipBorderGreen
     case seperateGray
 }
