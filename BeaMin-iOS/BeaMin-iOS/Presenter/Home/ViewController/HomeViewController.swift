@@ -20,7 +20,7 @@ final class HomeViewController: UIViewController {
     
     @frozen
     private enum Section: CaseIterable {
-        case promotion, menu, storeSmall, chip
+        case promotion, menu, storeSmall, chip, storeBig
     }
     
     private lazy var homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: self.setSectionLayout())
@@ -99,6 +99,7 @@ private extension HomeViewController {
         HomeMenuCollectionViewCell.register(collectionView: homeCollectionView)
         HomeStoreSmallCollectionViewCell.register(collectionView: homeCollectionView)
         HomeChipCollectionViewCell.register(collectionView: homeCollectionView)
+        HomeStoreBigCollectionViewCell.register(collectionView: homeCollectionView)
     }
     
     func setSectionLayout() -> UICollectionViewLayout {
@@ -113,8 +114,8 @@ private extension HomeViewController {
                 return self.getLayoutStoreSmallSection()
             case .chip:
                 return self.getLayoutChipSection()
-//            case .storeBig :
-//                return self.getLayoutStoreBigSection()
+            case .storeBig :
+                return self.getLayoutStoreBigSection()
             }
         }
     }
@@ -212,9 +213,29 @@ private extension HomeViewController {
         
         return section
     }
-//
-//    func getLayoutStoreBigSection() -> NSCollectionLayoutSection {
-//    }
+
+    func getLayoutStoreBigSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(280)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(900)
+        )
+        let group = NSCollectionLayoutGroup.vertical(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = NSDirectionalEdgeInsets(top: 24, leading: 15, bottom: 15, trailing: 15)
+        
+        return section
+    }
     
 }
 
@@ -238,6 +259,10 @@ extension HomeViewController: UICollectionViewDataSource {
             let cell = HomeChipCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
             cell.setDataBind(model: chipData[indexPath.row])
             return cell
+        case .storeBig :
+            let cell = HomeStoreBigCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
+            cell.setDataBind(model: storeData[indexPath.row])
+            return cell
         }
     }
     
@@ -252,6 +277,8 @@ extension HomeViewController: UICollectionViewDataSource {
             return storeData.count
         case .chip :
             return chipData.count
+        case .storeBig :
+            return storeData.count
         }
     }
 }
