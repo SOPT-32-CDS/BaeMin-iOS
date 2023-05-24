@@ -89,6 +89,9 @@ public struct Constant {
         
         case delete
         
+        case mainCoupon
+        case mainNowCoupon
+        
         var real: String {
             return self.rawValue
         }
