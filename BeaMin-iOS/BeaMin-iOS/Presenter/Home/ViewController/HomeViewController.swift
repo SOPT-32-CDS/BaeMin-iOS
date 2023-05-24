@@ -27,7 +27,11 @@ final class HomeViewController: UIViewController {
     private let promotionData : [HomePromotionItem] = HomePromotionItem.homePromotionDummyData()
     private let menuData : [HomeMenuItem] = HomeMenuItem.homeMenuDummyData()
     private let storeData : [HomeStore] = HomeStore.dummyHomeStore()
-    private let chipData : [HomeChipItem] = HomeChipItem.homeChipMenuData()
+    private var chipData : [HomeChipItem] = HomeChipItem.homeChipMenuData() {
+        didSet {
+            self.homeCollectionView.reloadData()
+        }
+    }
     
     private let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
     
@@ -95,6 +99,9 @@ private extension HomeViewController {
     }
     
     func setRegister() {
+        homeCollectionView.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionHeaderView")
+        homeCollectionView.register(SectionFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionFooterView")
+        
         HomePromotionCollectionViewCell.register(collectionView: homeCollectionView)
         HomeMenuCollectionViewCell.register(collectionView: homeCollectionView)
         HomeStoreSmallCollectionViewCell.register(collectionView: homeCollectionView)
@@ -161,9 +168,21 @@ private extension HomeViewController {
             subitems: [item]
         )
         
+        let footerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(15)
+        )
+        let footer = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: footerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .bottom
+        )
+        footer.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: -30, bottom: 20, trailing: -30)
+        
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 30, bottom: 0, trailing: 30)
         section.orthogonalScrollingBehavior = .continuous
+        section.boundarySupplementaryItems = [footer]
         
         return section
     }
@@ -184,9 +203,21 @@ private extension HomeViewController {
             subitems: [item]
         )
         
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(100)
+        )
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        header.contentInsets = NSDirectionalEdgeInsets(top: 48, leading: 15, bottom: 0, trailing: 0)
+        
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 12, bottom: 0, trailing: 0)
+        section.boundarySupplementaryItems = [header]
         
         return section
     }
@@ -199,7 +230,7 @@ private extension HomeViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
+            widthDimension: .fractionalWidth(1.1),
             heightDimension: .absolute(50)
         )
         let group = NSCollectionLayoutGroup.horizontal(
@@ -207,9 +238,21 @@ private extension HomeViewController {
             subitems: [item]
         )
         
+        let headerSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(15)
+        )
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        header.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: -30, bottom: 20, trailing: -30)
+        
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 12, bottom: 0, trailing: 0)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 25, leading: 12, bottom: 0, trailing: 0)
+        section.boundarySupplementaryItems = [header]
         
         return section
     }
@@ -258,6 +301,10 @@ extension HomeViewController: UICollectionViewDataSource {
         case .chip :
             let cell = HomeChipCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
             cell.setDataBind(model: chipData[indexPath.row])
+            cell.handler = { [weak self] in
+                guard let self else { return }
+                self.chipData[indexPath.item].chipTapped.toggle()
+            }
             return cell
         case .storeBig :
             let cell = HomeStoreBigCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
@@ -281,6 +328,27 @@ extension HomeViewController: UICollectionViewDataSource {
             return storeData.count
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionType = SectionType.allCases[indexPath.section]
+        switch sectionType {
+        case .promotion:
+            let view = UICollectionReusableView()
+            return view
+        case .menu:
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionFooterView", for: indexPath) as! SectionFooterView
+            return footerView
+        case .storeSmall:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeaderView", for: indexPath) as! SectionHeaderView
+            return headerView
+        case .chip:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionFooterView", for: indexPath) as! SectionFooterView
+            return headerView
+        case .storeBig:
+            let view = UICollectionReusableView()
+            return view
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
@@ -288,4 +356,5 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return Section.allCases.count
     }
+
 }
