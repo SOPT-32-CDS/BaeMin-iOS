@@ -56,4 +56,5 @@ private extension SectionFooterView {
             $0.height.equalTo(12)
         }
     }
+    
 }
