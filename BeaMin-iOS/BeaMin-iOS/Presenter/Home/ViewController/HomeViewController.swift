@@ -26,19 +26,24 @@ final class HomeViewController: UIViewController {
     private lazy var homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: self.setSectionLayout())
     private let promotionData : [HomePromotionItem] = HomePromotionItem.homePromotionDummyData()
     private let menuData : [HomeMenuItem] = HomeMenuItem.homeMenuDummyData()
-    private let storeData : [HomeStore] = HomeStore.dummyHomeStore()
     private var chipData : [HomeChipItem] = HomeChipItem.homeChipMenuData() {
         didSet {
             self.homeCollectionView.reloadData()
         }
     }
     
+    private var homeData: [HomeDTO] = []
+    
     private let navigationBar = MainNavigationView()
     
     private let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
+
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setData()
+        
         // MARK: - 컴포넌트 설정
         setUI()
         
@@ -55,6 +60,20 @@ final class HomeViewController: UIViewController {
 }
 
 private extension HomeViewController {
+    func setData() {
+        HomeManager.homeShared.homeData { response in
+            switch response {
+            case .success(let data) :
+                guard let data = data as? Home else {return}
+                self.homeData = data.convertHomeDTO()
+                self.homeCollectionView.reloadData()
+                dump(self.homeData)
+            default :
+                break
+            }
+        }
+    }
+    
     func setUI() {
         view.backgroundColor = .designSystem(.white)
         navigationController?.navigationBar.isHidden = true
@@ -299,7 +318,7 @@ private extension HomeViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
+            widthDimension: .fractionalWidth(0.93),
             heightDimension: .absolute(900)
         )
         let group = NSCollectionLayoutGroup.vertical(
@@ -333,7 +352,11 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         case .storeSmall :
             let cell = HomeStoreSmallCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
-            cell.setDataBind(model: storeData[indexPath.row])
+
+            if (homeData.count == 3) {
+                cell.setDataBind(model: homeData[indexPath.row])
+            }
+            
             return cell
         case .chip :
             let cell = HomeChipCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
@@ -345,7 +368,10 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         case .storeBig :
             let cell = HomeStoreBigCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
-            cell.setDataBind(model: storeData[indexPath.row])
+            
+            if (homeData.count == 3) {
+                cell.setDataBind(model: homeData[indexPath.row])
+            }
             return cell
         }
     }
@@ -360,11 +386,11 @@ extension HomeViewController: UICollectionViewDataSource {
         case .menu :
             return menuData.count
         case .storeSmall :
-            return storeData.count
+            return homeData.count
         case .chip :
             return chipData.count
         case .storeBig :
-            return storeData.count
+            return homeData.count
         }
     }
     

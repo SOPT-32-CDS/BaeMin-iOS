@@ -84,7 +84,7 @@ extension HomeStoreSmallCollectionViewCell {
         }
         
         homeStoreSmallDeliveryTime.do {
-            $0.font = .pretendard(.body2Bold)
+            $0.font = .pretendard(.body2)
             $0.textColor = .designSystem(.black)
         }
         
@@ -95,7 +95,7 @@ extension HomeStoreSmallCollectionViewCell {
         }
         
         homeStoreSmallDeliveryTipMoney.do {
-            $0.font = .pretendard(.body2Bold)
+            $0.font = .pretendard(.body2)
             $0.textColor = .designSystem(.black)
         }
         
@@ -184,11 +184,18 @@ extension HomeStoreSmallCollectionViewCell {
         
     }
     
-    func setDataBind(model : HomeStore) {
+    func setDataBind(model : HomeDTO) {
         homeStoreSmallTItle.text = model.name
         homeStoreSmallStar.text = String(model.rate)
-        homeStoreSmallDeliveryTime.text = String(model.minDeliveryTime)
-        homeStoreSmallDeliveryTipMoney.text = String(model.deliveryFee)
-        
+        homeStoreSmallDeliveryTime.text = String(model.minDeliveryTime) + "~" + String(model.maxDeliveryTime) + "분"
+        homeStoreSmallDeliveryTipMoney.text = String(model.deliveryFee.makePriceLabelFromNumber())
+
+        if model.coupon == "coupon" {
+            homeStoreSmallCoupon.image = .assetImage(.mainCoupon)
+        } else if model.coupon == "direct-coupon" {
+            homeStoreSmallCoupon.image = .assetImage(.mainNowCoupon)
+        } else {
+            homeStoreSmallCoupon.image = .none
+        }
     }
 }
