@@ -32,6 +32,7 @@
 		C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C172A127AF800EC40FB /* OrderDetail.swift */; };
 		C0066C1A2A127F2F00EC40FB /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C192A127F2F00EC40FB /* Home.swift */; };
 		C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */; };
+		C00A097A2A1F14ED00C539FF /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A09792A1F14ED00C539FF /* CartModel.swift */; };
 		C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */; };
 		C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */; };
 		C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8D2A13B83F00F87D5B /* Int+.swift */; };
@@ -183,6 +184,7 @@
 		C0066C172A127AF800EC40FB /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		C0066C192A127F2F00EC40FB /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetail.swift; sourceTree = "<group>"; };
+		C00A09792A1F14ED00C539FF /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailHeaderView.swift; sourceTree = "<group>"; };
 		C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		C00E1C8D2A13B83F00F87D5B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
@@ -690,6 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				C069698C2A164426008663C9 /* CartModelDTO.swift */,
+				C00A09792A1F14ED00C539FF /* CartModel.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -938,6 +941,7 @@
 				A4D727262A1890D500A00E16 /* HomeStoreBigViewController.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
 				14D01E2F2A1520D8001A3C70 /* PopularMenuTableViewCell.swift in Sources */,
+				C00A097A2A1F14ED00C539FF /* CartModel.swift in Sources */,
 				C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */,
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
 				C00E1CB12A1634AD00F87D5B /* CartStoreMenuTableViewCell.swift in Sources */,
