@@ -20,7 +20,7 @@ final class HomeViewController: UIViewController {
     
     @frozen
     private enum Section: CaseIterable {
-        case promotion, menu, storeSmall, chip, storeBig
+        case advertise, promotion, menu, storeSmall, chip, storeBig
     }
     
     private lazy var homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: self.setSectionLayout())
@@ -111,6 +111,7 @@ private extension HomeViewController {
         homeCollectionView.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionHeaderView")
         homeCollectionView.register(SectionFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionFooterView")
         
+        HomeAdvertiseCollectionViewCell.register(collectionView: homeCollectionView)
         HomePromotionCollectionViewCell.register(collectionView: homeCollectionView)
         HomeMenuCollectionViewCell.register(collectionView: homeCollectionView)
         HomeStoreSmallCollectionViewCell.register(collectionView: homeCollectionView)
@@ -122,6 +123,8 @@ private extension HomeViewController {
         return UICollectionViewCompositionalLayout { sectionIndex, env -> NSCollectionLayoutSection? in
             let sectionType = SectionType.allCases[sectionIndex]
             switch sectionType {
+            case .advertise:
+                return self.getLayoutAdvertiseSection()
             case .promotion:
                 return self.getLayoutPromotionSection()
             case .menu:
@@ -134,6 +137,29 @@ private extension HomeViewController {
                 return self.getLayoutStoreBigSection()
             }
         }
+    }
+    
+    func getLayoutAdvertiseSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(144)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+        group.contentInsets = NSDirectionalEdgeInsets(top: 40, leading: 0, bottom: 12, trailing: 0)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        
+        return section
     }
     
     func getLayoutPromotionSection() -> NSCollectionLayoutSection {
@@ -151,7 +177,7 @@ private extension HomeViewController {
             layoutSize: groupSize,
             subitems: [item]
         )
-        group.contentInsets = NSDirectionalEdgeInsets(top: 40, leading: 14, bottom: 0, trailing: 0)
+        group.contentInsets = NSDirectionalEdgeInsets(top: 45, leading: 14, bottom: 0, trailing: 0)
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
@@ -295,6 +321,9 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let sectionType = SectionType.allCases[indexPath.section]
         switch sectionType {
+        case .advertise :
+            let cell = HomeAdvertiseCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
+            return cell
         case .promotion:
             let cell = HomePromotionCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
             cell.setDataBind(model: promotionData[indexPath.row])
@@ -325,6 +354,8 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let sectionType = SectionType.allCases[section]
         switch sectionType {
+        case .advertise :
+            return 1
         case .promotion:
             return promotionData.count
         case .menu :
@@ -341,6 +372,9 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionType = SectionType.allCases[indexPath.section]
         switch sectionType {
+        case .advertise:
+            let view = UICollectionReusableView()
+            return view
         case .promotion:
             let view = UICollectionReusableView()
             return view
