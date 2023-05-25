@@ -16,6 +16,8 @@ import DesignSystem
 
 final class CartViewController: UIViewController {
     
+    private let cartManager = CartManager.shared
+    
     private var cartData: CartModelDTO = .init(cartID: 0, totalDeliveryTip: 0, menusByStore: []) {
         didSet {
             cartButton.totalPrice = cartData.totalPrice + cartData.totalDeliveryTip
@@ -102,7 +104,7 @@ private extension CartViewController {
     }
     
     func setData() {
-        CartManager.shared.fetchCartDTO { data in
+        cartManager.fetchCartDTO { data in
             dump(data)
             self.cartData = data
             self.cartTableView.reloadData()
@@ -157,6 +159,8 @@ extension CartViewController: CartMenuCountDelegate {
     
     func deleteRow(sender: UIButton) {
         guard let indexPath = cartTableView.indexPathForRow(at: sender.convert(CGPoint.zero, to: cartTableView)) else { return }
+//        print(cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].menuID)
+        cartManager.deleteCartMenu(menuID: cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].menuID)
         cartData.menusByStore[indexPath.section].cartMenus.remove(at: indexPath.row)
         cartTableView.beginUpdates()
         cartTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .left)

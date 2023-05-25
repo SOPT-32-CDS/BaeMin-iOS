@@ -43,6 +43,23 @@ final class CartManager {
         }
     }
     
+    func deleteCartMenu(menuID: Int) {
+        print(makeCartUrl(cartID: menuID.description))
+        let dataRequest = AF.request(makeCartUrl(cartID: menuID.description), method: .delete, encoding: JSONEncoding.default, headers: header)
+        dataRequest.responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let value = response.value else { return }
+                if 200..<300 ~= statusCode {
+                    print("✅✅✅✅✅Cart삭제API호출성공✅✅✅✅✅")
+                }
+            case .failure:
+                fatalError("네트워킹실패")
+            }
+        }
+    }
+    
     private func convertCartDTO(input: CartModel) -> CartModelDTO {
         .init(cartID: input.data.cartID,
               totalDeliveryTip: input.data.deliveryFee,
