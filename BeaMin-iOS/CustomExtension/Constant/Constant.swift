@@ -38,11 +38,17 @@ public struct Constant {
         case scrdownImage = "ic_chips_scrdown"
         
         /// 주문하기상세메인 이미지
+        case sushi = "sushi"
         case heart_3 = "ic_heart_3"
         case share_3 = "ic_share_3"
         case together_3 = "ic_together_3"
         case oneshipping = "ic_shipping_1p"
+
+        case popularTag = "ic_popular"
+        case uparrow = "btn_uparrow"
+
         case popularityMark = "popularityMark"
+
         
         /// 홈 메뉴 이미지
         case menu = "Mask group"
@@ -92,10 +98,16 @@ public struct Constant {
         case mainCoupon
         case mainNowCoupon
         case img_advertise
+        case OrderCompleteImage
         
         var real: String {
             return self.rawValue
         }
+    }
+    
+    public struct CartNetworkConstant {
+        public static let baseURL: String = "http://43.201.68.44:8080/cart/"
+        public static let bearer: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IuyGoe2MjOq1rCDsmKzrprztlL3roZwgMTM1In0.hh0main0EWtZYLHWlO3GfdrDgPDaAipNTkBlxgc5KSY"
     }
 }
 

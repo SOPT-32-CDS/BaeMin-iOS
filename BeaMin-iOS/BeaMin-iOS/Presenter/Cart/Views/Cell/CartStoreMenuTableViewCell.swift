@@ -23,7 +23,7 @@ final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProto
     
     weak var delegate: CartMenuCountDelegate?
     
-    var menuData: CartModel.CartMenu? {
+    var menuData: CartModelDTO.CartMenu? {
         didSet {
             dataBind(menuData)
         }
@@ -208,7 +208,7 @@ private extension CartStoreMenuTableViewCell {
         }
     }
     
-    func dataBind(_ menuData: CartModel.CartMenu?) {
+    func dataBind(_ menuData: CartModelDTO.CartMenu?) {
         guard let menuData else { return }
         menuNameLabel.text = menuData.menuName
         menuImageView.image = .assetImage(menuData.menuImage)

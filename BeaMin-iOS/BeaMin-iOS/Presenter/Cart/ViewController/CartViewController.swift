@@ -16,11 +16,14 @@ import DesignSystem
 
 final class CartViewController: UIViewController {
     
-    private var cartData: CartModel = .init(menusByStore: []) {
+    private let cartManager = CartManager.shared
+    
+    private var cartData: CartModelDTO = .init(cartID: 0, totalDeliveryTip: 0, menusByStore: []) {
         didSet {
             cartButton.totalPrice = cartData.totalPrice + cartData.totalDeliveryTip
             cartButton.totalCount = cartData.totalMenuCount
             tableViewFooterView.totalPrice = cartData.totalPrice
+            tableViewFooterView.delivertTip = cartData.totalDeliveryTip
         }
     }
     private let BMnavigationBar = BMNavigationBar()
@@ -51,13 +54,14 @@ final class CartViewController: UIViewController {
         setTableView()
         
         setNavigation()
+        
+        setAddTarget()
     }
 }
 
 private extension CartViewController {
     func setUI() {
         view.backgroundColor = .designSystem(.white)
-        print(cartData.totalMenuCount)
     }
     
     func setHierarchy() {
@@ -101,7 +105,22 @@ private extension CartViewController {
     }
     
     func setData() {
-        cartData = CartModel.cartDummy
+        cartManager.fetchCartDTO { data in
+            dump(data)
+            self.cartData = data
+            self.cartTableView.reloadData()
+        }
+    }
+    
+    func setAddTarget() {
+        cartButton.addButtonAction { sender in
+            self.cartManager.orderComplete(cartID: self.cartData.cartID) { isComplete in
+                if isComplete {
+                    let orderCompleteViewController = OrderCompleteViewController()
+                    self.navigationController?.pushViewController(orderCompleteViewController, animated: true)
+                }
+            }
+        }
     }
 }
 
@@ -145,6 +164,7 @@ extension CartViewController: CartMenuCountDelegate {
     
     func changeCarMenuCount(sender: UIButton, count: Int, totalPrice: Int) {
         guard let indexPath = cartTableView.indexPathForRow(at: sender.convert(CGPoint.zero, to: cartTableView)) else { return }
+        
         cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].menuCount += count
         cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].totalPricePerMenu = totalPrice
     }
@@ -152,6 +172,7 @@ extension CartViewController: CartMenuCountDelegate {
     
     func deleteRow(sender: UIButton) {
         guard let indexPath = cartTableView.indexPathForRow(at: sender.convert(CGPoint.zero, to: cartTableView)) else { return }
+        cartManager.deleteCartMenu(menuID: cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].menuID)
         cartData.menusByStore[indexPath.section].cartMenus.remove(at: indexPath.row)
         cartTableView.beginUpdates()
         cartTableView.deleteRows(at: [IndexPath(row: indexPath.row, section: indexPath.section)], with: .left)

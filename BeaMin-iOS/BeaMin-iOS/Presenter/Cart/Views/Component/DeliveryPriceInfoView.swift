@@ -19,11 +19,15 @@ final class DeliveryPriceInfoView: UIView {
     var totalPrice: Int {
         didSet {
             self.totalPriceLabel.text = totalPrice.makePriceLabelFromNumber()
-            self.estimatedPaymentAmount.text = (totalPrice + totalTip).makePriceLabelFromNumber()
         }
     }
     
-    private let totalTip: Int
+    var totalTip: Int {
+        didSet {
+            self.tip.text = totalTip.makePriceLabelFromNumber()
+            self.estimatedPaymentAmount.text = (totalPrice + totalTip).makePriceLabelFromNumber()
+        }
+    }
     
     private let totalPriceTitle: UILabel = {
         let label = UILabel()
