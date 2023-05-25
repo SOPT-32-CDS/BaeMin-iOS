@@ -40,16 +40,18 @@ struct CartModel: Codable {
     struct CartItemList: Codable {
         let cartItemID: Int
         let name: String
+        let image: String
         let totalPrice: Int
         let options: String
         let count: Int
 
         enum CodingKeys: String, CodingKey {
             case cartItemID = "cart_item_id"
-            case name
+            case name, image
             case totalPrice = "total_price"
             case options, count
         }
     }
 
 }
+

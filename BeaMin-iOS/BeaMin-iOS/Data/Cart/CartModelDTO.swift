@@ -17,7 +17,6 @@ struct CartModelDTO {
         let storeImage: Constant.ImageName
         let storeName: String
         var cartMenus: [CartMenu]
-        let minimumPriceForDelivery: Int
     }
 
     struct CartMenu {
@@ -30,11 +29,8 @@ struct CartModelDTO {
         var menuCount: Int
     }
     var cartID: Int
+    var totalDeliveryTip: Int
     var menusByStore: [MenuByStore]
-    
-    var totalDeliveryTip: Int {
-        return menusByStore.map{ $0.minimumPriceForDelivery }.reduce(0, +)
-    }
     
     var totalPrice: Int {
         return menusByStore.map{ $0.cartMenus }.flatMap{ $0 }.map{ $0.totalPricePerMenu }.reduce(0, +)
@@ -52,17 +48,15 @@ struct CartModelDTO {
 extension CartModelDTO {
     static var cartDummy: CartModelDTO {
         return
-            .init(cartID: 1, menusByStore: [
+            .init(cartID: 1, totalDeliveryTip: 8800, menusByStore: [
                 .init(storeID: 1,
                       storeImage: .logoImage,
                       storeName: "청담초밥 송파점",
-                      cartMenus: sushiMenus,
-                      minimumPriceForDelivery: 2000),
+                      cartMenus: sushiMenus),
                 .init(storeID: 2,
                       storeImage: .logoImage,
                       storeName: "황후 탕후루",
-                      cartMenus: tanghuruMenus,
-                      minimumPriceForDelivery: 3000)
+                      cartMenus: tanghuruMenus)
             ])
         
     }
