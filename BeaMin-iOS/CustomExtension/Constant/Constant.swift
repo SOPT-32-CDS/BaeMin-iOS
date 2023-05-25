@@ -91,6 +91,7 @@ public struct Constant {
         
         case mainCoupon
         case mainNowCoupon
+        case img_advertise
         
         var real: String {
             return self.rawValue
