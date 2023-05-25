@@ -193,7 +193,7 @@ extension HomeStoreBigCollectionViewCell {
         }
     }
     
-    func setDataBind(model : HomeStore) {
+    func setDataBind(model : HomeDTO) {
         homeStoreBigTitle.text = model.name
         homeStoreBigStar.text = String(model.rate)
         homeStoreBigDeliveryTime.text = String(model.minDeliveryTime) + "~" + String(model.maxDeliveryTime) + "분"
@@ -201,9 +201,9 @@ extension HomeStoreBigCollectionViewCell {
         homeStoreBigMinDelivery.text = String(model.minOrderAmount.makePriceLabelFromNumber())
         
         
-        if model.hasCoupon == "coupon" {
+        if model.coupon == "coupon" {
             homeStoreBigCoupon.image = .assetImage(.mainCoupon)
-        } else if model.hasCoupon == "direct-coupon" {
+        } else if model.coupon == "direct-coupon" {
             homeStoreBigCoupon.image = .assetImage(.mainNowCoupon)
         } else {
             homeStoreBigCoupon.image = .none
