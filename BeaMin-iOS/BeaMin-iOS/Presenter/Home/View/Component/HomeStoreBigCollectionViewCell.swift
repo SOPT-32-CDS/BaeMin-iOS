@@ -58,6 +58,9 @@ extension HomeStoreBigCollectionViewCell {
     func setUI() {
         homeStoreBigImage.do {
             $0.image = UIImage.assetImage(.img_advertise)
+            $0.layer.cornerRadius = 10
+            $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            $0.layer.masksToBounds = true
         }
         
         homeStoreBigTitle.do {

@@ -306,12 +306,12 @@
 		A4D7270D2A16043300A00E16 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A4A72F782A1F2A9700E32056 /* HomeAdvertiseCollectionViewCell.swift */,
 				A4D727102A1604A700A00E16 /* HomePromotionCollectionViewCell.swift */,
 				A4D727182A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift */,
 				A4D7271F2A1875FD00A00E16 /* HomeStoreSmallCollectionViewCell.swift */,
 				A4D727232A18888B00A00E16 /* HomeStoreBigCollectionViewCell.swift */,
 				A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */,
-				A4A72F782A1F2A9700E32056 /* HomeAdvertiseCollectionViewCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
