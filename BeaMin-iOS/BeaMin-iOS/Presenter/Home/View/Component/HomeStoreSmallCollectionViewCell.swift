@@ -59,7 +59,7 @@ extension HomeStoreSmallCollectionViewCell {
         backgroundColor = .designSystem(.white)
         
         homeStoreSmallImage.do {
-            $0.image = UIImage.assetImage(.nav_heart)
+            $0.image = UIImage.assetImage(.img_test)
             $0.layer.cornerRadius = 7
         }
         
@@ -123,6 +123,7 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallImage.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().inset(4)
+            $0.leading.equalToSuperview()
             $0.width.height.equalTo(150)
         }
         
@@ -131,11 +132,13 @@ extension HomeStoreSmallCollectionViewCell {
         }
         
         homeStoreSmallStarIcon.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(2)
             $0.leading.equalTo(homeStoreSmallTItle.snp.trailing).offset(8)
         }
         
         homeStoreSmallStar.snp.makeConstraints {
-            $0.leading.equalTo(homeStoreSmallStarIcon.snp.trailing)
+            $0.top.equalToSuperview().inset(1)
+            $0.leading.equalTo(homeStoreSmallStarIcon.snp.trailing).offset(2)
         }
         
         homeStoreSmallTitleStackView.snp.makeConstraints {

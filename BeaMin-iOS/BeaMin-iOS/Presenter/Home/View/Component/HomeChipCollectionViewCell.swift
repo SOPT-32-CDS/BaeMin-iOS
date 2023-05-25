@@ -54,7 +54,6 @@ extension HomeChipCollectionViewCell {
             $0.layer.cornerRadius = 19
             $0.layer.borderColor = .designSystem(.gray2)
             $0.layer.borderWidth = 1
-//            $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 20)
             $0.contentEdgeInsets = .init(top: 0, left: 14, bottom: 0, right: 14)
             $0.titleEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: -6)
         }

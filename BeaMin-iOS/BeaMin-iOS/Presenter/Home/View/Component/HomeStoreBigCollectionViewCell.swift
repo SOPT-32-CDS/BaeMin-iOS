@@ -141,12 +141,13 @@ extension HomeStoreBigCollectionViewCell {
         }
         
         homeStoreBigStarIcon.snp.makeConstraints {
-            $0.top.leading.equalToSuperview().inset(4)
+            $0.top.equalToSuperview().inset(2)
+            $0.leading.equalToSuperview().inset(4)
         }
         
         homeStoreBigStar.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(2.5)
-            $0.leading.equalTo(homeStoreBigStarIcon.snp.trailing)
+            $0.top.equalToSuperview().inset(1)
+            $0.leading.equalTo(homeStoreBigStarIcon.snp.trailing).offset(2)
         }
         
         homeStoreBigStarStackView.snp.makeConstraints {
