@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1432ADF12A1F6C6A0027E744 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432ADF02A1F6C6A0027E744 /* Store.swift */; };
 		149291812A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149291802A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift */; };
 		149ADE662A1F28530020D026 /* OrderMainCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149ADE652A1F28530020D026 /* OrderMainCartButton.swift */; };
 		14D01E2F2A1520D8001A3C70 /* PopularMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */; };
@@ -159,6 +160,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1432ADF02A1F6C6A0027E744 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		149291802A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMenuSectionHeaderView.swift; sourceTree = "<group>"; };
 		149ADE652A1F28530020D026 /* OrderMainCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainCartButton.swift; sourceTree = "<group>"; };
 		14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */,
+				1432ADF02A1F6C6A0027E744 /* Store.swift */,
 			);
 			path = OrderMain;
 			sourceTree = "<group>";
@@ -961,6 +964,7 @@
 				149291812A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift in Sources */,
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
+				1432ADF12A1F6C6A0027E744 /* Store.swift in Sources */,
 				A4D727132A17611C00A00E16 /* HomePromotionItem.swift in Sources */,
 				A4D727192A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift in Sources */,
 				A4D727282A18A4BE00A00E16 /* HomePromotionViewController.swift in Sources */,
