@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149291812A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149291802A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift */; };
+		14D01E2F2A1520D8001A3C70 /* PopularMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */; };
+		14D01E312A154245001A3C70 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E302A154245001A3C70 /* OrderMainViewController.swift */; };
+		14D01E332A174A17001A3C70 /* OrderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E322A174A17001A3C70 /* OrderMainView.swift */; };
 		A4809C3C2A1B3DAB0009C1DD /* HomeChipItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */; };
 		A4809C3E2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */; };
 		A4809C402A1B68190009C1DD /* HomeChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */; };
@@ -70,8 +74,6 @@
 		C01BB1462A0FBAEB0008C814 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1452A0FBAEB0008C814 /* UIColor+.swift */; };
 		C01BB1482A0FBB5E0008C814 /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1472A0FBB5E0008C814 /* CGColor+.swift */; };
 		C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1572A0FBC6A0008C814 /* OrderMainManager.swift */; };
-		C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */; };
-		C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */; };
 		C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15D2A0FBC830008C814 /* HomeManager.swift */; };
 		C01BB1622A0FBC930008C814 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1612A0FBC930008C814 /* HomeView.swift */; };
 		C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */; };
@@ -158,6 +160,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		149291802A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMenuSectionHeaderView.swift; sourceTree = "<group>"; };
+		14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMenuTableViewCell.swift; sourceTree = "<group>"; };
+		14D01E302A154245001A3C70 /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
+		14D01E322A174A17001A3C70 /* OrderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainView.swift; sourceTree = "<group>"; };
 		A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipItem.swift; sourceTree = "<group>"; };
 		A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipViewController.swift; sourceTree = "<group>"; };
@@ -220,8 +226,6 @@
 		C01BB1452A0FBAEB0008C814 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		C01BB1472A0FBB5E0008C814 /* CGColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+.swift"; sourceTree = "<group>"; };
 		C01BB1572A0FBC6A0008C814 /* OrderMainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainManager.swift; sourceTree = "<group>"; };
-		C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
-		C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainView.swift; sourceTree = "<group>"; };
 		C01BB15D2A0FBC830008C814 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		C01BB1612A0FBC930008C814 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailManager.swift; sourceTree = "<group>"; };
@@ -592,7 +596,9 @@
 		C01BB1512A0FBC2A0008C814 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C01BB15B2A0FBC7B0008C814 /* OrderMainView.swift */,
+				14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */,
+				14D01E322A174A17001A3C70 /* OrderMainView.swift */,
+				149291802A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,7 +606,7 @@
 		C01BB1522A0FBC2F0008C814 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C01BB1592A0FBC740008C814 /* OrderMainViewController.swift */,
+				14D01E302A154245001A3C70 /* OrderMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -946,11 +952,13 @@
 				C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */,
 				A4D727262A1890D500A00E16 /* HomeStoreBigViewController.swift in Sources */,
 				C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */,
+				14D01E2F2A1520D8001A3C70 /* PopularMenuTableViewCell.swift in Sources */,
 				C00E1C952A13BE4400F87D5B /* CheckBox.swift in Sources */,
 				C01BB1582A0FBC6A0008C814 /* OrderMainManager.swift in Sources */,
 				C00E1CB12A1634AD00F87D5B /* CartStoreMenuTableViewCell.swift in Sources */,
 				A4D7270A2A15DCEF00A00E16 /* CustomTabBarView.swift in Sources */,
 				C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */,
+				14D01E332A174A17001A3C70 /* OrderMainView.swift in Sources */,
 				C00E1C922A13BDA400F87D5B /* AddMenuTableViewCell.swift in Sources */,
 				A4809C3E2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift in Sources */,
 				C069698F2A16539A008663C9 /* DeliveryInfoView.swift in Sources */,
@@ -960,6 +968,9 @@
 				A4809C402A1B68190009C1DD /* HomeChipViewController.swift in Sources */,
 				A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */,
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
+				14D01E312A154245001A3C70 /* OrderMainViewController.swift in Sources */,
+				149291812A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift in Sources */,
+				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
 				A4D727132A17611C00A00E16 /* HomePromotionItem.swift in Sources */,
 				A4D727192A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift in Sources */,
@@ -978,10 +989,12 @@
 				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				A4D727112A1604A700A00E16 /* HomePromotionCollectionViewCell.swift in Sources */,
 				C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */,
-				C01BB15A2A0FBC740008C814 /* OrderMainViewController.swift in Sources */,
 				C00E1CBB2A163CE900F87D5B /* CartViewController.swift in Sources */,
+<<<<<<< HEAD
 				C0FFD76C2A1E367100C73270 /* CartModel.swift in Sources */,
 				C01BB15C2A0FBC7B0008C814 /* OrderMainView.swift in Sources */,
+=======
+>>>>>>> develop
 				C00E1CB32A1634D800F87D5B /* CartStoreMenuSectionHeaderView.swift in Sources */,
 				C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */,
 			);
