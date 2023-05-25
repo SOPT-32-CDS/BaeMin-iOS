@@ -54,6 +54,8 @@ final class CartViewController: UIViewController {
         setTableView()
         
         setNavigation()
+        
+        setAddTarget()
     }
 }
 
@@ -107,6 +109,17 @@ private extension CartViewController {
             dump(data)
             self.cartData = data
             self.cartTableView.reloadData()
+        }
+    }
+    
+    func setAddTarget() {
+        cartButton.addButtonAction { sender in
+            self.cartManager.orderComplete(cartID: self.cartData.cartID) { isComplete in
+                if isComplete {
+                    let orderCompleteViewController = OrderCompleteViewController()
+                    self.navigationController?.pushViewController(orderCompleteViewController, animated: true)
+                }
+            }
         }
     }
 }

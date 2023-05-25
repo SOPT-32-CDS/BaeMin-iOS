@@ -57,6 +57,23 @@ final class CartManager {
             }
         }
     }
+    
+    func orderComplete(cartID: Int, completion: @escaping (Bool)->Void) {
+        let dataRequest = AF.request(makeCartUrl(cartID: cartID.description), method: .post, encoding: JSONEncoding.default, headers: header)
+        dataRequest.responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                if 200..<300 ~= statusCode {
+                    print("✅✅✅✅✅주문완료API호출성공✅✅✅✅✅")
+                    completion(true)
+                }
+            case .failure:
+                fatalError("네트워킹실패")
+            }
+        }
+    }
+    
 }
 
 private extension CartManager {
