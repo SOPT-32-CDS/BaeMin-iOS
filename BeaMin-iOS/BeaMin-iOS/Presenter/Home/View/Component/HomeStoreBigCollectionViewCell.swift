@@ -67,10 +67,12 @@ extension HomeStoreBigCollectionViewCell {
         
         homeStoreBigCoupon.do {
             $0.image = .assetImage(.mainCoupon)
+            
         }
         
         homeStoreBigStarIcon.do {
             $0.image = UIImage.assetImage(.ic_star)
+            $0.contentMode = .scaleAspectFill
         }
         
         homeStoreBigStar.do {
