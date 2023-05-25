@@ -67,6 +67,7 @@ extension HomeChipCollectionViewCell {
     func setLayout() {
         homeChipButton.snp.makeConstraints {
             $0.top.leading.equalToSuperview()
+            $0.width.equalTo(83)
             $0.height.equalTo(37)
         }
     }
@@ -81,7 +82,8 @@ extension HomeChipCollectionViewCell {
         homeChipButton.do {
             $0.setImage(model.chipImage, for: .normal)
             $0.setTitle(model.chipTitle, for: .normal)
-            if model.chipTitle == "기본순" { $0.backgroundColor = .designSystem(.white)
+            if model.chipTitle == "기본순" {
+                $0.backgroundColor = .designSystem(.white)
             }
         }
         isTapped = model.chipTapped
@@ -96,7 +98,7 @@ extension HomeChipCollectionViewCell {
         if isTapped {
             homeChipButton.do {
                 $0.backgroundColor = .designSystem(.lightGreen)
-                $0.layer.borderColor = .designSystem(.lightGreen)
+                $0.layer.borderColor = .designSystem(.chipBorderGreen)
             }
         }
         else {

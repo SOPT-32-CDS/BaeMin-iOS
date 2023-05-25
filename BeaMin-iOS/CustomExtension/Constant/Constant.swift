@@ -95,6 +95,9 @@ public struct Constant {
         
         case delete
         
+        case mainCoupon
+        case mainNowCoupon
+        case img_advertise
         case OrderCompleteImage
         
         var real: String {
