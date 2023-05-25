@@ -80,7 +80,7 @@ extension HomeStoreBigViewController : UICollectionViewDelegate {
 extension HomeStoreBigViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = HomeStoreBigCollectionViewCell.dequeueReusableCell(collectionView: homeStoreBigView, indexPath: indexPath)
-        cell.setDataBind(model: homeStoreModel[indexPath.row])
+//        cell.setDataBind(model: homeStoreModel[indexPath.row])
         return cell
     }
     
