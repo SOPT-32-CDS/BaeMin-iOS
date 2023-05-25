@@ -16,6 +16,8 @@ import DesignSystem
 
 final class CartStoreMenuSectionHeaderView: UIView {
     
+    private var task: URLSessionDataTask?
+    
     private let sectionLine = SeperateView(height: 10)
     
     private let storeImage: UIImageView = {
@@ -48,8 +50,8 @@ final class CartStoreMenuSectionHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(storeName: String, storeImage: Constant.ImageName) {
-        self.storeImage.image = .assetImage(storeImage)
+    func configure(storeName: String, storeImage: String) {
+        task = self.storeImage.loadImage(from: storeImage)
         self.storeNameLabel.text = storeName
     }
 
