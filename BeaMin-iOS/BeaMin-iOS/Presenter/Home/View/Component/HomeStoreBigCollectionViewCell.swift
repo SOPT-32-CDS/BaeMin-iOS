@@ -18,6 +18,7 @@ final class HomeStoreBigCollectionViewCell: UICollectionViewCell, CollectionView
     
     private let homeStoreBigImage = UIImageView()
     private let homeStoreBigTitle = UILabel()
+    private let homeStoreBigCoupon = UIImageView()
     
     private let homeStoreBigStarIcon = UIImageView()
     private let homeStoreBigStar = UILabel()
@@ -56,7 +57,7 @@ final class HomeStoreBigCollectionViewCell: UICollectionViewCell, CollectionView
 extension HomeStoreBigCollectionViewCell {
     func setUI() {
         homeStoreBigImage.do {
-            $0.image = UIImage.assetImage(.nav_heart)
+            $0.image = UIImage.assetImage(.img_advertise)
         }
         
         homeStoreBigTitle.do {
@@ -64,9 +65,12 @@ extension HomeStoreBigCollectionViewCell {
             $0.textColor = .designSystem(.black)
         }
         
+        homeStoreBigCoupon.do {
+            $0.image = .assetImage(.mainCoupon)
+        }
+        
         homeStoreBigStarIcon.do {
-            $0.image = UIImage.assetImage(.ic_star
-            )
+            $0.image = UIImage.assetImage(.ic_star)
         }
         
         homeStoreBigStar.do {
@@ -107,11 +111,11 @@ extension HomeStoreBigCollectionViewCell {
     }
     
     func setHierarchy() {
-        addSubviews(homeStoreBigImage,homeStoreBigTitleStackView,homeStoreBigInfoStackView, homeStoreBigMinDeliveryStackView)
+        addSubviews(homeStoreBigImage,homeStoreBigTitleStackView, homeStoreBigCoupon,homeStoreBigInfoStackView, homeStoreBigMinDeliveryStackView)
         
         homeStoreBigTitleStackView.addSubviews(homeStoreBigTitle, homeStoreBigStarStackView)
         homeStoreBigStarStackView.addSubviews(homeStoreBigStarIcon, homeStoreBigStar)
-        homeStoreBigInfoStackView.addSubviews(homeStoreBigIcon, homeStoreBigDeliveryTime, homeStoreBigDeliveryTipTitle, homeStoreBigDeliveryTip)
+        homeStoreBigInfoStackView.addSubviews(  homeStoreBigIcon, homeStoreBigDeliveryTime, homeStoreBigDeliveryTipTitle, homeStoreBigDeliveryTip)
         homeStoreBigMinDeliveryStackView.addSubviews(homeStoreBigMinDeliveryTitle, homeStoreBigMinDelivery)
     }
     
@@ -124,6 +128,11 @@ extension HomeStoreBigCollectionViewCell {
         
         homeStoreBigTitle.snp.makeConstraints {
             $0.top.leading.equalToSuperview()
+        }
+        
+        homeStoreBigCoupon.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(16)
+            $0.top.equalTo(homeStoreBigImage.snp.bottom).offset(12)
         }
         
         homeStoreBigStarIcon.snp.makeConstraints {
@@ -187,8 +196,17 @@ extension HomeStoreBigCollectionViewCell {
     func setDataBind(model : HomeStore) {
         homeStoreBigTitle.text = model.name
         homeStoreBigStar.text = String(model.rate)
-        homeStoreBigDeliveryTime.text = String(model.minDeliveryTime)
-        homeStoreBigDeliveryTip.text = String(model.deliveryFee)
-        homeStoreBigMinDelivery.text = String(model.minOrderAmount)
+        homeStoreBigDeliveryTime.text = String(model.minDeliveryTime) + "~" + String(model.maxDeliveryTime) + "분"
+        homeStoreBigDeliveryTip.text = String(model.deliveryFee.makePriceLabelFromNumber())
+        homeStoreBigMinDelivery.text = String(model.minOrderAmount.makePriceLabelFromNumber())
+        
+        
+        if model.hasCoupon == "coupon" {
+            homeStoreBigCoupon.image = .assetImage(.mainCoupon)
+        } else if model.hasCoupon == "direct-coupon" {
+            homeStoreBigCoupon.image = .assetImage(.mainNowCoupon)
+        } else {
+            homeStoreBigCoupon.image = .none
+        }
     }
 }
