@@ -33,12 +33,18 @@ final class HomeViewController: UIViewController {
         }
     }
     
+    private var homeData: [HomeDTO] = []
+    
     private let navigationBar = MainNavigationView()
     
     private let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
+
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setData()
+        
         // MARK: - 컴포넌트 설정
         setUI()
         
@@ -55,6 +61,20 @@ final class HomeViewController: UIViewController {
 }
 
 private extension HomeViewController {
+    func setData() {
+        HomeManager.homeShared.homeData { response in
+            switch response {
+            case .success(let data) :
+                guard let data = data as? Home else {return}
+                self.homeData = data.convertHomeDTO()
+                self.homeCollectionView.reloadData()
+                dump(self.homeData)
+            default :
+                break
+            }
+        }
+    }
+    
     func setUI() {
         view.backgroundColor = .designSystem(.white)
         navigationController?.navigationBar.isHidden = true
@@ -333,7 +353,11 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         case .storeSmall :
             let cell = HomeStoreSmallCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
-            cell.setDataBind(model: storeData[indexPath.row])
+
+            if (homeData.count == 3) {
+                cell.setDataBind(model: homeData[indexPath.row])
+            }
+            
             return cell
         case .chip :
             let cell = HomeChipCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
@@ -345,7 +369,10 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         case .storeBig :
             let cell = HomeStoreBigCollectionViewCell.dequeueReusableCell(collectionView: homeCollectionView, indexPath: indexPath)
-            cell.setDataBind(model: storeData[indexPath.row])
+            
+            if (homeData.count == 3) {
+                cell.setDataBind(model: homeData[indexPath.row])
+            }
             return cell
         }
     }
