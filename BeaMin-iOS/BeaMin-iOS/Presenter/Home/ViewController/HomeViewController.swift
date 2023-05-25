@@ -299,7 +299,7 @@ private extension HomeViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
+            widthDimension: .fractionalWidth(0.93),
             heightDimension: .absolute(900)
         )
         let group = NSCollectionLayoutGroup.vertical(
