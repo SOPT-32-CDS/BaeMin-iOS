@@ -16,12 +16,12 @@ import Foundation
 
 // MARK: - Datum
 struct HomeStore {
-    //let id: Int
+    let id: Int
     let name: String
-    //let image: String
+    let image: String
     let rate: Double
     let minOrderAmount, deliveryFee, minDeliveryTime, maxDeliveryTime: Int
-    //let hasCoupon: String
+    let hasCoupon: String
     
     enum CodingKeys: String, CodingKey {
         case id, name, image, rate
@@ -36,24 +36,33 @@ struct HomeStore {
 extension HomeStore { 
     static func dummyHomeStore() -> [HomeStore] {
         return [
-            HomeStore(name : "이공족발",
-                      rate : 4.0,
-                      minOrderAmount: 10000,
+            HomeStore(id: 1,
+                      name: "정담초밥",
+                      image: "https://i.ibb.co/mJhK4mw/store.png",
+                      rate: 4.7,
+                      minOrderAmount: 15000,
                       deliveryFee: 4400,
-                      minDeliveryTime: 20,
-                      maxDeliveryTime: 50),
-            HomeStore(name : "이공족발",
-                      rate : 4.0,
-                      minOrderAmount: 10000,
+                      minDeliveryTime: 22,
+                      maxDeliveryTime: 38,
+                      hasCoupon: "coupon"),
+            HomeStore(id: 2,
+                      name: "정담초밥",
+                      image: "https://i.ibb.co/mJhK4mw/store.png",
+                      rate: 4.7,
+                      minOrderAmount: 15000,
                       deliveryFee: 4400,
-                      minDeliveryTime: 20,
-                      maxDeliveryTime: 50),
-            HomeStore(name : "이공족발",
-                      rate : 4.0,
-                      minOrderAmount: 10000,
+                      minDeliveryTime: 22,
+                      maxDeliveryTime: 38,
+                      hasCoupon: "direct-coupon"),
+            HomeStore(id: 3,
+                      name: "정담초밥",
+                      image: "https://i.ibb.co/mJhK4mw/store.png",
+                      rate: 4.7,
+                      minOrderAmount: 15000,
                       deliveryFee: 4400,
-                      minDeliveryTime: 20,
-                      maxDeliveryTime: 50)
+                      minDeliveryTime: 22,
+                      maxDeliveryTime: 38,
+                      hasCoupon: "")
         ]
     }
 }
