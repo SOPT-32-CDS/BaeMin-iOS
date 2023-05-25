@@ -199,8 +199,8 @@ extension HomeStoreBigCollectionViewCell {
         homeStoreBigTitle.text = model.name
         homeStoreBigStar.text = String(model.rate)
         homeStoreBigDeliveryTime.text = String(model.minDeliveryTime) + "~" + String(model.maxDeliveryTime) + "분"
-        homeStoreBigDeliveryTip.text = String(model.deliveryFee.makePriceLabelFromNumber())
-        homeStoreBigMinDelivery.text = String(model.minOrderAmount.makePriceLabelFromNumber())
+        homeStoreBigDeliveryTip.text = model.deliveryFee.makePriceLabelFromNumber()
+        homeStoreBigMinDelivery.text = model.minOrderAmount.makePriceLabelFromNumber()
         
         
         if model.coupon == "coupon" {
