@@ -1,5 +1,5 @@
 //
-//  CartModel.swift
+//  CartModelDTO.swift
 //  BeaMin-iOS
 //
 //  Created by uiskim on 2023/05/18.
@@ -10,9 +10,10 @@ import Foundation
 import DesignSystem
 import CustomExtension
 
-struct CartModel {
+struct CartModelDTO {
     
     struct MenuByStore {
+        let storeID: Int
         let storeImage: Constant.ImageName
         let storeName: String
         var cartMenus: [CartMenu]
@@ -20,6 +21,7 @@ struct CartModel {
     }
 
     struct CartMenu {
+        let menuID: Int
         let menuImage: Constant.ImageName
         let menuName: String
         let sideInfo: String?
@@ -27,7 +29,7 @@ struct CartModel {
         var totalPricePerMenu: Int
         var menuCount: Int
     }
-    
+    var cartID: Int
     var menusByStore: [MenuByStore]
     
     var totalDeliveryTip: Int {
@@ -47,15 +49,17 @@ struct CartModel {
 
 
 
-extension CartModel {
-    static var cartDummy: CartModel {
+extension CartModelDTO {
+    static var cartDummy: CartModelDTO {
         return
-            .init(menusByStore: [
-                .init(storeImage: .logoImage,
+            .init(cartID: 1, menusByStore: [
+                .init(storeID: 1,
+                      storeImage: .logoImage,
                       storeName: "청담초밥 송파점",
                       cartMenus: sushiMenus,
                       minimumPriceForDelivery: 2000),
-                .init(storeImage: .logoImage,
+                .init(storeID: 2,
+                      storeImage: .logoImage,
                       storeName: "황후 탕후루",
                       cartMenus: tanghuruMenus,
                       minimumPriceForDelivery: 3000)
@@ -65,13 +69,15 @@ extension CartModel {
     
     static var sushiMenus: [CartMenu] {
         return [
-            .init(menuImage: .suish,
+            .init(menuID: 1,
+                  menuImage: .suish,
                   menuName: "[갓성비]모둠초밥(10P)+미니우동",
                   sideInfo: "새우튀김(6p)추가(7,000원)",
                   singleMenuPrice: 11000,
                   totalPricePerMenu: 36000,
                   menuCount: 2),
-            .init(menuImage: .suish2,
+            .init(menuID: 2,
+                  menuImage: .suish2,
                   menuName: "[재주문1위]특초밥+미니우동",
                   sideInfo: nil,
                   singleMenuPrice: 12000,
@@ -82,7 +88,8 @@ extension CartModel {
     
     static var tanghuruMenus: [CartMenu] {
         return [
-            .init(menuImage: .tang,
+            .init(menuID: 1,
+                  menuImage: .tang,
                   menuName: "딸기탕후루 제철이 끝나가는중",
                   sideInfo: nil,
                   singleMenuPrice: 3800,
