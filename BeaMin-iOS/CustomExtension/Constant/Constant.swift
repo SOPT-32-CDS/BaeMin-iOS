@@ -95,6 +95,8 @@ public struct Constant {
         
         case delete
         
+        case OrderCompleteImage
+        
         var real: String {
             return self.rawValue
         }
