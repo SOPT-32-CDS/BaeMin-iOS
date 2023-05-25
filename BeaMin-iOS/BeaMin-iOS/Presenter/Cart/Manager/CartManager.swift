@@ -44,13 +44,11 @@ final class CartManager {
     }
     
     func deleteCartMenu(menuID: Int) {
-        print(makeCartUrl(cartID: menuID.description))
         let dataRequest = AF.request(makeCartUrl(cartID: menuID.description), method: .delete, encoding: JSONEncoding.default, headers: header)
         dataRequest.responseData { response in
             switch response.result {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
-                guard let value = response.value else { return }
                 if 200..<300 ~= statusCode {
                     print("✅✅✅✅✅Cart삭제API호출성공✅✅✅✅✅")
                 }
@@ -59,8 +57,10 @@ final class CartManager {
             }
         }
     }
-    
-    private func convertCartDTO(input: CartModel) -> CartModelDTO {
+}
+
+private extension CartManager {
+    func convertCartDTO(input: CartModel) -> CartModelDTO {
         .init(cartID: input.data.cartID,
               totalDeliveryTip: input.data.deliveryFee,
               menusByStore: input.data.cartStoreList.map{.init(storeID: $0.cartStoreID,
@@ -75,7 +75,7 @@ final class CartManager {
                                                                                                     menuCount: $0.count)})})
     }
 
-    private func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, changeData: T.Type) -> NetworkResult<T> {
+    func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, changeData: T.Type) -> NetworkResult<T> {
         switch statusCode {
         case 200..<300: return isValidData(data: data, changeData: T.self)
         case 500..<600: return .serverErr
@@ -83,18 +83,9 @@ final class CartManager {
         }
     }
 
-    private func isValidData<T: Codable>(data: Data, changeData: T.Type) -> NetworkResult<T> {
+    func isValidData<T: Codable>(data: Data, changeData: T.Type) -> NetworkResult<T> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(T.self, from: data) else { fatalError("decode error") }
         return .success(decodedData)
     }
-    
-    
 }
-
-enum NetworkResult<T> {
-    case success(T)     // 서버 통신 성공
-    case serverErr  // 서버 내부 에러
-    case networkErr // 네트워크 연결 실패
-}
-

@@ -60,7 +60,6 @@ final class CartViewController: UIViewController {
 private extension CartViewController {
     func setUI() {
         view.backgroundColor = .designSystem(.white)
-        print(cartData.totalMenuCount)
     }
     
     func setHierarchy() {
@@ -152,6 +151,7 @@ extension CartViewController: CartMenuCountDelegate {
     
     func changeCarMenuCount(sender: UIButton, count: Int, totalPrice: Int) {
         guard let indexPath = cartTableView.indexPathForRow(at: sender.convert(CGPoint.zero, to: cartTableView)) else { return }
+        
         cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].menuCount += count
         cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].totalPricePerMenu = totalPrice
     }
@@ -159,7 +159,6 @@ extension CartViewController: CartMenuCountDelegate {
     
     func deleteRow(sender: UIButton) {
         guard let indexPath = cartTableView.indexPathForRow(at: sender.convert(CGPoint.zero, to: cartTableView)) else { return }
-//        print(cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].menuID)
         cartManager.deleteCartMenu(menuID: cartData.menusByStore[indexPath.section].cartMenus[indexPath.row].menuID)
         cartData.menusByStore[indexPath.section].cartMenus.remove(at: indexPath.row)
         cartTableView.beginUpdates()

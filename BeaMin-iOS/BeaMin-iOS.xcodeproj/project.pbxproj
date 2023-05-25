@@ -34,6 +34,7 @@
 		C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */; };
 		C00A097A2A1F14ED00C539FF /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A09792A1F14ED00C539FF /* CartModel.swift */; };
 		C00A097D2A1F153900C539FF /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A097C2A1F153900C539FF /* CartManager.swift */; };
+		C00A09802A1F22A300C539FF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A097F2A1F22A300C539FF /* NetworkResult.swift */; };
 		C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */; };
 		C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */; };
 		C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8D2A13B83F00F87D5B /* Int+.swift */; };
@@ -187,6 +188,7 @@
 		C0066C1B2A139F4B00EC40FB /* StoreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetail.swift; sourceTree = "<group>"; };
 		C00A09792A1F14ED00C539FF /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		C00A097C2A1F153900C539FF /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		C00A097F2A1F22A300C539FF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailHeaderView.swift; sourceTree = "<group>"; };
 		C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		C00E1C8D2A13B83F00F87D5B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
@@ -360,6 +362,14 @@
 				C00A097C2A1F153900C539FF /* CartManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		C00A097E2A1F229300C539FF /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				C00A097F2A1F22A300C539FF /* NetworkResult.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		C00E1C8F2A13BD4100F87D5B /* Cell */ = {
@@ -661,6 +671,7 @@
 		C01BB16F2A0FBD2F0008C814 /* CustomExtension */ = {
 			isa = PBXGroup;
 			children = (
+				C00A097E2A1F229300C539FF /* Enum */,
 				C01BB1932A0FBE240008C814 /* Extenstions */,
 				C01BB1902A0FBDE60008C814 /* Constant */,
 				C01BB18B2A0FBD420008C814 /* Protocol */,
@@ -1021,6 +1032,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01BB18F2A0FBDBE0008C814 /* TableViewCellReuseProtocol.swift in Sources */,
+				C00A09802A1F22A300C539FF /* NetworkResult.swift in Sources */,
 				C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */,
 				C01BB18D2A0FBD560008C814 /* CollectionViewCellReuseProtocol.swift in Sources */,
 				C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */,
