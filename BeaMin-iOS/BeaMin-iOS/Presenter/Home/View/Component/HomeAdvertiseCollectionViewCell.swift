@@ -45,6 +45,7 @@ private extension HomeAdvertiseCollectionViewCell {
     func setUI() {
         advertiseImage.do {
             $0.image = .assetImage(.img_advertise)
+            $0.contentMode = .scaleAspectFill
         }
     }
     
