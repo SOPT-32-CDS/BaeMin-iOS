@@ -36,7 +36,6 @@ final class AddMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
     private let checkBox: UIButton = {
         let button = UIButton()
         button.setImage(.assetImage(.emptyCheckBox), for: .normal)
-//        button.setImage(.assetImage(.fillCheckBox), for: .selected)
         return button
     }()
     
