@@ -17,7 +17,6 @@ import DesignSystem
 final class PopularMenuSectionHeaderView: UIView {
     
     private let menuTitle = UILabel().then {
-        $0.text = "인기 메뉴"
         $0.font = .pretendard(.h1Headline)
         $0.textColor = .designSystem(.black)
     }
@@ -49,9 +48,10 @@ final class PopularMenuSectionHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    func config(title: String) {
-//        self.menuTitle.text = title
-//    }
+    func config(title: String) {
+        self.menuTitle.text = title
+    }
+    
 }
 
 private extension PopularMenuSectionHeaderView {

@@ -130,7 +130,13 @@ extension OrderMainViewController: UITableViewDataSource {
 }
 
 extension OrderMainViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionHeaderView = PopularMenuSectionHeaderView()
+        sectionHeaderView.config(title: mockData.menuOrder[section].menuName)
+        return sectionHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
 }
