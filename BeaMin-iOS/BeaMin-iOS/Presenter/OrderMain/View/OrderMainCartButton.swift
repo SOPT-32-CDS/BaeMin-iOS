@@ -41,6 +41,7 @@ final class OrderMainCartButton: UIButton{
         $0.backgroundColor = .designSystem(.white)
         $0.textAlignment = .center
         $0.layer.cornerRadius = 12
+        $0.clipsToBounds = true
     }
     
     private let buttonTitleLabel = UILabel().then {

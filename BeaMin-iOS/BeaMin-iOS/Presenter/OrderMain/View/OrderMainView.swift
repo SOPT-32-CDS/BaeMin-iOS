@@ -176,7 +176,7 @@ final class OrderMainView: UIView {
         starLabel.text = storeStars.description
         reviewLabel.text = "리뷰 \(storeReviews)개"
         minPriceLabel.text = minPrice.makePriceLabelFromNumber()
-        deliverTimeLabel.text = deliverTime
+        deliverTimeLabel.text = "\(deliverTime)분 후 도착"
         deliverTipLabel.text = "배달팁 " + deliverTips.makePriceLabelFromNumber()
     }
 }
