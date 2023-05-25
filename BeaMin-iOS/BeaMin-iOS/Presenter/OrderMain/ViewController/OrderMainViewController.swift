@@ -16,7 +16,18 @@ import DesignSystem
 
 final class OrderMainViewController: UIViewController {
     
+    private var cartData: CartModel = .init(menusByStore: []) {
+        didSet {
+            cartlistButton.totalPrice = cartData.totalPrice + cartData.totalDeliveryTip
+            cartlistButton.totalCount = cartData.totalMenuCount
+        }
+    }
+    
+    private let BMnavigationBar = BMNavigationBar()
+    
     private let OrderMainTableView = UITableView()
+    
+    private lazy var cartlistButton = OrderMainCartButton(totalPrice: cartData.totalPrice + cartData.totalDeliveryTip, totalCount: cartData.totalMenuCount)
     
     private let mockData = StoreDetail.storeDetailDummy
     
@@ -34,12 +45,12 @@ final class OrderMainViewController: UIViewController {
         // MARK: - button의 addtarget설정
         setAddTarget()
         
-//        setRegister()
-        
         // MARK: - delegate설정
         setDelegate()
 
         setTableView()
+        
+        setNavigation()
     }
 }
 
@@ -49,14 +60,23 @@ private extension OrderMainViewController {
     }
     
     func setHierarchy() {
-        view.addSubviews(OrderMainTableView)
+        view.addSubviews(BMnavigationBar, OrderMainTableView, cartlistButton)
     }
     
     func setLayout() {
+        BMnavigationBar.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+        }
         
         OrderMainTableView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaInsets)
-            $0.bottom.leading.trailing.equalToSuperview()
+            $0.top.equalTo(BMnavigationBar.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(cartlistButton.snp.top).offset(-12)
+        }
+        
+        cartlistButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(50)
+            $0.leading.trailing.equalToSuperview().inset(11)
         }
     }
     
@@ -78,6 +98,12 @@ private extension OrderMainViewController {
         let headerView = OrderMainView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 536))
         headerView.config(storeName: mockData.storeName, storeStars: mockData.storeStars, storeReviews: mockData.storeReviews, minPrice: mockData.minPrice, deliverTime: mockData.deliverTime, deliverTips: mockData.deliverTips)
         OrderMainTableView.tableHeaderView = headerView
+    }
+    
+    func setNavigation() {
+        self.navigationController?.navigationBar.isHidden = true
+        BMnavigationBar.backgroundColor = .designSystem(.white)
+        BMnavigationBar.buttonTintColor = .designSystem(.black)
     }
 }
 
