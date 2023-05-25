@@ -26,7 +26,6 @@ final class HomeViewController: UIViewController {
     private lazy var homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: self.setSectionLayout())
     private let promotionData : [HomePromotionItem] = HomePromotionItem.homePromotionDummyData()
     private let menuData : [HomeMenuItem] = HomeMenuItem.homeMenuDummyData()
-    private let storeData : [HomeStore] = HomeStore.dummyHomeStore()
     private var chipData : [HomeChipItem] = HomeChipItem.homeChipMenuData() {
         didSet {
             self.homeCollectionView.reloadData()
@@ -387,11 +386,11 @@ extension HomeViewController: UICollectionViewDataSource {
         case .menu :
             return menuData.count
         case .storeSmall :
-            return storeData.count
+            return homeData.count
         case .chip :
             return chipData.count
         case .storeBig :
-            return storeData.count
+            return homeData.count
         }
     }
     

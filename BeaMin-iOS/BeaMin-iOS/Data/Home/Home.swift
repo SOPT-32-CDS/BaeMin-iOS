@@ -50,37 +50,3 @@ extension Home {
         return data.map { HomeDTO(id: $0.id, name: $0.name, image: $0.image, rate: $0.rate, minOrderAmount: $0.minOrderAmount, deliveryFee: $0.deliveryFee, minDeliveryTime: $0.minDeliveryTime, maxDeliveryTime: $0.maxDeliveryTime, coupon: $0.coupon) }
     }
 }
-
-extension HomeStore {
-    static func dummyHomeStore() -> [HomeStore] {
-        return [
-            HomeStore(id: 1,
-                      name: "정담초밥",
-                      image: "https://i.ibb.co/mJhK4mw/store.png",
-                      rate: 4.7,
-                      minOrderAmount: 15000,
-                      deliveryFee: 4400,
-                      minDeliveryTime: 22,
-                      maxDeliveryTime: 38,
-                      coupon: "coupon"),
-            HomeStore(id: 2,
-                      name: "정담초밥",
-                      image: "https://i.ibb.co/mJhK4mw/store.png",
-                      rate: 4.7,
-                      minOrderAmount: 15000,
-                      deliveryFee: 4400,
-                      minDeliveryTime: 22,
-                      maxDeliveryTime: 38,
-                      coupon: "direct-coupon"),
-            HomeStore(id: 3,
-                      name: "정담초밥",
-                      image: "https://i.ibb.co/mJhK4mw/store.png",
-                      rate: 4.7,
-                      minOrderAmount: 15000,
-                      deliveryFee: 4400,
-                      minDeliveryTime: 22,
-                      maxDeliveryTime: 38,
-                      coupon: "")
-        ]
-    }
-}
