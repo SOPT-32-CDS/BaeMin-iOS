@@ -7,21 +7,21 @@
 
 import Foundation
 
-//// MARK: - Home
-//struct Home: Codable {
-//    let status: Int
-//    let message: String
-//    let data: [HomeStore]
-//}
+// MARK: - Home
+struct Home: Decodable {
+    let status: Int
+    let message: String
+    let data: [HomeStore]
+}
 
 // MARK: - Datum
-struct HomeStore {
+struct HomeStore : Decodable{
     let id: Int
     let name: String
     let image: String
     let rate: Double
     let minOrderAmount, deliveryFee, minDeliveryTime, maxDeliveryTime: Int
-    let hasCoupon: String
+    let coupon: String?
     
     enum CodingKeys: String, CodingKey {
         case id, name, image, rate
@@ -29,11 +29,29 @@ struct HomeStore {
         case deliveryFee = "delivery_fee"
         case minDeliveryTime = "min_delivery_time"
         case maxDeliveryTime = "max_delivery_time"
-        case hasCoupon = "has_coupon"
+        case coupon
     }
 }
 
-extension HomeStore { 
+struct HomeDTO {
+    let id: Int
+    let name: String
+    let image: String
+    let rate: Double
+    let minOrderAmount: Int
+    let deliveryFee: Int
+    let minDeliveryTime: Int
+    let maxDeliveryTime: Int
+    let coupon: String?
+}
+
+extension Home {
+    func convertHomeDTO() -> [HomeDTO] {
+        return data.map { HomeDTO(id: $0.id, name: $0.name, image: $0.image, rate: $0.rate, minOrderAmount: $0.minOrderAmount, deliveryFee: $0.deliveryFee, minDeliveryTime: $0.minDeliveryTime, maxDeliveryTime: $0.maxDeliveryTime, coupon: $0.coupon) }
+    }
+}
+
+extension HomeStore {
     static func dummyHomeStore() -> [HomeStore] {
         return [
             HomeStore(id: 1,
@@ -44,7 +62,7 @@ extension HomeStore {
                       deliveryFee: 4400,
                       minDeliveryTime: 22,
                       maxDeliveryTime: 38,
-                      hasCoupon: "coupon"),
+                      coupon: "coupon"),
             HomeStore(id: 2,
                       name: "정담초밥",
                       image: "https://i.ibb.co/mJhK4mw/store.png",
@@ -53,7 +71,7 @@ extension HomeStore {
                       deliveryFee: 4400,
                       minDeliveryTime: 22,
                       maxDeliveryTime: 38,
-                      hasCoupon: "direct-coupon"),
+                      coupon: "direct-coupon"),
             HomeStore(id: 3,
                       name: "정담초밥",
                       image: "https://i.ibb.co/mJhK4mw/store.png",
@@ -62,7 +80,7 @@ extension HomeStore {
                       deliveryFee: 4400,
                       minDeliveryTime: 22,
                       maxDeliveryTime: 38,
-                      hasCoupon: "")
+                      coupon: "")
         ]
     }
 }
