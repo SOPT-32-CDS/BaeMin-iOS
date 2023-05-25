@@ -104,7 +104,7 @@ extension HomeStoreSmallCollectionViewCell {
         }
         
         homeStoreSmallCoupon.do {
-            $0.image = UIImage.assetImage(.couponImage)
+            $0.image = UIImage.assetImage(.mainNowCoupon)
         }
 
         

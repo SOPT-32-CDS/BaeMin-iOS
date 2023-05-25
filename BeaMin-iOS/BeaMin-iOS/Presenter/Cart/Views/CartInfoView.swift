@@ -22,7 +22,13 @@ final class CartInfoView: UIView {
         }
     }
     
-    private var delivertTip: Int
+    var delivertTip: Int {
+        didSet {
+            deliveryInfoView.deliveryTip = delivertTip
+            priceInfoView.totalTip = delivertTip
+        }
+    }
+    
     private let topSeperatedView = SeperateView(height: 10)
     
     private let deliveryLabel: UILabel = {

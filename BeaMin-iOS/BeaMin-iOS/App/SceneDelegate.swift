@@ -19,8 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         Font.registerFonts()
 
-
-        let navigationController = UINavigationController(rootViewController: OrderMainViewController())
+        let navigationController = UINavigationController(rootViewController: HomeViewController())
 
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

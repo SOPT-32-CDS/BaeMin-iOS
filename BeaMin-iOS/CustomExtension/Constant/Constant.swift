@@ -96,9 +96,19 @@ public struct Constant {
         
         case delete
         
+        case mainCoupon
+        case mainNowCoupon
+        case img_advertise
+        case OrderCompleteImage
+        
         var real: String {
             return self.rawValue
         }
+    }
+    
+    public struct CartNetworkConstant {
+        public static let baseURL: String = "http://43.201.68.44:8080/cart/"
+        public static let bearer: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiYWRkcmVzcyI6IuyGoe2MjOq1rCDsmKzrprztlL3roZwgMTM1In0.hh0main0EWtZYLHWlO3GfdrDgPDaAipNTkBlxgc5KSY"
     }
 }
 

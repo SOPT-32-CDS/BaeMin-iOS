@@ -16,7 +16,11 @@ import DesignSystem
 
 final class DeliveryInfoView: UIView {
     
-    private let deliveryTip: Int
+    var deliveryTip: Int {
+        didSet {
+            deliveryTipLabel.text = "배달팁" + deliveryTip.makePriceLabelFromNumber()
+        }
+    }
     
     private let deliveryIcon: UIImageView = {
         let imageView = UIImageView()
