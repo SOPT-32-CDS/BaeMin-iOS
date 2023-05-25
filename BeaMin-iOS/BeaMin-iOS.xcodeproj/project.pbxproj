@@ -35,6 +35,7 @@
 		C00A097A2A1F14ED00C539FF /* CartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A09792A1F14ED00C539FF /* CartModel.swift */; };
 		C00A097D2A1F153900C539FF /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A097C2A1F153900C539FF /* CartManager.swift */; };
 		C00A09802A1F22A300C539FF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A097F2A1F22A300C539FF /* NetworkResult.swift */; };
+		C00A09822A1F278B00C539FF /* OrderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A09812A1F278B00C539FF /* OrderCompleteViewController.swift */; };
 		C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */; };
 		C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */; };
 		C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8D2A13B83F00F87D5B /* Int+.swift */; };
@@ -189,6 +190,7 @@
 		C00A09792A1F14ED00C539FF /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
 		C00A097C2A1F153900C539FF /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		C00A097F2A1F22A300C539FF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		C00A09812A1F278B00C539FF /* OrderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteViewController.swift; sourceTree = "<group>"; };
 		C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailHeaderView.swift; sourceTree = "<group>"; };
 		C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		C00E1C8D2A13B83F00F87D5B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				C00E1CBA2A163CE900F87D5B /* CartViewController.swift */,
+				C00A09812A1F278B00C539FF /* OrderCompleteViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -995,6 +998,7 @@
 				C00E1C972A13DAFB00F87D5B /* OrderDetailSectionHeaderView.swift in Sources */,
 				C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */,
 				A4D7270C2A15DD8700A00E16 /* HomeViewController.swift in Sources */,
+				C00A09822A1F278B00C539FF /* OrderCompleteViewController.swift in Sources */,
 				C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */,
 				C00E1C9D2A13F28B00F87D5B /* BMBasicButton.swift in Sources */,
 				C06969952A165846008663C9 /* WarningView.swift in Sources */,

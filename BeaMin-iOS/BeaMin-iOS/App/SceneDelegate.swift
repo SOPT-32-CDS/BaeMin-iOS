@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Font.registerFonts()
 
 
-        let navigationController = UINavigationController(rootViewController: CartViewController())
+        let navigationController = UINavigationController(rootViewController: OrderCompleteViewController())
 
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
