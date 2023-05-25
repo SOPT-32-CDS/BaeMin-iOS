@@ -31,7 +31,7 @@ final class OrderCompleteViewController: UIViewController {
         return label
     }()
     
-    private let completeButton = BMBasicButton(price: 30000)
+    private let completeButton = BMBasicButton(title: "홈으로 돌아가기")
 
     public override func viewDidLoad() {
         super.viewDidLoad()
