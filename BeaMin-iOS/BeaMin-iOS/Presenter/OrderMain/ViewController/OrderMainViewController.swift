@@ -25,7 +25,7 @@ final class OrderMainViewController: UIViewController {
     
     private let BMnavigationBar = BMNavigationBar()
     
-    private let OrderMainTableView = UITableView()
+    private let OrderMainTableView = UITableView(frame: .zero, style: .grouped)
     
     private lazy var cartlistButton = OrderMainCartButton(totalPrice: cartData.totalPrice + cartData.totalDeliveryTip, totalCount: cartData.totalMenuCount)
     
