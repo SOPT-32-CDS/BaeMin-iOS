@@ -133,7 +133,6 @@ private extension OrderDetailViewController {
     
     func setData() {
         self.singleMenuPrice += mockData.menuPrice
-        print("현재금액은 \(self.singleMenuPrice)")
         self.navigationBar.config(menuName: mockData.menuName)
 
     }
