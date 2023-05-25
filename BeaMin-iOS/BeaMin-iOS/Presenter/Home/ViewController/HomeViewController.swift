@@ -33,6 +33,8 @@ final class HomeViewController: UIViewController {
         }
     }
     
+    private let navigationBar = MainNavigationView()
+    
     private let tabBarView = CustomTabBarView(tabBarItems: [.find, .heart, .logo, .order, .mypage])
     
     public override func viewDidLoad() {
@@ -75,12 +77,19 @@ private extension HomeViewController {
     }
     
     func setHierarchy() {
-        view.addSubviews(homeCollectionView, tabBarView)
+        view.addSubviews(homeCollectionView, tabBarView, navigationBar)
     }
     
     func setLayout() {
+        navigationBar.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaInsets)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(110)
+        }
+        
         homeCollectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalToSuperview().inset(80)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
         
         // MARK: - 이부분 snapkit으로 바꿔주세요

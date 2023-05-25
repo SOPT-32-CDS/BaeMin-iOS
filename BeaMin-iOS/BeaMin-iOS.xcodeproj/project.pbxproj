@@ -12,6 +12,7 @@
 		A4809C402A1B68190009C1DD /* HomeChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */; };
 		A4A72F732A1E79B000E32056 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A72F722A1E79B000E32056 /* SectionHeaderView.swift */; };
 		A4A72F752A1E84D600E32056 /* SectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A72F742A1E84D600E32056 /* SectionFooterView.swift */; };
+		A4A72F772A1F1FCA00E32056 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A72F762A1F1FCA00E32056 /* MainNavigationView.swift */; };
 		A4D727062A15DC0A00A00E16 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */; };
 		A4D727082A15DC8700A00E16 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727072A15DC8700A00E16 /* UIButton+.swift */; };
 		A4D7270A2A15DCEF00A00E16 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */; };
@@ -162,6 +163,7 @@
 		A4809C3F2A1B68190009C1DD /* HomeChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChipViewController.swift; sourceTree = "<group>"; };
 		A4A72F722A1E79B000E32056 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		A4A72F742A1E84D600E32056 /* SectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFooterView.swift; sourceTree = "<group>"; };
+		A4A72F762A1F1FCA00E32056 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
 		A4D727052A15DC0A00A00E16 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
 		A4D727072A15DC8700A00E16 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		A4D727092A15DCEF00A00E16 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
@@ -617,6 +619,7 @@
 				A4D7270D2A16043300A00E16 /* Component */,
 				A4A72F722A1E79B000E32056 /* SectionHeaderView.swift */,
 				A4A72F742A1E84D600E32056 /* SectionFooterView.swift */,
+				A4A72F762A1F1FCA00E32056 /* MainNavigationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 			files = (
 				C065C80D2A16412A001DA63D /* CartStepperView.swift in Sources */,
 				C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */,
+				A4A72F772A1F1FCA00E32056 /* MainNavigationView.swift in Sources */,
 				C069698D2A164426008663C9 /* CartModel.swift in Sources */,
 				C00E1CB92A16355D00F87D5B /* CartInfoView.swift in Sources */,
 				C0066C1C2A139F4B00EC40FB /* StoreDetail.swift in Sources */,
