@@ -67,7 +67,6 @@ private extension HomeViewController {
                 guard let data = data as? Home else {return}
                 self.homeData = data.convertHomeDTO()
                 self.homeCollectionView.reloadData()
-                dump(self.homeData)
             default :
                 break
             }

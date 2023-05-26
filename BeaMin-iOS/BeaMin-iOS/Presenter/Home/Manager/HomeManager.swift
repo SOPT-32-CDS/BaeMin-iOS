@@ -33,6 +33,7 @@ final class HomeManager {
                 guard let statusCode = response.response?.statusCode else { return }
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
+                print("✅✅✅✅✅Home정보조회API호출성공✅✅✅✅✅")
                 completion(networkResult)
             case .failure :
                 completion(.networkErr)
@@ -44,7 +45,7 @@ final class HomeManager {
     func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200..<300:
-            print(data)
+            
             return isValidData(data: data)
         case 500..<600: return .serverErr
         default: return .networkErr
