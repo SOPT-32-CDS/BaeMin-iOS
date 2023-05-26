@@ -106,7 +106,6 @@ private extension CartViewController {
     
     func setData() {
         cartManager.fetchCartDTO { data in
-            dump(data)
             self.cartData = data
             self.cartTableView.reloadData()
         }

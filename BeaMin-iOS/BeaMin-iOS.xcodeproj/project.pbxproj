@@ -35,6 +35,7 @@
 		C00A097D2A1F153900C539FF /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A097C2A1F153900C539FF /* CartManager.swift */; };
 		C00A09802A1F22A300C539FF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A097F2A1F22A300C539FF /* NetworkResult.swift */; };
 		C00A09822A1F278B00C539FF /* OrderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A09812A1F278B00C539FF /* OrderCompleteViewController.swift */; };
+		C00A09862A2006AB00C539FF /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A09852A2006AB00C539FF /* UIImageView+.swift */; };
 		C00E1C882A13A80900F87D5B /* OrderDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */; };
 		C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */; };
 		C00E1C8E2A13B83F00F87D5B /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1C8D2A13B83F00F87D5B /* Int+.swift */; };
@@ -188,6 +189,7 @@
 		C00A097C2A1F153900C539FF /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		C00A097F2A1F22A300C539FF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		C00A09812A1F278B00C539FF /* OrderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteViewController.swift; sourceTree = "<group>"; };
+		C00A09852A2006AB00C539FF /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		C00E1C872A13A80900F87D5B /* OrderDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailHeaderView.swift; sourceTree = "<group>"; };
 		C00E1C8B2A13ABB400F87D5B /* OrderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
 		C00E1C8D2A13B83F00F87D5B /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
@@ -703,6 +705,7 @@
 				C01BB1982A0FBEFC0008C814 /* UIControl+.swift */,
 				C00E1C8D2A13B83F00F87D5B /* Int+.swift */,
 				A4D727072A15DC8700A00E16 /* UIButton+.swift */,
+				C00A09852A2006AB00C539FF /* UIImageView+.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -1028,6 +1031,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01BB18F2A0FBDBE0008C814 /* TableViewCellReuseProtocol.swift in Sources */,
+				C00A09862A2006AB00C539FF /* UIImageView+.swift in Sources */,
 				C00A09802A1F22A300C539FF /* NetworkResult.swift in Sources */,
 				C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */,
 				C01BB18D2A0FBD560008C814 /* CollectionViewCellReuseProtocol.swift in Sources */,

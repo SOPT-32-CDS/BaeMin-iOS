@@ -34,6 +34,17 @@ final class BMBasicButton: UIButton {
         }
     }
     
+    init(title: String) {
+        super.init(frame: .zero)
+        self.setTitle(title, for: .normal)
+        self.titleLabel?.font = .pretendard(.h3Headline)
+        self.backgroundColor = .designSystem(.mainGreen)
+        self.layer.cornerRadius = 3.36
+        self.snp.makeConstraints { make in
+            make.height.equalTo(45)
+        }
+    }
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

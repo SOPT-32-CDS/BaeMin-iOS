@@ -22,7 +22,7 @@ protocol CartMenuCountDelegate: AnyObject {
 final class CartStoreMenuTableViewCell: UITableViewCell, TableViewCellReuseProtocol {
     
     weak var delegate: CartMenuCountDelegate?
-    
+    private var task: URLSessionDataTask?
     var menuData: CartModelDTO.CartMenu? {
         didSet {
             dataBind(menuData)
@@ -211,7 +211,7 @@ private extension CartStoreMenuTableViewCell {
     func dataBind(_ menuData: CartModelDTO.CartMenu?) {
         guard let menuData else { return }
         menuNameLabel.text = menuData.menuName
-        menuImageView.image = .assetImage(menuData.menuImage)
+        task = menuImageView.loadImage(from: menuData.menuImage)
         singlePricePerMenuLabel.text = "가격:" + menuData.singleMenuPrice.makePriceLabelFromNumber()
         if menuData.sideInfo == nil {
             sideInfoLabel.text = ""

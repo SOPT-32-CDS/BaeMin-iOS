@@ -26,7 +26,7 @@ final class PriceInfoView: UIView {
     
     private let seperatedView = SeperateView(height: 1.5)
     
-    private let addCartButton = BMBasicButton(price: 0)
+    let addCartButton = BMBasicButton(price: 0)
     
     private let minimunPriceForDeliveryLabel: UILabel = {
         let label = UILabel()
