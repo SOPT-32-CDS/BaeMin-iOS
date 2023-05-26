@@ -100,6 +100,8 @@ public struct Constant {
         case img_advertise
         case OrderCompleteImage
         
+        case BMLaunchScreen
+        
         var real: String {
             return self.rawValue
         }
