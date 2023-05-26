@@ -15,10 +15,10 @@ struct StoreDetail {
     let storeStars: Float
     let storeReviews: Int
     let minPrice: Int
-    let deliverTime: String
+    let deliverTime: Int
     let deliverTips: Int
     
-    let menuOrder: [MenuOrderInfo]
+//    let menuOrder: [MenuOrderInfo]
 }
 
 struct MenuOrderInfo {
@@ -38,9 +38,10 @@ extension StoreDetail {
                      storeStars: 4.9,
                      storeReviews: 176,
                      minPrice: 15000,
-                     deliverTime: "38~48",
-                     deliverTips: 4440,
-                     menuOrder: MenuOrderInfo.menuDummy)
+                     deliverTime: 38,
+                     deliverTips: 4440
+//                     menuOrder: MenuOrderInfo.menuDummy
+                     )
     }
 }
 

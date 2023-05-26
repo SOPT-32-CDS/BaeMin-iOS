@@ -54,3 +54,12 @@ struct MenuDetail: Codable {
         case basePrice = "base_price"
     }
 }
+
+extension Store {
+    func convertStoreDetail() -> [StoreDetail] {
+        return [
+            StoreDetail(storeName: data.name, storeStars: Float(data.rate), storeReviews: 3, minPrice: data.minOrderAmount, deliverTime: data.maxDeliveryTime, deliverTips: data.deliveryFee)
+        ]
+//        return data.map { StoreDetail(storeName: $0.name, storeStars: $0.rate, storeReviews: <#T##Int#>, minPrice: <#T##Int#>, deliverTime: <#T##String#>, deliverTips: <#T##Int#>, menuOrder: <#T##[MenuOrderInfo]#>)}
+    }
+}
