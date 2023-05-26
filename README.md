@@ -13,6 +13,12 @@
 ## 🔨 Made with
 ### Networking
 - Alamofire
+    - [GET] 장바구니조회
+    - [POST] 장바구니에 메뉴추가
+    - [DELETE] 장바구니 메뉴 삭제
+    - [POST] 주문
+    - [GET] 가게 리스트
+    - [GET] 유저정보
 
 ### UI
 - SnapKit
