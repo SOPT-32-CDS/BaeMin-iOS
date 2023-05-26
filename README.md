@@ -8,7 +8,7 @@
 
     - [김의성(장바구니페이지, 메뉴상세페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/48)
     - [남유진(가게정보페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/48)
-    - [고아라(메인홈페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/48)
+    - [고아라(메인홈페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/49)
 
 ## 🔨 Made with
 ### Networking
