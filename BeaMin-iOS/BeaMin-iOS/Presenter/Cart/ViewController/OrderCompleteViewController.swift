@@ -80,7 +80,9 @@ private extension OrderCompleteViewController {
     }
     
     func setAddTarget() {
-        
+        completeButton.addButtonAction { sender in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func setDelegate() {
