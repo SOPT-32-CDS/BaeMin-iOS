@@ -25,9 +25,9 @@ final class OrderMainView: UIView {
         $0.textColor = .designSystem(.black)
     }
     
-//    private let starImage = UIImageView().then {
-//
-//    }
+    private let starImage = UIImageView().then {
+        $0.image = .assetImage(.ic_star)
+    }
     
     private let starLabel = UILabel().then {
         $0.font = .pretendard(.h3Headline)
@@ -37,6 +37,10 @@ final class OrderMainView: UIView {
     private let reviewLabel = UILabel().then {
         $0.font = .pretendard(.body1)
         $0.textColor = .designSystem(.black)
+    }
+    
+    private let reviewarrowImage = UIImageView().then {
+        $0.image = .assetImage(.rightarrow)
     }
     
     private var informButton = UIButton().then {
@@ -170,9 +174,9 @@ final class OrderMainView: UIView {
     func config(storeName: String, storeStars: Float, storeReviews: Int, minPrice: Int, deliverTime: String, deliverTips: Int) {
         menuNameLabel.text = storeName
         starLabel.text = storeStars.description
-        reviewLabel.text = "리뷰 \(storeReviews) 개"
+        reviewLabel.text = "리뷰 \(storeReviews)개"
         minPriceLabel.text = minPrice.makePriceLabelFromNumber()
-        deliverTimeLabel.text = deliverTime
+        deliverTimeLabel.text = "\(deliverTime)분 후 도착"
         deliverTipLabel.text = "배달팁 " + deliverTips.makePriceLabelFromNumber()
     }
 }
@@ -183,7 +187,7 @@ private extension OrderMainView {
     }
     
     func setHierarchy() {
-        addSubviews(menuImage, menuNameLabel, starLabel, reviewLabel, informButton, cescoLabel, storeinformView, personalStack)
+        addSubviews(menuImage, menuNameLabel, starImage, starLabel, reviewLabel, reviewarrowImage, informButton, cescoLabel, storeinformView, personalStack)
        
         storeinformView.addSubviews(minPriceTitle, minPriceLabel, lineView, oneservingImage, deliverTimeLabel, deliverTipLabel)
         
@@ -216,14 +220,27 @@ private extension OrderMainView {
             $0.leading.equalToSuperview().inset(20)
         }
         
-        starLabel.snp.makeConstraints {
+        starImage.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(22)
             $0.top.equalTo(menuNameLabel.snp.bottom).offset(16)
-            $0.leading.equalToSuperview().inset(22)
+            $0.width.height.equalTo(20)
+        }
+        
+        starLabel.snp.makeConstraints {
+            $0.top.equalTo(menuNameLabel.snp.bottom).offset(16.5)
+            $0.leading.equalTo(starImage.snp.trailing)
         }
         
         reviewLabel.snp.makeConstraints {
             $0.top.equalTo(starLabel.snp.top)
             $0.leading.equalTo(starLabel.snp.trailing).offset(8)
+        }
+        
+        reviewarrowImage.snp.makeConstraints {
+            $0.leading.equalTo(reviewLabel.snp.trailing).offset(4)
+            $0.top.equalTo(reviewLabel.snp.top).offset(6)
+            $0.width.equalTo(4)
+            $0.height.equalTo(8)
         }
         
         informButton.snp.makeConstraints {

@@ -34,11 +34,11 @@ struct OrderMenu {
 
 extension StoreDetail {
     static var storeDetailDummy: StoreDetail {
-        return .init(storeName: "정담초밥 송파점test",
+        return .init(storeName: "정담초밥 송파점",
                      storeStars: 4.9,
                      storeReviews: 176,
                      minPrice: 15000,
-                     deliverTime: "38분~48분",
+                     deliverTime: "38~48",
                      deliverTips: 4440,
                      menuOrder: MenuOrderInfo.menuDummy)
     }

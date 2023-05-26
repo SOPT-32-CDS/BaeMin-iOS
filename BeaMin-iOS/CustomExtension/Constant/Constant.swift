@@ -46,6 +46,7 @@ public struct Constant {
 
         case popularTag = "ic_popular"
         case uparrow = "btn_uparrow"
+        case rightarrow = "ic_rightarrow"
 
         case popularityMark = "popularityMark"
 
