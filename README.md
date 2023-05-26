@@ -1,7 +1,7 @@
 # BaeMin-iOS
 ## SOPT iOS 32기 클디서합동세미나
 ### 리디자인 배달의민족 app 결과물
-![화면 기록 2023-05-26 오후 12 24 56](https://github.com/SOPT-32-CDS/BaeMin-iOS/assets/99013115/779acc35-5ef6-4ce2-ba36-9482a88f421b)
+<img src="https://github.com/SOPT-32-CDS/BaeMin-iOS/assets/99013115/f15e616b-0620-4054-b5ab-278f338b884b" width="300"/>
 
 ## 🔨 Made with
 ### Networking
