@@ -418,6 +418,11 @@ extension HomeViewController: UICollectionViewDataSource {
             return view
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let orderMainViewController = OrderMainViewController()
+        self.navigationController?.pushViewController(orderMainViewController, animated: true)
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {

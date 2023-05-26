@@ -30,7 +30,7 @@ final class PopularMenuTableViewCell: UITableViewCell, TableViewCellReuseProtoco
     
     private let menuName = UILabel().then {
         $0.text = "[재주문 1위] 특초밥+미니우동"
-        $0.font = .pretendard(.h2Headline)
+        $0.font = .pretendard(.h3Headline)
         $0.textColor = .designSystem(.black)
     }
     
@@ -89,6 +89,7 @@ private extension PopularMenuTableViewCell {
         
         menuName.snp.makeConstraints {
             $0.leading.equalTo(popularTag.snp.trailing)
+            $0.trailing.equalTo(menuImage.snp.leading)
             $0.top.equalTo(popularTag.snp.top).inset(6)
         }
         

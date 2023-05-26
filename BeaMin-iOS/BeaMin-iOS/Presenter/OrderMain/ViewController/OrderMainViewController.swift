@@ -16,18 +16,11 @@ import DesignSystem
 
 final class OrderMainViewController: UIViewController {
     
-    private var cartData: CartModel = .init(menusByStore: []) {
-        didSet {
-            cartlistButton.totalPrice = cartData.totalPrice + cartData.totalDeliveryTip
-            cartlistButton.totalCount = cartData.totalMenuCount
-        }
-    }
-    
     private let BMnavigationBar = BMNavigationBar()
     
     private let OrderMainTableView = UITableView(frame: .zero, style: .grouped)
     
-    private lazy var cartlistButton = OrderMainCartButton(totalPrice: cartData.totalPrice + cartData.totalDeliveryTip, totalCount: cartData.totalMenuCount)
+    private lazy var cartlistButton = OrderMainCartButton(totalPrice: 0, totalCount: 0)
     
     private let mockData = StoreDetail.storeDetailDummy
     
@@ -126,6 +119,11 @@ extension OrderMainViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         cell.data = mockData.menuOrder[indexPath.section].menuDetail[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let orderDetailViewController = OrderDetailViewController()
+        self.navigationController?.pushViewController(orderDetailViewController, animated: true)
     }
 }
 
