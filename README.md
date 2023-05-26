@@ -7,7 +7,7 @@
 - 각 팀원들의 최종 구현결과, 챌린지요소 구현결과, API연결, 트러블슈팅을 기록한 PR
 
     - [김의성(장바구니페이지, 메뉴상세페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/48)
-    - [남유진(가게정보페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/48)
+    - [남유진(가게정보페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/42)
     - [고아라(메인홈페이지)](https://github.com/SOPT-32-CDS/BaeMin-iOS/pull/49)
 
 ## 🔨 Made with
