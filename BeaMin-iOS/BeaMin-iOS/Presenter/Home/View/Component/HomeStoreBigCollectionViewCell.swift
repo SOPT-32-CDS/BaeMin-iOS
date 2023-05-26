@@ -35,6 +35,7 @@ final class HomeStoreBigCollectionViewCell: UICollectionViewCell, CollectionView
     private let homeStoreBigMinDelivery = UILabel()
     private let homeStoreBigMinDeliveryStackView = UIStackView()
 
+    private var task: URLSessionDataTask?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,6 +59,11 @@ extension HomeStoreBigCollectionViewCell {
     func setUI() {
         homeStoreBigImage.do {
             $0.image = UIImage.assetImage(.img_advertise)
+            $0.layer.cornerRadius = 10
+            $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            $0.layer.masksToBounds = true
+            $0.contentMode = .scaleAspectFill
+            
         }
         
         homeStoreBigTitle.do {
@@ -138,12 +144,13 @@ extension HomeStoreBigCollectionViewCell {
         }
         
         homeStoreBigStarIcon.snp.makeConstraints {
-            $0.top.leading.equalToSuperview().inset(4)
+            $0.top.equalToSuperview().inset(2)
+            $0.leading.equalToSuperview().inset(4)
         }
         
         homeStoreBigStar.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(2.5)
-            $0.leading.equalTo(homeStoreBigStarIcon.snp.trailing)
+            $0.top.equalToSuperview().inset(1)
+            $0.leading.equalTo(homeStoreBigStarIcon.snp.trailing).offset(2)
         }
         
         homeStoreBigStarStackView.snp.makeConstraints {
@@ -196,6 +203,7 @@ extension HomeStoreBigCollectionViewCell {
     }
     
     func setDataBind(model : HomeDTO) {
+        task = homeStoreBigImage.loadImage(from: model.image)
         homeStoreBigTitle.text = model.name
         homeStoreBigStar.text = String(model.rate)
         homeStoreBigDeliveryTime.text = String(model.minDeliveryTime) + "~" + String(model.maxDeliveryTime) + "분"
@@ -212,3 +220,4 @@ extension HomeStoreBigCollectionViewCell {
         }
     }
 }
+

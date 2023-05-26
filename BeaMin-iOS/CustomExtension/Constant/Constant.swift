@@ -98,6 +98,7 @@ public struct Constant {
         case mainCoupon
         case mainNowCoupon
         case img_advertise
+        case img_test
         case OrderCompleteImage
         
         case BMLaunchScreen
