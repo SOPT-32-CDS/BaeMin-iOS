@@ -18,11 +18,7 @@ final class OrderDetailViewController: UIViewController {
     
     private var singleMenuPrice = 0 {
         didSet {
-            if totalMenuCount > 1 {
-                priceInfoView.price = singleMenuPrice * totalMenuCount
-            } else {
-                priceInfoView.price = singleMenuPrice
-            }
+            priceInfoView.price = totalMenuCount > 1 ? singleMenuPrice * totalMenuCount : singleMenuPrice
         }
     }
     
@@ -99,6 +95,22 @@ private extension OrderDetailViewController {
     }
     
     func setAddTarget() {
+        priceInfoView.addCartButton.addButtonAction { sender in
+            CartManager.shared.fetchCartDTO { data in
+                let cartID = data.cartID
+                let menuTitle = self.mockData.menuName
+                let menuImage = "https://i.ibb.co/ydXz7jN/menu.png"
+                let totalPrice = self.singleMenuPrice*self.totalMenuCount
+                let menuCount = self.totalMenuCount
+                let options = "데이터연결 아직안함"
+                OrderDetailManager.shared.appendMenuInCart(cartID: cartID, menuName: menuTitle, menuImage: menuImage, totalPrice: totalPrice, options: options, totalCount: menuCount) { isCompleted in
+                    if isCompleted {
+                        let cartViewController = CartViewController()
+                        self.navigationController?.pushViewController(cartViewController, animated: true)
+                    }
+                }
+            }
+        }
     }
     
     func setDelegate() {
@@ -121,8 +133,8 @@ private extension OrderDetailViewController {
     
     func setData() {
         self.singleMenuPrice += mockData.menuPrice
-        print("현재금액은 \(self.singleMenuPrice)")
         self.navigationBar.config(menuName: mockData.menuName)
+
     }
 }
 
