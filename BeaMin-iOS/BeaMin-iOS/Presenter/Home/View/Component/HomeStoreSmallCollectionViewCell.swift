@@ -35,6 +35,7 @@ final class HomeStoreSmallCollectionViewCell: UICollectionViewCell, CollectionVi
     private let homeStoreSmallIcon = UIImageView()
     private let homeStoreSmallCoupon = UIImageView()
     
+    private var task: URLSessionDataTask?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -61,6 +62,8 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallImage.do {
             $0.image = UIImage.assetImage(.img_test)
             $0.layer.cornerRadius = 7
+            $0.layer.masksToBounds = true
+            $0.contentMode = .scaleAspectFill
         }
         
         homeStoreSmallTItle.do {
@@ -123,7 +126,7 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallImage.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().inset(4)
-            $0.leading.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(4)
             $0.width.height.equalTo(150)
         }
         
@@ -188,6 +191,7 @@ extension HomeStoreSmallCollectionViewCell {
     }
     
     func setDataBind(model : HomeDTO) {
+        task = homeStoreSmallImage.loadImage(from: model.image)
         homeStoreSmallTItle.text = model.name
         homeStoreSmallStar.text = String(model.rate)
         homeStoreSmallDeliveryTime.text = String(model.minDeliveryTime) + "~" + String(model.maxDeliveryTime) + "분"
