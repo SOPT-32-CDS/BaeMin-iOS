@@ -11,7 +11,13 @@ import Alamofire
 
 import CustomExtension
 
-final class CartManager {
+protocol CartManagerNetwork: AnyObject {
+    func fetchCartDTO(completion: @escaping (CartModelDTO) -> Void)
+    func deleteCartMenu(menuID: Int)
+    func orderComplete(cartID: Int, completion: @escaping (Bool)->Void)
+}
+
+final class CartManager: CartManagerNetwork {
     static let shared = CartManager()
     private init() {}
     
