@@ -62,7 +62,7 @@ extension HomePromotionCollectionViewCell {
     func setLayout() {
         
         promotionView.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.leading.equalToSuperview()
             $0.width.equalTo(100)
             $0.height.equalTo(74)
         }
