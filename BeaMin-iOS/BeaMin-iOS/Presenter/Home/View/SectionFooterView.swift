@@ -53,7 +53,6 @@ private extension SectionFooterView {
     func setLayout() {
         footerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
-            $0.height.equalTo(12)
         }
     }
     
