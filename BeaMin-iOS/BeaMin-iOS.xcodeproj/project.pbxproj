@@ -12,6 +12,7 @@
 		14D01E2F2A1520D8001A3C70 /* PopularMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E2E2A1520D8001A3C70 /* PopularMenuTableViewCell.swift */; };
 		14D01E312A154245001A3C70 /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E302A154245001A3C70 /* OrderMainViewController.swift */; };
 		14D01E332A174A17001A3C70 /* OrderMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D01E322A174A17001A3C70 /* OrderMainView.swift */; };
+		A45173C82A30DF2600E07577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		A4809C3C2A1B3DAB0009C1DD /* HomeChipItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3B2A1B3DAB0009C1DD /* HomeChipItem.swift */; };
 		A4809C3E2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4809C3D2A1B46B50009C1DD /* HomeChipCollectionViewCell.swift */; };
 		A4A72F732A1E79B000E32056 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A72F722A1E79B000E32056 /* SectionHeaderView.swift */; };
@@ -56,7 +57,6 @@
 		C00E1CB52A1634E900F87D5B /* CartStoreMenuSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CB42A1634E900F87D5B /* CartStoreMenuSectionFooterView.swift */; };
 		C00E1CB92A16355D00F87D5B /* CartInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CB82A16355D00F87D5B /* CartInfoView.swift */; };
 		C00E1CBB2A163CE900F87D5B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E1CBA2A163CE900F87D5B /* CartViewController.swift */; };
-		C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E32A0FB27B0008C814 /* AppDelegate.swift */; };
 		C01BB0E62A0FB27B0008C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E52A0FB27B0008C814 /* SceneDelegate.swift */; };
 		C01BB0E82A0FB27B0008C814 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB0E72A0FB27B0008C814 /* TestViewController.swift */; };
 		C01BB0ED2A0FB27C0008C814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01BB0EC2A0FB27C0008C814 /* Assets.xcassets */; };
@@ -955,6 +955,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45173C82A30DF2600E07577 /* AppDelegate.swift in Sources */,
 				C065C80D2A16412A001DA63D /* CartStepperView.swift in Sources */,
 				C00E1C9F2A13F4B900F87D5B /* PriceInfoView.swift in Sources */,
 				A4A72F772A1F1FCA00E32056 /* MainNavigationView.swift in Sources */,
@@ -989,7 +990,6 @@
 				C0066C182A127AF800EC40FB /* OrderDetail.swift in Sources */,
 				14D01E312A154245001A3C70 /* OrderMainViewController.swift in Sources */,
 				149291812A1CB2DA006D2691 /* PopularMenuSectionHeaderView.swift in Sources */,
-				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				C00E1C8C2A13ABB400F87D5B /* OrderDetailViewController.swift in Sources */,
 				A4D727132A17611C00A00E16 /* HomePromotionItem.swift in Sources */,
 				A4D727192A17A2F800A00E16 /* HomeMenuCollectionViewCell.swift in Sources */,
@@ -1004,7 +1004,6 @@
 				C00E1C992A13DB3700F87D5B /* ChoiceChipView.swift in Sources */,
 				C00E1C9D2A13F28B00F87D5B /* BMBasicButton.swift in Sources */,
 				C06969952A165846008663C9 /* WarningView.swift in Sources */,
-				C01BB0E42A0FB27B0008C814 /* AppDelegate.swift in Sources */,
 				A4D727112A1604A700A00E16 /* HomePromotionCollectionViewCell.swift in Sources */,
 				C00E1CA32A13F9E900F87D5B /* OrderDetailFooterViewView.swift in Sources */,
 				C00E1CBB2A163CE900F87D5B /* CartViewController.swift in Sources */,

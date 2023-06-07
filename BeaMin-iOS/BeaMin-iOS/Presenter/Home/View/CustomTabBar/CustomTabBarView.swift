@@ -52,7 +52,6 @@ private extension CustomTabBarView {
                 button.setTitle(item.tabBarText, for: .normal)
                 button.setTitleColor(.designSystem(.gray1), for: .normal)
                 button.titleLabel?.font = .pretendard(.body4Bold)
-                button.adjustsImageWhenHighlighted = false
                 button.alignTextBelow(spacing: 1)
                 button.snp.makeConstraints {
                     $0.width.equalTo(77)
