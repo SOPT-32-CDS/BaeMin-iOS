@@ -54,7 +54,11 @@ private extension CustomTabBarView {
                 button.titleLabel?.font = .pretendard(.body4Bold)
                 button.adjustsImageWhenHighlighted = false
                 button.alignTextBelow(spacing: 1)
-                stackView.spacing = 33
+                button.snp.makeConstraints {
+                    $0.width.equalTo(77)
+                    $0.height.equalTo(49)
+                }
+                stackView.spacing = 8
                 stackView.addArrangedSubview(button)
             }
     }
@@ -65,9 +69,8 @@ private extension CustomTabBarView {
     
     func setLayout() {    
         stackView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(-5)
-            $0.leading.equalToSuperview().inset(35)
-            $0.trailing.equalToSuperview().inset(25)
+            $0.top.equalToSuperview().inset(2)
+            $0.centerX.equalToSuperview()
         }
     }
 }
