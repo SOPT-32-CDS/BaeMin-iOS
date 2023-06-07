@@ -101,9 +101,9 @@ private extension HomeViewController {
     
     func setLayout() {
         navigationBar.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaInsets)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(110)
+            $0.height.equalTo(80)
         }
         
         homeCollectionView.snp.makeConstraints {

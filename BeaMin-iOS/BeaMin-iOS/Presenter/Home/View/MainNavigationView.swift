@@ -34,11 +34,6 @@ final class MainNavigationView: UIView {
         // MARK: - autolayout설정
         setLayout()
         
-        // MARK: - button의 addtarget설정
-        setAddTarget()
-        
-        // MARK: - delegate설정
-        setDelegate()
     }
     
     @available(*, unavailable)
@@ -87,24 +82,23 @@ private extension MainNavigationView {
     
     func setLayout() {
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(safeAreaInsets).inset(50)
-            $0.leading.equalToSuperview().inset(17)
+            $0.top.leading.equalToSuperview().inset(17)
         }
         
         homeButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(52)
+            $0.top.equalToSuperview().inset(19)
             $0.trailing.equalToSuperview().inset(50)
             $0.width.height.equalTo(28)
         }
         
         cartButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(51)
+            $0.top.equalToSuperview().inset(18)
             $0.trailing.equalToSuperview().inset(10)
             $0.width.height.equalTo(28)
         }
         
         addressTitle.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(14)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(21)
             $0.leading.equalToSuperview().inset(16) 
         }
         
@@ -117,13 +111,5 @@ private extension MainNavigationView {
             $0.top.equalTo(addressTitle.snp.top).offset(-2)
             $0.leading.equalTo(addressText.snp.trailing).offset(2)
         }
-    }
-    
-    func setAddTarget() {
-        
-    }
-    
-    func setDelegate() {
-        
     }
 }
