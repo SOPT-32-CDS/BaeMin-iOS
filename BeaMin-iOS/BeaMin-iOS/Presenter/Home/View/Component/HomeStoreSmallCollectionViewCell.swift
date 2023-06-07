@@ -126,7 +126,6 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallImage.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().inset(4)
-            $0.leading.trailing.equalToSuperview().inset(4)
             $0.width.height.equalTo(150)
         }
         
