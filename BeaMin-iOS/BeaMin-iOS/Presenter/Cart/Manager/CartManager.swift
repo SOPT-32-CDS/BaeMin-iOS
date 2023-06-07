@@ -23,22 +23,17 @@ final class CartManager {
     func fetchCartDTO(completion: @escaping (CartModelDTO) -> Void) {
         let dataRequest = AF.request(makeCartUrl(), method: .get, encoding: JSONEncoding.default, headers: header)
         dataRequest.responseData { response in
-            switch response.result {
-            case .success:
-                guard let statusCode = response.response?.statusCode else { return }
-                guard let value = response.value else { return }
-                let networkResult = self.judgeStatus(by: statusCode, value, changeData: CartModel.self)
-                switch networkResult {
-                case .success(let data):
-                    print("✅✅✅✅✅Cart정보조회API호출성공✅✅✅✅✅")
-                    completion(self.convertCartDTO(input: data))
-                case .serverErr:
-                    fatalError("서버에러")
-                case .networkErr:
-                    fatalError("네트워크에러")
-                }
-            case .failure:
-                fatalError("네트워킹실패")
+            guard case let .success(data) = response.result else { fatalError("Cart정보조회 네트워킹실패") }
+            guard let statusCode = response.response?.statusCode else { return }
+            let networkResult = self.judgeStatus(by: statusCode, data, changeData: CartModel.self)
+            switch networkResult {
+            case .success(let data):
+                print("✅✅✅✅✅Cart정보조회API호출성공✅✅✅✅✅")
+                completion(self.convertCartDTO(input: data))
+            case .serverErr:
+                fatalError("서버에러")
+            case .networkErr:
+                fatalError("네트워크에러")
             }
         }
     }
