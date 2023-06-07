@@ -63,7 +63,6 @@ extension HomeStoreBigCollectionViewCell {
             $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
             $0.layer.masksToBounds = true
             $0.contentMode = .scaleAspectFill
-            
         }
         
         homeStoreBigTitle.do {
@@ -72,8 +71,9 @@ extension HomeStoreBigCollectionViewCell {
         }
         
         homeStoreBigCoupon.do {
-            $0.image = .assetImage(.mainCoupon)
-            
+            $0.image = .assetImage(.couponImage)
+            $0.contentMode = .scaleAspectFit
+            $0.layer.contentsGravity = .right
         }
         
         homeStoreBigStarIcon.do {
@@ -119,10 +119,10 @@ extension HomeStoreBigCollectionViewCell {
     }
     
     func setHierarchy() {
-        addSubviews(homeStoreBigImage,homeStoreBigTitleStackView, homeStoreBigCoupon,homeStoreBigInfoStackView, homeStoreBigMinDeliveryStackView)
+        addSubviews(homeStoreBigImage,homeStoreBigTitleStackView,homeStoreBigCoupon,homeStoreBigInfoStackView, homeStoreBigMinDeliveryStackView)
         
-        homeStoreBigTitleStackView.addSubviews(homeStoreBigTitle, homeStoreBigStarStackView)
         homeStoreBigStarStackView.addSubviews(homeStoreBigStarIcon, homeStoreBigStar)
+        homeStoreBigTitleStackView.addSubviews(homeStoreBigTitle, homeStoreBigStarStackView)
         homeStoreBigInfoStackView.addSubviews(  homeStoreBigIcon, homeStoreBigDeliveryTime, homeStoreBigDeliveryTipTitle, homeStoreBigDeliveryTip)
         homeStoreBigMinDeliveryStackView.addSubviews(homeStoreBigMinDeliveryTitle, homeStoreBigMinDelivery)
     }
@@ -139,13 +139,15 @@ extension HomeStoreBigCollectionViewCell {
         }
         
         homeStoreBigCoupon.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(16)
             $0.top.equalTo(homeStoreBigImage.snp.bottom).offset(12)
+            $0.trailing.equalToSuperview().inset(16)
+            $0.width.equalTo(60)
+            $0.height.equalTo(16)
         }
         
         homeStoreBigStarIcon.snp.makeConstraints {
             $0.top.equalToSuperview().inset(2)
-            $0.leading.equalToSuperview().inset(4)
+            $0.leading.equalTo(homeStoreBigTitle.snp.trailing).offset(4)
         }
         
         homeStoreBigStar.snp.makeConstraints {
@@ -153,14 +155,11 @@ extension HomeStoreBigCollectionViewCell {
             $0.leading.equalTo(homeStoreBigStarIcon.snp.trailing).offset(2)
         }
         
-        homeStoreBigStarStackView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(2)
-            $0.leading.equalTo(homeStoreBigTitle.snp.trailing).offset(4)
-        }
-        
         homeStoreBigTitleStackView.snp.makeConstraints {
             $0.top.equalTo(homeStoreBigImage.snp.bottom).offset(12)
             $0.leading.equalToSuperview().inset(14)
+            $0.trailing.equalTo(homeStoreBigStar.snp.trailing)
+            $0.bottom.equalTo(homeStoreBigTitle.snp.bottom)
         }
         
         homeStoreBigIcon.snp.makeConstraints {
@@ -185,6 +184,7 @@ extension HomeStoreBigCollectionViewCell {
         homeStoreBigInfoStackView.snp.makeConstraints {
             $0.top.equalTo(homeStoreBigTitle.snp.bottom).offset(4)
             $0.leading.equalToSuperview().inset(14)
+            $0.trailing.bottom.equalToSuperview()
         }
 
         homeStoreBigMinDeliveryTitle.snp.makeConstraints {
@@ -199,6 +199,7 @@ extension HomeStoreBigCollectionViewCell {
         homeStoreBigMinDeliveryStackView.snp.makeConstraints {
             $0.top.equalTo(homeStoreBigIcon.snp.bottom).offset(4)
             $0.leading.equalToSuperview().inset(14)
+            $0.trailing.bottom.equalToSuperview()
         }
     }
     
