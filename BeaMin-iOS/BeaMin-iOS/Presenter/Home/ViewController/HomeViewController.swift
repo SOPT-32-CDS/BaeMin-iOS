@@ -100,9 +100,9 @@ private extension HomeViewController {
     
     func setLayout() {
         navigationBar.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaInsets)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(110)
+            $0.height.equalTo(80)
         }
         
         homeCollectionView.snp.makeConstraints {
@@ -110,14 +110,12 @@ private extension HomeViewController {
             $0.leading.trailing.bottom.equalToSuperview()
         }
         
-        // MARK: - 이부분 snapkit으로 바꿔주세요
-        NSLayoutConstraint.activate([
-            tabBarView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tabBarView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tabBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tabBarView.heightAnchor.constraint(equalToConstant: 83),
-            tabBarView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
-        ])
+        tabBarView.snp.makeConstraints {
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.height.equalTo(83)
+            $0.width.equalTo(view.safeAreaLayoutGuide)
+        }
+        
     }
     
     func setDelegate() {
@@ -222,7 +220,7 @@ private extension HomeViewController {
         
         let footerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(15)
+            heightDimension: .absolute(12)
         )
         let footer = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: footerSize,

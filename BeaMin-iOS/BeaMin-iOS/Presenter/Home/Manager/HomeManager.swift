@@ -45,7 +45,6 @@ final class HomeManager {
     func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200..<300:
-            
             return isValidData(data: data)
         case 500..<600: return .serverErr
         default: return .networkErr

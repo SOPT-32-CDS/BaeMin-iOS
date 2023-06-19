@@ -107,9 +107,10 @@ extension HomeStoreSmallCollectionViewCell {
         }
         
         homeStoreSmallCoupon.do {
-            $0.image = UIImage.assetImage(.mainNowCoupon)
+            $0.image = UIImage.assetImage(.couponImage)
+            $0.contentMode = .scaleAspectFit
+            $0.layer.contentsGravity = .left
         }
-
         
     }
     
@@ -124,9 +125,8 @@ extension HomeStoreSmallCollectionViewCell {
     
     func setLayout() {
         homeStoreSmallImage.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().inset(4)
-            $0.leading.trailing.equalToSuperview().inset(4)
+            $0.leading.equalToSuperview().inset(4)
             $0.width.height.equalTo(150)
         }
         
@@ -147,10 +147,11 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallTitleStackView.snp.makeConstraints {
             $0.top.equalTo(homeStoreSmallImage.snp.bottom).offset(10)
             $0.leading.equalToSuperview().inset(4)
+            $0.trailing.bottom.equalToSuperview()
         }
         
         homeStoreSmallDeliveryTitle.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.leading.equalToSuperview()
         }
         
         homeStoreSmallDeliveryTime.snp.makeConstraints {
@@ -161,10 +162,11 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallDeliveryStackView.snp.makeConstraints {
             $0.top.equalTo(homeStoreSmallTItle.snp.bottom).offset(8)
             $0.leading.equalToSuperview().inset(4)
+            $0.trailing.bottom.equalToSuperview()
         }
         
         homeStoreSmallDeliveryTipTitle.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.leading.equalToSuperview()
         }
 
         homeStoreSmallDeliveryTipMoney.snp.makeConstraints {
@@ -175,6 +177,7 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallDeliveryTipStackView.snp.makeConstraints {
             $0.top.equalTo(homeStoreSmallDeliveryTitle.snp.bottom).offset(8)
             $0.leading.equalToSuperview().inset(4)
+            $0.trailing.bottom.equalToSuperview()
         }
 
 
@@ -186,6 +189,8 @@ extension HomeStoreSmallCollectionViewCell {
         homeStoreSmallCoupon.snp.makeConstraints {
             $0.top.equalTo(homeStoreSmallIcon.snp.bottom).offset(8)
             $0.leading.equalToSuperview().inset(4)
+            $0.width.equalTo(60)
+            $0.height.equalTo(16)
         }
         
     }
