@@ -105,7 +105,7 @@ private extension OrderDetailViewController {
                 let options = "데이터연결 아직안함"
                 OrderDetailManager.shared.appendMenuInCart(cartID: cartID, menuName: menuTitle, menuImage: menuImage, totalPrice: totalPrice, options: options, totalCount: menuCount) { isCompleted in
                     if isCompleted {
-                        let cartViewController = CartViewController()
+                        let cartViewController = CartViewController(cartManager: CartManager.shared)
                         self.navigationController?.pushViewController(cartViewController, animated: true)
                     }
                 }

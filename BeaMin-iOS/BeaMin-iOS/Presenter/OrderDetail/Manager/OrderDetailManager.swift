@@ -11,11 +11,15 @@ import Alamofire
 
 import CustomExtension
 
-final class OrderDetailManager {
+protocol OrderDetailNetwork: AnyObject {
+    func appendMenuInCart(cartID: Int, storeID: Int, menuName: String, menuImage: String, totalPrice: Int, options: String, totalCount: Int, completion: @escaping (Bool) -> Void)
+}
+
+final class OrderDetailManager: OrderDetailNetwork {
     static let shared = OrderDetailManager()
     private init() {}
     
-    func appendMenuInCart(cartID: Int, storeID: Int = 1, menuName: String, menuImage: String, totalPrice: Int, options: String, totalCount: Int, completion: @escaping (Bool)->Void) {
+    func appendMenuInCart(cartID: Int, storeID: Int = 1, menuName: String, menuImage: String, totalPrice: Int, options: String, totalCount: Int, completion: @escaping (Bool) -> Void) {
         let dataRequest = AF.request(Constant.CartNetworkConstant.baseURL, method: .post, parameters: makeRequestBody(cartID: cartID, menuName: menuName, menuImage: menuImage, totalPrice: totalPrice, options: options, totalCount: totalCount), encoding: JSONEncoding.default)
         dataRequest.responseData { response in
             switch response.result {

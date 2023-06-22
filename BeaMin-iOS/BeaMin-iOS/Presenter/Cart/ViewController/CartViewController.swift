@@ -16,7 +16,7 @@ import DesignSystem
 
 final class CartViewController: UIViewController {
     
-    private let cartManager = CartManager.shared
+    private let cartManager: CartManagerNetwork
     
     private var cartData: CartModelDTO = .init(cartID: 0, totalDeliveryTip: 0, menusByStore: []) {
         didSet {
@@ -33,6 +33,15 @@ final class CartViewController: UIViewController {
                                                         frame: .init(x: 0, y: 0, width: Constant.Screen.width, height: 400))
     
     private lazy var cartButton = CartInfoButton(totalPrice: cartData.totalPrice + cartData.totalDeliveryTip, totalCount: cartData.totalMenuCount)
+    
+    init(cartManager: CartManagerNetwork) {
+        self.cartManager = cartManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
