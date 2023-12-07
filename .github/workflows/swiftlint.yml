@@ -28,6 +28,6 @@ jobs:
          ## All File Checked ✅
          | ✅ 	| Auto Pull Request SwiftLint Success!!!! 	|
          |---	|----------------------------------------------	|
-        repo-token: ${{ secrets.ACCESS_TOKEN }}
+        repo-token: ${{ secrets.TOKEN }}
         repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
         allow-repeats: false # This is the default
