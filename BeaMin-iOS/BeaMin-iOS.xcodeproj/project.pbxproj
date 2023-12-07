@@ -63,7 +63,6 @@
 		C01BB0F92A0FB6CA0008C814 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C01BB0F82A0FB6CA0008C814 /* SnapKit */; };
 		C01BB0FC2A0FB6D10008C814 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C01BB0FB2A0FB6D10008C814 /* Then */; };
 		C01BB1062A0FB70C0008C814 /* DesignSystem.docc in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1052A0FB70C0008C814 /* DesignSystem.docc */; };
-		C01BB10C2A0FB70C0008C814 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB1022A0FB70C0008C814 /* DesignSystem.framework */; };
 		C01BB1142A0FB70C0008C814 /* DesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = C01BB1042A0FB70C0008C814 /* DesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C01BB1172A0FB70C0008C814 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB1022A0FB70C0008C814 /* DesignSystem.framework */; };
 		C01BB1182A0FB70C0008C814 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB1022A0FB70C0008C814 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,7 +82,6 @@
 		C01BB15E2A0FBC830008C814 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB15D2A0FBC830008C814 /* HomeManager.swift */; };
 		C01BB1642A0FBC9F0008C814 /* OrderDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1632A0FBC9F0008C814 /* OrderDetailManager.swift */; };
 		C01BB1722A0FBD2F0008C814 /* CustomExtension.docc in Sources */ = {isa = PBXBuildFile; fileRef = C01BB1712A0FBD2F0008C814 /* CustomExtension.docc */; };
-		C01BB1782A0FBD2F0008C814 /* CustomExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */; };
 		C01BB1802A0FBD2F0008C814 /* CustomExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C01BB1702A0FBD2F0008C814 /* CustomExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C01BB1832A0FBD2F0008C814 /* CustomExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */; };
 		C01BB1842A0FBD2F0008C814 /* CustomExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -104,40 +102,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C01BB10D2A0FB70C0008C814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C01BB0D82A0FB27B0008C814 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C01BB1012A0FB70C0008C814;
-			remoteInfo = DesignSystem;
-		};
-		C01BB10F2A0FB70C0008C814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C01BB0D82A0FB27B0008C814 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C01BB0DF2A0FB27B0008C814;
-			remoteInfo = "BeaMin-iOS";
-		};
 		C01BB1152A0FB70C0008C814 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C01BB0D82A0FB27B0008C814 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C01BB1012A0FB70C0008C814;
 			remoteInfo = DesignSystem;
-		};
-		C01BB1792A0FBD2F0008C814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C01BB0D82A0FB27B0008C814 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C01BB16D2A0FBD2E0008C814;
-			remoteInfo = CustomExtension;
-		};
-		C01BB17B2A0FBD2F0008C814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C01BB0D82A0FB27B0008C814 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C01BB0DF2A0FB27B0008C814;
-			remoteInfo = "BeaMin-iOS";
 		};
 		C01BB1812A0FBD2F0008C814 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -229,7 +199,6 @@
 		C01BB1022A0FB70C0008C814 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB1042A0FB70C0008C814 /* DesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignSystem.h; sourceTree = "<group>"; };
 		C01BB1052A0FB70C0008C814 /* DesignSystem.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DesignSystem.docc; sourceTree = "<group>"; };
-		C01BB10B2A0FB70C0008C814 /* DesignSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB1212A0FB7200008C814 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		C01BB1232A0FB73F0008C814 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		C01BB1342A0FB8630008C814 /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.ttf"; sourceTree = "<group>"; };
@@ -248,7 +217,6 @@
 		C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB1702A0FBD2F0008C814 /* CustomExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomExtension.h; sourceTree = "<group>"; };
 		C01BB1712A0FBD2F0008C814 /* CustomExtension.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CustomExtension.docc; sourceTree = "<group>"; };
-		C01BB1772A0FBD2F0008C814 /* CustomExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01BB18C2A0FBD560008C814 /* CollectionViewCellReuseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellReuseProtocol.swift; sourceTree = "<group>"; };
 		C01BB18E2A0FBDBE0008C814 /* TableViewCellReuseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellReuseProtocol.swift; sourceTree = "<group>"; };
 		C01BB1912A0FBDF10008C814 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -264,6 +232,7 @@
 		C0FA4B842B216E8E006D7561 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0FA4B8A2B21D7C3006D7561 /* BeaMin-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeaMin-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FA4B8C2B21D7C3006D7561 /* BeaMin_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaMin_iOSTests.swift; sourceTree = "<group>"; };
+		C0FA4B932B21E1FE006D7561 /* BeaMin-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BeaMin-iOS.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,26 +255,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C01BB1082A0FB70C0008C814 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C01BB10C2A0FB70C0008C814 /* DesignSystem.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C01BB16B2A0FBD2E0008C814 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C01BB1742A0FBD2F0008C814 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C01BB1782A0FBD2F0008C814 /* CustomExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +435,7 @@
 		C01BB0D72A0FB27B0008C814 = {
 			isa = PBXGroup;
 			children = (
+				C0FA4B932B21E1FE006D7561 /* BeaMin-iOS.xctestplan */,
 				C0FA4B842B216E8E006D7561 /* .swiftlint.yml */,
 				C01BB0E22A0FB27B0008C814 /* BeaMin-iOS */,
 				C01BB1032A0FB70C0008C814 /* DesignSystem */,
@@ -496,9 +450,7 @@
 			children = (
 				C01BB0E02A0FB27B0008C814 /* BeaMin-iOS.app */,
 				C01BB1022A0FB70C0008C814 /* DesignSystem.framework */,
-				C01BB10B2A0FB70C0008C814 /* DesignSystemTests.xctest */,
 				C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */,
-				C01BB1772A0FBD2F0008C814 /* CustomExtensionTests.xctest */,
 				C0FA4B8A2B21D7C3006D7561 /* BeaMin-iOSTests.xctest */,
 			);
 			name = Products;
@@ -819,25 +771,6 @@
 			productReference = C01BB1022A0FB70C0008C814 /* DesignSystem.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C01BB10A2A0FB70C0008C814 /* DesignSystemTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C01BB11D2A0FB70C0008C814 /* Build configuration list for PBXNativeTarget "DesignSystemTests" */;
-			buildPhases = (
-				C01BB1072A0FB70C0008C814 /* Sources */,
-				C01BB1082A0FB70C0008C814 /* Frameworks */,
-				C01BB1092A0FB70C0008C814 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C01BB10E2A0FB70C0008C814 /* PBXTargetDependency */,
-				C01BB1102A0FB70C0008C814 /* PBXTargetDependency */,
-			);
-			name = DesignSystemTests;
-			productName = DesignSystemTests;
-			productReference = C01BB10B2A0FB70C0008C814 /* DesignSystemTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C01BB16D2A0FBD2E0008C814 /* CustomExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01BB1852A0FBD2F0008C814 /* Build configuration list for PBXNativeTarget "CustomExtension" */;
@@ -855,25 +788,6 @@
 			productName = CustomExtension;
 			productReference = C01BB16E2A0FBD2F0008C814 /* CustomExtension.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		C01BB1762A0FBD2F0008C814 /* CustomExtensionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C01BB1882A0FBD2F0008C814 /* Build configuration list for PBXNativeTarget "CustomExtensionTests" */;
-			buildPhases = (
-				C01BB1732A0FBD2F0008C814 /* Sources */,
-				C01BB1742A0FBD2F0008C814 /* Frameworks */,
-				C01BB1752A0FBD2F0008C814 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C01BB17A2A0FBD2F0008C814 /* PBXTargetDependency */,
-				C01BB17C2A0FBD2F0008C814 /* PBXTargetDependency */,
-			);
-			name = CustomExtensionTests;
-			productName = CustomExtensionTests;
-			productReference = C01BB1772A0FBD2F0008C814 /* CustomExtensionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C0FA4B892B21D7C3006D7561 /* BeaMin-iOSTests */ = {
 			isa = PBXNativeTarget;
@@ -909,16 +823,8 @@
 					C01BB1012A0FB70C0008C814 = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					C01BB10A2A0FB70C0008C814 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = C01BB0DF2A0FB27B0008C814;
-					};
 					C01BB16D2A0FBD2E0008C814 = {
 						CreatedOnToolsVersion = 14.3;
-					};
-					C01BB1762A0FBD2F0008C814 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = C01BB0DF2A0FB27B0008C814;
 					};
 					C0FA4B892B21D7C3006D7561 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -946,9 +852,7 @@
 			targets = (
 				C01BB0DF2A0FB27B0008C814 /* BeaMin-iOS */,
 				C01BB1012A0FB70C0008C814 /* DesignSystem */,
-				C01BB10A2A0FB70C0008C814 /* DesignSystemTests */,
 				C01BB16D2A0FBD2E0008C814 /* CustomExtension */,
-				C01BB1762A0FBD2F0008C814 /* CustomExtensionTests */,
 				C0FA4B892B21D7C3006D7561 /* BeaMin-iOSTests */,
 			);
 		};
@@ -979,21 +883,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C01BB1092A0FB70C0008C814 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C01BB16C2A0FBD2E0008C814 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C01BB1752A0FBD2F0008C814 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1085,13 +975,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C01BB1072A0FB70C0008C814 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C01BB16A2A0FBD2E0008C814 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1110,13 +993,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C01BB1732A0FBD2F0008C814 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C0FA4B862B21D7C3006D7561 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1128,30 +1004,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C01BB10E2A0FB70C0008C814 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C01BB1012A0FB70C0008C814 /* DesignSystem */;
-			targetProxy = C01BB10D2A0FB70C0008C814 /* PBXContainerItemProxy */;
-		};
-		C01BB1102A0FB70C0008C814 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C01BB0DF2A0FB27B0008C814 /* BeaMin-iOS */;
-			targetProxy = C01BB10F2A0FB70C0008C814 /* PBXContainerItemProxy */;
-		};
 		C01BB1162A0FB70C0008C814 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C01BB1012A0FB70C0008C814 /* DesignSystem */;
 			targetProxy = C01BB1152A0FB70C0008C814 /* PBXContainerItemProxy */;
-		};
-		C01BB17A2A0FBD2F0008C814 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C01BB16D2A0FBD2E0008C814 /* CustomExtension */;
-			targetProxy = C01BB1792A0FBD2F0008C814 /* PBXContainerItemProxy */;
-		};
-		C01BB17C2A0FBD2F0008C814 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C01BB0DF2A0FB27B0008C814 /* BeaMin-iOS */;
-			targetProxy = C01BB17B2A0FBD2F0008C814 /* PBXContainerItemProxy */;
 		};
 		C01BB1822A0FBD2F0008C814 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1402,42 +1258,6 @@
 			};
 			name = Release;
 		};
-		C01BB11E2A0FB70C0008C814 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z225784MRD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uikit.DesignSystemTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaMin-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BeaMin-iOS";
-			};
-			name = Debug;
-		};
-		C01BB11F2A0FB70C0008C814 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z225784MRD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uikit.DesignSystemTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaMin-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BeaMin-iOS";
-			};
-			name = Release;
-		};
 		C01BB1862A0FBD2F0008C814 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1501,42 +1321,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C01BB1892A0FBD2F0008C814 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z225784MRD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uikit.CustomExtensionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaMin-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BeaMin-iOS";
-			};
-			name = Debug;
-		};
-		C01BB18A2A0FBD2F0008C814 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z225784MRD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uikit.CustomExtensionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeaMin-iOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BeaMin-iOS";
 			};
 			name = Release;
 		};
@@ -1608,29 +1392,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01BB11D2A0FB70C0008C814 /* Build configuration list for PBXNativeTarget "DesignSystemTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C01BB11E2A0FB70C0008C814 /* Debug */,
-				C01BB11F2A0FB70C0008C814 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C01BB1852A0FBD2F0008C814 /* Build configuration list for PBXNativeTarget "CustomExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01BB1862A0FBD2F0008C814 /* Debug */,
 				C01BB1872A0FBD2F0008C814 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C01BB1882A0FBD2F0008C814 /* Build configuration list for PBXNativeTarget "CustomExtensionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C01BB1892A0FBD2F0008C814 /* Debug */,
-				C01BB18A2A0FBD2F0008C814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
