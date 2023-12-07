@@ -264,6 +264,7 @@
 		C0FA4B842B216E8E006D7561 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C0FA4B8A2B21D7C3006D7561 /* BeaMin-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeaMin-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FA4B8C2B21D7C3006D7561 /* BeaMin_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaMin_iOSTests.swift; sourceTree = "<group>"; };
+		C0FA4B932B21E1FE006D7561 /* BeaMin-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "BeaMin-iOS.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -482,6 +483,7 @@
 		C01BB0D72A0FB27B0008C814 = {
 			isa = PBXGroup;
 			children = (
+				C0FA4B932B21E1FE006D7561 /* BeaMin-iOS.xctestplan */,
 				C0FA4B842B216E8E006D7561 /* .swiftlint.yml */,
 				C01BB0E22A0FB27B0008C814 /* BeaMin-iOS */,
 				C01BB1032A0FB70C0008C814 /* DesignSystem */,

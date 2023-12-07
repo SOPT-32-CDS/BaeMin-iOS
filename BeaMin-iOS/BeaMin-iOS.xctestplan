@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "369225C3-5DF5-442D-8051-15C34988EB05",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:BeaMin-iOS.xcodeproj",
+      "identifier" : "C01BB0DF2A0FB27B0008C814",
+      "name" : "BeaMin-iOS"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:BeaMin-iOS.xcodeproj",
+        "identifier" : "C0FA4B892B21D7C3006D7561",
+        "name" : "BeaMin-iOSTests"
+      }
+    }
+  ],
+  "version" : 1
+}
