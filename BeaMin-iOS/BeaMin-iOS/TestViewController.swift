@@ -5,16 +5,11 @@
 //  Created by uiskim on 2023/05/13.
 //
 
-import UIKit
-
-import SnapKit
-
-import Then
-
-import DesignSystem
-
 import CustomExtension
-
+import DesignSystem
+import SnapKit
+import Then
+import UIKit
 
 class TestViewController: UIViewController {
     
