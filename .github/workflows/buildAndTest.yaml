@@ -20,3 +20,15 @@ jobs:
     - name: Start xcode build 🛠
       run: |
         xcodebuild clean test -project BeaMin-iOS/BeaMin-iOS.xcodeproj -scheme BeaMin-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=latest'
+
+    - name: Add PR Comment
+      if: ${{ success() }}
+      uses: mshick/add-pr-comment@v1
+      with:
+        message: |
+         ## Build & Test Checked ✅
+         | ✅ 	| Auto Build And Test SUCCESS !!! 	|
+         |---	|----------------------------------------------	|
+        repo-token: ${{ secrets.ACCESS_TOKEN }}
+        repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
+        allow-repeats: false # This is the default
