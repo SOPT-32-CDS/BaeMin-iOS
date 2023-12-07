@@ -42,7 +42,7 @@ class TestViewController: UIViewController {
         }
         
         if intArray.isEmpty {
-            print("린트걸릴겁니다")
+            print("dkak?")
         }
     }
 }
