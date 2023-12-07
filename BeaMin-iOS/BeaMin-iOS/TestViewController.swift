@@ -17,7 +17,25 @@ class TestViewController: UIViewController {
     
     let testChip = ChoiceChipView()
     
+    var intArray = [1,2,3,4]
+    
     let test: UILabel = {
+        let label = UILabel()
+        label.text = "테스트 텍스트입니다"
+        label.font = .hannaPro(.brandTypeBig)
+        label.textColor = .designSystem(.white)
+        return label
+    }()
+    
+    let test1: UILabel = {
+        let label = UILabel()
+        label.text = "테스트 텍스트입니다"
+        label.font = .hannaPro(.brandTypeBig)
+        label.textColor = .designSystem(.white)
+        return label
+    }()
+    
+    let test2: UILabel = {
         let label = UILabel()
         label.text = "테스트 텍스트입니다"
         label.font = .hannaPro(.brandTypeBig)
@@ -37,6 +55,10 @@ class TestViewController: UIViewController {
         view.addSubview(testChip)
         testChip.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+        
+        if intArray.count == 0 {
+            print("린트걸릴겁니다")
         }
     }
 }
