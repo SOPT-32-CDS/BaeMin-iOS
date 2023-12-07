@@ -16,9 +16,7 @@ class TestViewController: UIViewController {
     let testChip = ChoiceChipView()
     
     var intArray = [1,2,3,4]
-    
-    
-    
+
     let sfsf: UILabel = {
         let label = UILabel()
         label.text = "테스트 텍스트입니다"
