@@ -33,7 +33,8 @@ disabled_rules:
 
 # 인덴트 커스텀 정의
 
-sorted_imports: error
+sorted_imports:
+    severity: error
 
 indentation_width:
   indentation_width: 2
