@@ -19,23 +19,7 @@ class TestViewController: UIViewController {
     
     var intArray = [1,2,3,4]
     
-    let test: UILabel = {
-        let label = UILabel()
-        label.text = "테스트 텍스트입니다"
-        label.font = .hannaPro(.brandTypeBig)
-        label.textColor = .designSystem(.white)
-        return label
-    }()
-    
-    let test1: UILabel = {
-        let label = UILabel()
-        label.text = "테스트 텍스트입니다"
-        label.font = .hannaPro(.brandTypeBig)
-        label.textColor = .designSystem(.white)
-        return label
-    }()
-    
-    let test2: UILabel = {
+    let taifhiashfiashfishfihsafho_fjosfjosjf_siofjsofiest: UILabel = {
         let label = UILabel()
         label.text = "테스트 텍스트입니다"
         label.font = .hannaPro(.brandTypeBig)
@@ -46,8 +30,8 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .designSystem(.mainGreen)
-        view.addSubview(test)
-        test.snp.makeConstraints { make in
+        view.addSubview(taifhiashfiashfishfihsafho_fjosfjosjf_siofjsofiest)
+        taifhiashfiashfishfihsafho_fjosfjosjf_siofjsofiest.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.size.equalTo(200)
         }
@@ -57,7 +41,7 @@ class TestViewController: UIViewController {
             make.center.equalToSuperview()
         }
         
-        if intArray.count == 0 {
+        if intArray.isEmpty {
             print("린트걸릴겁니다")
         }
     }
