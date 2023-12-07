@@ -17,7 +17,7 @@ class TestViewController: UIViewController {
     
     var intArray = [1,2,3,4]
     
-    let a: UILabel = {
+    let afafaf: UILabel = {
         let label = UILabel()
         label.text = "테스트 텍스트입니다"
         label.font = .hannaPro(.brandTypeBig)
@@ -28,8 +28,8 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .designSystem(.mainGreen)
-        view.addSubview(a)
-        a.snp.makeConstraints { make in
+        view.addSubview(afafaf)
+        afafaf.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.size.equalTo(200)
         }
