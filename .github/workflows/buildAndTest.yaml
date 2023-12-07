@@ -10,11 +10,10 @@ jobs:
   build:
     # job이 실행될 환경 - 최신 mac os
     runs-on: macos-latest
-
-    steps:
-    - uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '15.0.1'
+    strategy:
+      matrix:
+        xcode: [15.0.1]
+    steps:      
     # uses 키워드를 통해 Github Actions에서 기본으로 제공하는 액션을 사용 가능. 아래 액션은 repository 에 체크아웃하는 것
     - uses: actions/checkout@v3
     # shell 이용해서 하나의 command 수행
