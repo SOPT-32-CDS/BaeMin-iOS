@@ -19,23 +19,9 @@ class TestViewController: UIViewController {
     
     var intArray = [1,2,3,4]
     
-    let test: UILabel = {
-        let label = UILabel()
-        label.text = "테스트 텍스트입니다"
-        label.font = .hannaPro(.brandTypeBig)
-        label.textColor = .designSystem(.white)
-        return label
-    }()
+
     
-    let test1: UILabel = {
-        let label = UILabel()
-        label.text = "테스트 텍스트입니다"
-        label.font = .hannaPro(.brandTypeBig)
-        label.textColor = .designSystem(.white)
-        return label
-    }()
-    
-    let test2: UILabel = {
+    let jfoasjfioasjfoasjfioasjfoasjofjasofjosajfosjiofsjiojsof: UILabel = {
         let label = UILabel()
         label.text = "테스트 텍스트입니다"
         label.font = .hannaPro(.brandTypeBig)
@@ -46,8 +32,8 @@ class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .designSystem(.mainGreen)
-        view.addSubview(test)
-        test.snp.makeConstraints { make in
+        view.addSubview(jfoasjfioasjfoasjfioasjfoasjofjasofjosajfosjiofsjiojsof)
+        jfoasjfioasjfoasjfioasjfoasjofjasofjosajfosjiofsjiojsof.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.size.equalTo(200)
         }
