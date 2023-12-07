@@ -37,7 +37,8 @@ opt_in_rules:
 
 # 인덴트 커스텀 정의
 
-  used_import: error
+
+used_import: error
 
 indentation_width:
   indentation_width: 2
