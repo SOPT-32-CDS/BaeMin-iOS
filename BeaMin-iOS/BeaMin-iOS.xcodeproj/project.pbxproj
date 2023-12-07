@@ -253,6 +253,7 @@
 		C06969902A16566E008663C9 /* DeliveryPriceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPriceInfoView.swift; sourceTree = "<group>"; };
 		C06969942A165846008663C9 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		C07E6A3D2A17BCDC0006A61E /* CartInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInfoButton.swift; sourceTree = "<group>"; };
+		C0FA4B842B216E8E006D7561 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +465,7 @@
 		C01BB0D72A0FB27B0008C814 = {
 			isa = PBXGroup;
 			children = (
+				C0FA4B842B216E8E006D7561 /* .swiftlint.yml */,
 				C01BB0E22A0FB27B0008C814 /* BeaMin-iOS */,
 				C01BB1032A0FB70C0008C814 /* DesignSystem */,
 				C01BB16F2A0FBD2F0008C814 /* CustomExtension */,
