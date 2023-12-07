@@ -41,7 +41,7 @@ class TestViewController: UIViewController {
             make.center.equalToSuperview()
         }
         
-        if intArray.count == 0 {
+        if intArray.isEmpty {
             print("린트걸릴겁니다")
         }
     }
