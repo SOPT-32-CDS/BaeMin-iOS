@@ -30,13 +30,10 @@ disabled_rules:
   - empty_string                           # == ""보다 isEmpty 선호
 
 # 옵트 인 룰
-opt_in_rules:
-  - sorted_imports                            # 사용되지 않는 모듈 import 알림
 
 # 인덴트 커스텀 정의
 
-  sorted_imports:
-    severity: error
+sorted_imports: error
 
 indentation_width:
   indentation_width: 2
