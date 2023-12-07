@@ -12,33 +12,10 @@ analyzer_rules:
 opt_in_rules:
   - sorted_imports
 # 디폴트로 활성화되어있는 규칙 중 비활성화할 규칙을 정하는 키워드
-disabled_rules:
-# 추가한 rules
-  - todo
-  - orphaned_doc_comment
-  - empty_xctest_method
-  - redundant_type_annotation
-  - number_separator
-  - empty_count
-  - object_literal
-  - file_name
-  - trailing_whitespace
-  - sorted_imports
-  - file_header
-  - vertical_whitespace_opening_braces
-  - vertical_whitespace_closing_braces
 
 # Customized Configurable Rules
-line_length: 140
-force_cast: error
-nesting:
-  type_level:
-    warning: 3
-  statement_level:
-    warning: 5
-identifier_name:
-  excluded:
-    - id
+sorted_imports: error
+
 
 ... # 문서의 끝
 
