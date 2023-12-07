@@ -3,10 +3,6 @@
 
 # 기본 적용되는 룰에서 사용하지 않는 룰
 disabled_rules:
-
-
-# 옵트 인 룰
-opt_in_rules:
   - trailing_whitespace                    # 후행 공백 (선행 공백과 더불어 필요없다고 미적용이 불필요하다고 생각됨) - 선택 필요
   - nesting                                # 중첩
   - vertical_whitespace                    # 세로 공백
@@ -33,9 +29,16 @@ opt_in_rules:
   - empty_count                            # count보다 isEmpty 선호
   - empty_string                           # == ""보다 isEmpty 선호
   - sorted_imports                         # import 시 알파벳 순 정렬
+
+# 옵트 인 룰
+opt_in_rules:
+
   - used_import                            # 사용되지 않는 모듈 import 알림
 
 # 인덴트 커스텀 정의
+
+  used_import: error
+
 indentation_width:
   indentation_width: 2
   include_comments: false
