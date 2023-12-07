@@ -28,15 +28,14 @@ disabled_rules:
   - closure_end_indentation                # 클로저의 끝 괄호를 시작한 행과의 들여쓰기 맞춤
   - empty_count                            # count보다 isEmpty 선호
   - empty_string                           # == ""보다 isEmpty 선호
-  - sorted_imports                         # import 시 알파벳 순 정렬
 
 # 옵트 인 룰
 opt_in_rules:
-  - used_import                            # 사용되지 않는 모듈 import 알림
+  - sorted_imports                            # 사용되지 않는 모듈 import 알림
 
 # 인덴트 커스텀 정의
 
-used_import:
+  sorted_imports:
     severity: error
 
 indentation_width:
