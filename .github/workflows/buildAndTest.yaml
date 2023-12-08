@@ -57,5 +57,5 @@ jobs:
       - uses: kishikawakatsumi/xcresulttool@v1
         with:
           path: TestResults.xcresult
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
         if: success() || failure()
